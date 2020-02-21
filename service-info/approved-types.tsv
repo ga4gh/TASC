@@ -1,0 +1,9 @@
+group   artifact    version
+org.ga4gh   beacon  1.0.0
+org.ga4gh   service-registry    1.0.0
+org.ga4gh   refget  1.0.0
+org.ga4gh   htsget  1.2.0
+org.ga4gh   RNAget  1.0.0
+org.ga4gh   wes 1.0.0
+org.ga4gh   trs 2.0.0
+org.ga4gh   drs 1.0.0
