@@ -12,7 +12,7 @@ There are two accompanying files here which should have the same information in 
 
 ### JSON format
 
-The JSON file shall 
+The JSON file shall features entries in the following format:
 ```
 [
   {
