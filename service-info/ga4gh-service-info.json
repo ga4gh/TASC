@@ -1,3 +1,50 @@
 [
-
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "beacon"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "service-registry"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "refget"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "htsget"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "rnaget"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "wes"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "trs"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "drs"
+    }
+  }
 ]
