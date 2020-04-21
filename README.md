@@ -19,7 +19,7 @@ The collective resources in the TASC will help inform the peer review of standar
 ## TASC members
 TASC consists of at least 1 volunteer representative from each Work Stream from members of the Steering Committee or a proxy nominated by the SC member, representing multiple countries and organizations.
 
-[Project Board](https://github.com/orgs/ga4gh/projects/7)
+[TASC Github Project board](https://github.com/orgs/ga4gh/projects/7)
 
 | Member           | Work Stream          |
 |------------------|----------------------|
