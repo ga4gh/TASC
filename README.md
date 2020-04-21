@@ -10,8 +10,8 @@ The collective resources in the TASC will help inform the peer review of standar
 
 ## Table of Contents
 [TASC members](#tasc-members)   
-[What kinds of issues should be submitted to TASC?](#what-kinds-of-ishsues-should-be-submitted-to-tasc?)  
-[How to submit](#ow-to-submit)   
+[What kinds of issues should be submitted to TASC?](#what-kinds-of-ishsues-should-be-submitted-to-tasc)  
+[How to submit](#how-to-submit)   
 [What should be included in the submission](#what-should-be-included-in-the-submission)   
 [What to Expect](#what-to-expect)   
 [Issue labels](#issue-labels)   
