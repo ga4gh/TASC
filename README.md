@@ -59,7 +59,6 @@ Project ideas should be submitted through the [Github issues](https://github.com
 ## What should be included in the submission
 - Clear problem statement
 - Explanation of how this impacts alignment between GA4GH standards
-Scope
 - Background research and landscape analysis
 - Proposed solution
 
