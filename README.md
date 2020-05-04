@@ -9,12 +9,12 @@ GA4GH aims to balance agility with mechanisms that will allow our teams to devel
 The collective resources in the TASC will help inform the peer review of standards inside of GA4GH but do not by themselves mandate adoption. The benefit of participating in the interoperable GA4GH suite of standards, rather, would drive uptake.
 
 ## Table of Contents
-[TASC members](#tasc-members)   
-[What kinds of issues should be submitted to TASC?](#what-kinds-of-issues-should-be-submitted-to-tasc)  
-[How to submit](#how-to-submit)   
-[What should be included in the submission](#what-should-be-included-in-the-submission)   
-[What to Expect](#what-to-expect)   
-[Issue labels](#issue-labels)   
+- [TASC members](#tasc-members)   
+- [What kinds of issues should be submitted to TASC?](#what-kinds-of-issues-should-be-submitted-to-tasc)  
+- [How to submit](#how-to-submit)   
+- [What should be included in the submission](#what-should-be-included-in-the-submission)   
+- [What to Expect](#what-to-expect)   
+- [Issue labels](#issue-labels)   
 
 ## TASC members
 TASC consists of at least 1 volunteer representative from each Work Stream from members of the Steering Committee or a proxy nominated by the SC member, representing multiple countries and organizations.
