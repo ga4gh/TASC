@@ -34,5 +34,11 @@
       "group": "org.ga4gh",
       "artifact": "drs"
     }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "tes"
+    }
   }
 ]
