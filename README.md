@@ -31,7 +31,7 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
 | Melissa Konopko  | Lead                 |
-| Rishi Nag        | Lead                 |
+| Jeremy Adams     | Lead                 |
 | Mamana Mbiyavanga| Lead                 |
 
 
