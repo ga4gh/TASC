@@ -14,7 +14,7 @@
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "ga4gh-search"
+      "artifact": "search"
     }
   },
   {
