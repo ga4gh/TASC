@@ -8,25 +8,7 @@
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "service-registry"
-    }
-  },
-  {
-    "type": {
-      "group": "org.ga4gh",
-      "artifact": "rnaget"
-    }
-  },
-  {
-    "type": {
-      "group": "org.ga4gh",
-      "artifact": "wes"
-    }
-  },
-  {
-    "type": {
-      "group": "org.ga4gh",
-      "artifact": "trs"
+      "artifact": "data-connect"
     }
   },
   {
@@ -38,13 +20,31 @@
   {
     "type": {
       "group": "org.ga4gh",
+      "artifact": "rnaget"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "service-registry"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
       "artifact": "tes"
     }
   },
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "data-connect"
+      "artifact": "trs"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "wes"
     }
   }
 ]

@@ -37,7 +37,7 @@ Additional items can be raised as required for standards. It is recommended that
 To add an item to this list, please take the following steps.
 <ol>
 <li>Create a fork of the TASC repo in your own user space</li>
-<li>Modify the JSON file with the values for your PR</li>
+<li>Modify the JSON file with the values for your PR, keeping the entries ordered alphabetically</li>
 <li>Submit the changes as a PR back into the TASC repository</li>
 <li>Notify the GA4GH Secretariat or TASC Force directly</li>
 <li>The GA4GH TASC Force will review and either approve or comment. Please respond to comments to allow the process to move forwards.</li>
