@@ -30,9 +30,8 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | Bob Freimuth     | GKS                  |
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
-| Melissa Konopko  | Lead                 |
-| Rishi Nag        | Lead                 |
 | Mamana Mbiyavanga| Lead                 |
+| Jeremy Adams     | Lead                 |
 
 
 ## What kinds of issues should be submitted to TASC?
