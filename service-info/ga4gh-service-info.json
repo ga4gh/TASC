@@ -40,5 +40,11 @@
       "group": "org.ga4gh",
       "artifact": "tes"
     }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "data-connect"
+    }
   }
 ]
