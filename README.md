@@ -26,7 +26,7 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | Marc Fiume       | Discovery            |
 | James Eddy       | Cloud                |
 | John Marshall    | Large Scale Genomics |
-| Craig Voisin     | DURI                 |
+| Jonathan Lawson  | DURI                 |
 | Bob Freimuth     | GKS                  |
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
