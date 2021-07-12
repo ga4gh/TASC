@@ -13,18 +13,18 @@ To enable servers using the suite of GA4GH APIs to be used in a networks, the Se
 ### JSON format
 
 The JSON file shall feature entries in the following format:
-```
+```json
 [
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "first-api-name",
+      "artifact": "first-api-name"
     }
   },
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "other-api-name",
+      "artifact": "other-api-name"
     }
   }
 ]
