@@ -8,7 +8,11 @@ To enable servers using the suite of GA4GH APIs to be used in a networks, the Se
 
 ## Using This File
 
-`ga4gh-service-info.json` captures the group and artifact values of the type field. The artifact should be written in kebab case i.e. lower case ASCII character values, with - character as a separator if required.
+`ga4gh-service-info.json` captures the group and artifact values of the type field. The artifact should be written in kebab case i.e. lower case ASCII character values, with - character as a separator if required. Submitted artifact values should conform to the following regular expression (regex) pattern:
+
+```
+^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
+```
 
 ### JSON format
 
