@@ -20,6 +20,12 @@
   {
     "type": {
       "group": "org.ga4gh",
+      "artifact": "htsget"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
       "artifact": "rnaget"
     }
   },
