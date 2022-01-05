@@ -12,7 +12,7 @@ The computed identifier mechanism is broadly applicable and useful to the entire
 
 ## Background
 
-The following algorithmic processes, described in depth in VRS [Computed Identifiers](https://vrs.ga4gh.org/en/1.0/impl-guide/computed_identifiers.html#computed-identifiers) proposal, are included in this proposal by reference:
+The following algorithmic processes, described in depth in VRS [Computed Identifiers](https://vrs.ga4gh.org/en/1.0/impl-guide/computed_identifiers.html#computed-identifiers), are included in this proposal by reference:
 
 * **GA4GH Digest Serialization** is the process of converting an object to a canonical binary form based on JSON and inspired by similar (but unratified) JSON standards. This serialization for is used only for the purposes of computing a digest.
 
