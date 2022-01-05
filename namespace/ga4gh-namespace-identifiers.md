@@ -1,20 +1,18 @@
 # GA4GH Namespace Identifiers
 
-This document outlines the cross-workstream, GA4GH-wide namespace identifier system. Identifiers under the `ga4gh` namespace are CURIE-style ids that unambiguously associate the object at the given id with the data model (outlined in a GA4GH specification) it is constructed according to.
+This document outlines the cross-workstream, GA4GH-wide namespace identifier system. Identifiers under the `ga4gh` namespace are compact uniform resource identifiers (CURIEs) that unambiguously associate the object at the given id with the data model (outlined in a GA4GH specification) it is constructed according to.
 
 ## Background
 
 The GA4GH mission entails structuring, connecting, and sharing data reliably. A key component of this effort is to be able to `identify` entities, that is, to associate identifiers with entities. Ideally, there will be exactly one identifier for each entity, and one entity for each identifier. Traditionally, identifiers are assigned to entities, which means that disconnected groups must coordinate on identifier assignment.
 
-The computed identifier scheme proposed in the VR Specification computes identifiers from the data itself. Because identifers depend on the data, groups that independently generate the same variation will generate the same computed identifier for that entity, thereby obviating centralized identifier systems and enabling identifiers to be used in isolated settings such as clinical labs.
+The computed identifier scheme proposed in the Variation Representation Specification (VRS) computes identifiers from the data itself. Because identifiers depend on the data, groups that independently generate the same variation will generate the same computed identifier for that entity, thereby obviating centralized identifier systems and enabling identifiers to be used in isolated settings such as clinical labs.
 
 The computed identifier mechanism is broadly applicable and useful to the entire GA4GH ecosystem. Adopting a common identifier scheme will make interoperability of GA4GH entities more obvious to consumers, will enable the entire organization to share common entity definitions (such as sequence identifiers), and will enable all GA4GH products to share tooling that manipulate identified data. In short, it provides an important consistency within the GA4GH ecosystem.
 
-As a result, we are proposing that the computed identifier scheme described in the VR specification be considered for adoption as a GA4GH-wide standard. If the proposal is accepted by the GA4GH executive committee, the current VR proposal will stand as-is; if the proposal is rejected, the VR proposal will be modified to rescope the computed identifier mechanism to VR and under admininstration of the VR team.
+## Background
 
-## Proposal
-
-The following algorithmic processes, described in depth in the VR [Computed Identifiers](https://vrs.ga4gh.org/en/1.0/impl-guide/computed_identifiers.html#computed-identifiers) proposal, are included in this proposal by reference:
+The following algorithmic processes, described in depth in VRS [Computed Identifiers](https://vrs.ga4gh.org/en/1.0/impl-guide/computed_identifiers.html#computed-identifiers) proposal, are included in this proposal by reference:
 
 * **GA4GH Digest Serialization** is the process of converting an object to a canonical binary form based on JSON and inspired by similar (but unratified) JSON standards. This serialization for is used only for the purposes of computing a digest.
 
@@ -30,9 +28,9 @@ A GA4GH identifier is constructed according to this syntax:
 "ga4gh" ":" type_prefix ":" digest
 ```
 
-The `digest` is computed as described above. The type_prefix is a short alphanumeric code that corresponds to the type of object being represented. If this propsal is accepted, this “type prefix map” would be administered by GA4GH. (Currently, this map is maintained in a YAML file within the vr-spec repository, but it would be relocated on approval of this proposal.)
+The `digest` is computed as described above. The type_prefix is a short alphanumeric code that corresponds to the type of object being represented.
 
-We propose the following guidelines for type prefixes:
+These are our recommendations for type prefixes:
 
 * Prefixes SHOULD be short, ideally 2-4 characters.
 * Prefixes SHOULD be for concrete types, not polymorphic parent classes.
