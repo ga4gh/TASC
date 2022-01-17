@@ -27,7 +27,7 @@ The following algorithmic processes, described in depth in VRS [Computed Identif
 A GA4GH identifier is constructed according to this syntax:
 
 ```
-"ga4gh" ":" type_prefix ":" digest
+"ga4gh" ":" type_prefix "." digest
 ```
 
 The `digest` is computed as described above. The type_prefix is a short alphanumeric code that corresponds to the type of object being represented.
