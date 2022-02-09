@@ -30,8 +30,10 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | Bob Freimuth     | GKS                  |
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
+| Ian Fore         | FASP                 |
 | Mamana Mbiyavanga| Lead                 |
 | Jeremy Adams     | Lead                 |
+| Susan Fairley    | Chief Standards Officer |
 
 
 ## What kinds of issues should be submitted to TASC?
