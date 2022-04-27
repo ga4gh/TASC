@@ -35,6 +35,15 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | Jeremy Adams     | Lead                 |
 | Susan Fairley    | Chief Standards Officer |
 
+### Tech Team Support
+
+TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
+
+| Member               | Email                          | Github Handle                                         |
+|----------------------|--------------------------------|-------------------------------------------------------|
+| Yasasvini Puligundla | yasasvini.puligundla@ga4gh.org | [yash-puligundla](https://github.com/yash-puligundla) |
+| Chen Chen            | chen.chen@ga4gh.org            | [Chen2x](https://github.com/Chen2x)                   |
+| Alex Tsai            | alex.tsai@ga4gh.org            | [alextsaihi](https://github.com/alextsaihi)           |
 
 ## What kinds of issues should be submitted to TASC?
 *TASC aids the harmonisation of aspects of GA4GH's various products that would otherwise prevent different products from being used together conveniently.*
