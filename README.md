@@ -32,7 +32,6 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 | David Bernick    | Security             |
 | Ian Fore         | FASP                 |
 | Mamana Mbiyavanga| Lead                 |
-| Jeremy Adams     | Lead                 |
 | Susan Fairley    | Chief Standards Officer |
 
 ### Tech Team Support
