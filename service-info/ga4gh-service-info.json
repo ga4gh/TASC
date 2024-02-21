@@ -26,7 +26,13 @@
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "refget"
+      "artifact": "refget.sequence"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "refget.seqcol"
     }
   },
   {
