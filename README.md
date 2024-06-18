@@ -21,18 +21,17 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 
 [TASC Github Project board](https://github.com/orgs/ga4gh/projects/7)
 
-| Member           | Work Stream          |
-|------------------|----------------------|
-| Marc Fiume       | Discovery            |
-| James Eddy       | Cloud                |
+| Member                           | Work Stream          |
+|----------------------------------|----------------------|
+| Ian Fore & Michael Baudis        | Discovery            |
+| James Eddy & Alex Kanitz         | Cloud                |
 | John Marshall    | Large Scale Genomics |
 | Jonathan Lawson  | DURI                 |
-| Bob Freimuth     | GKS                  |
+| Bob Freimuth & Alex Wagner     | GKS                  |
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
-| Ian Fore         | FASP                 |
 | Mamana Mbiyavanga| Lead                 |
-| Jeremy Adams     | Lead                 |
+| Andy Yates    | Lead                 |
 | Susan Fairley    | Chief Standards Officer |
 
 ### Tech Team Support
@@ -41,9 +40,15 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 
 | Member               | Email                          | Github Handle                                         |
 |----------------------|--------------------------------|-------------------------------------------------------|
-| Yasasvini Puligundla | yasasvini.puligundla@ga4gh.org | [yash-puligundla](https://github.com/yash-puligundla) |
-| Chen Chen            | chen.chen@ga4gh.org            | [Chen2x](https://github.com/Chen2x)                   |
-| Alex Tsai            | alex.tsai@ga4gh.org            | [alextsaihi](https://github.com/alextsaihi)           |
+| Amreen Mohamed | amreen.mohamed@ga4gh.org | |
+| Neerjah Skantharajah |||
+| Jimmy Payyappilly |||
+| Yasmeen Kurdi |||
+| Reggan Thomas |||
+| Angela Page |||
+| Chen Chen            || [Chen2x](https://github.com/Chen2x)                   |
+| Alex Tsai            || [alextsaihi](https://github.com/alextsaihi)           |
+
 
 ## What kinds of issues should be submitted to TASC?
 *TASC aids the harmonisation of aspects of GA4GH's various products that would otherwise prevent different products from being used together conveniently.*
