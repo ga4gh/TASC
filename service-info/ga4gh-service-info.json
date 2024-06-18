@@ -26,13 +26,13 @@
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "refget.sequence"
+      "artifact": "refget.seqcol"
     }
   },
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "refget.seqcol"
+      "artifact": "refget.sequence"
     }
   },
   {
