@@ -5,8 +5,8 @@
 **Title**: API pagination guide  
 **Related GitHub issues**: [TASC\#29](https://github.com/ga4gh/TASC/issues/29)  
 **Author**: Mamana Mbiyavanga, Andy Yates  
-**Date:** 2024-07-24
-**Status:**: Draft
+**Date:** 2024-11-25  
+**Status:** Approved
 
 ## Abstract
 
