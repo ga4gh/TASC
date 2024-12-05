@@ -10,7 +10,7 @@
 
 ## Abstract
 
-The recommendation is a summary of the discussion at the London GA4GH Connect to describe the pagination methods employed by the Tool Registry Service, Beacon 2 and Data Connection GA4GH products \[AGENDA\] \[PRESENTATION\]. It highlights approaches to implementing pagination called page-based and token-based, and documents how pagination logic may be encoded in a server response. Page-based and token-based pagination are the two approved GA4GH preferred strategies, with guidance around how to implement these strategies and their applicable use-cases. If an implementation requires authorization, it must be applied to every paginated request. This recommendation does not require existing GA4GH products to reimplement their pagination strategy.
+The recommendation is a summary of the discussion at the London GA4GH Connect to describe the pagination methods employed by the Tool Registry Service, Beacon 2 and Data Connect GA4GH products \[AGENDA\] \[PRESENTATION\]. It highlights approaches to implementing pagination called page-based and token-based, and documents how pagination logic may be encoded in a server response. Page-based and token-based pagination are the two approved GA4GH preferred strategies, with guidance around how to implement these strategies and their applicable use-cases. If an implementation requires authorization, it must be applied to every paginated request. This recommendation does not require existing GA4GH products to reimplement their pagination strategy.
 
 ## Table of contents
 
