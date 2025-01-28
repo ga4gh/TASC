@@ -23,16 +23,16 @@ TASC consists of at least 1 volunteer representative from each Work Stream from 
 
 | Member                           | Work Stream          |
 |----------------------------------|----------------------|
-| Ian Fore & Michael Baudis        | Discovery            |
+| Michael Baudis        | Discovery            |
 | James Eddy & Alex Kanitz         | Cloud                |
 | John Marshall    | Large Scale Genomics |
 | Jonathan Lawson  | DURI                 |
-| Bob Freimuth & Alex Wagner     | GKS                  |
+| Alex Wagner     | GKS                  |
 | Francesca Frexia | Clin/Pheno           |
 | David Bernick    | Security             |
 | Mamana Mbiyavanga| Lead                 |
 | Andy Yates    | Lead                 |
-| Susan Fairley    | Chief Standards Officer |
+| Sasha Siegel    | Chief Standards Officer |
 
 ### Tech Team Support
 
@@ -43,11 +43,11 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 | Amreen Mohamed | amreen.mohamed@ga4gh.org | |
 | Neerjah Skantharajah |||
 | Jimmy Payyappilly |||
-| Yasmeen Kurdi |||
 | Reggan Thomas |||
 | Angela Page |||
 | Chen Chen            || [Chen2x](https://github.com/Chen2x)                   |
-| Alex Tsai            || [alextsaihi](https://github.com/alextsaihi)           |
+| Beatrice Amos | beatrice.amos@ga4gh.org |[bea-amos](https://github.com/bea-amos)|
+
 
 
 ## What kinds of issues should be submitted to TASC?
