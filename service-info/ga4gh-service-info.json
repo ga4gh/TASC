@@ -26,7 +26,21 @@
   {
     "type": {
       "group": "org.ga4gh",
-      "artifact": "refget"
+      "artifact": "refget",
+      "status": "superseded",
+      "note": "Renamed to refget-sequence as of March 2025"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "refget-seqcol"
+    }
+  },
+  {
+    "type": {
+      "group": "org.ga4gh",
+      "artifact": "refget-sequence"
     }
   },
   {

@@ -47,4 +47,8 @@ To add an item to this list, please take the following steps.
 <li>The GA4GH TASC Force will review and either approve or comment. Please respond to comments to allow the process to move forwards.</li>
 </ol>
 
+Items should not be removed from this list, as otherwise eventual new additions may collide with historical values which may be still in use with their original meanings by older servers.
+If an item is to be retired or renamed, the existing entry should be retained with two additional fields:
 
+* `status`, which must be one of `"superseded"` or `"withdrawn"`;
+* `note`, which is a free-form string describing why the item is no longer active.
