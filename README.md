@@ -17,38 +17,54 @@ The collective resources in the TASC will help inform the peer review of standar
 - [Issue labels](#issue-labels)   
 
 ## TASC members
-TASC consists of at least 1 volunteer representative from each Work Stream from members of the Steering Committee or a proxy nominated by the SC member, representing multiple countries and organizations.
+TASC is composed of a minimum of two volunteer representatives from each Work Stream. These representatives are either members of the Steering Committee (SC) or designated proxies nominated by SC members, ensuring diverse representation across multiple countries and organizations.
 
-[TASC Github Project board](https://github.com/orgs/ga4gh/projects/7)
+TASC benefits from dedicated support provided by the GA4GH Staff Technical Team, which facilitates technical coordination and promotes alignment across all Work Streams
 
-| Member                           | Work Stream          |
-|----------------------------------|----------------------|
-| Ian Fore & Michael Baudis        | Discovery            |
-| James Eddy & Alex Kanitz         | Cloud                |
-| John Marshall    | Large Scale Genomics |
-| Jonathan Lawson  | DURI                 |
-| Bob Freimuth & Alex Wagner     | GKS                  |
-| Francesca Frexia | Clin/Pheno           |
-| David Bernick    | Security             |
-| Mamana Mbiyavanga| Lead                 |
-| Andy Yates    | Lead                 |
-| Susan Fairley    | Chief Standards Officer |
+### TASC representatives
 
-### Tech Team Support
+| Member | Work Stream / Role |
+|--------|-------------|
+| Michael Baudis | Discovery |
+| Venkat Malladi & Alex Kanitz | Cloud |
+| John Marshall | Large Scale Genomics |
+| Jonathan Lawson | DURI |
+| Bob Freimuth & Alex Wagner | GKS |
+| Francesca Frexia | Clin/Pheno |
+| David Bernick | Security |
+| Mallory Freeberg | GIF |
+| Kathy Reinold | DaMaSC |
+| Mamana Mbiyavanga | TASC Lead |
+| Andy Yates | TASC Lead |
+| Sasha Siegel | Chief Product Officer |
 
-TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
+### Active contributors
 
-| Member               | Email                          | Github Handle                                         |
-|----------------------|--------------------------------|-------------------------------------------------------|
-| Amreen Mohamed | amreen.mohamed@ga4gh.org | |
-| Neerjah Skantharajah |||
-| Jimmy Payyappilly |||
-| Yasmeen Kurdi |||
-| Reggan Thomas |||
-| Angela Page |||
-| Chen Chen            || [Chen2x](https://github.com/Chen2x)                   |
-| Alex Tsai            || [alextsaihi](https://github.com/alextsaihi)           |
+| Member | Work Stream / Role |
+|-------------------|-------|
+| Reggan Thomas (reggan.thomas@ga4gh.org) | Staff Technical Team Support |
+| Jimmy Payyappilly | Staff Technical Team |
+| Angela Page | Staff Technical Team |
+| Chen Chen | Staff Technical Team |
+| Jon Turner | Staff Technical Team |
 
+### Past contributors
+
+| Member | Work Stream / Role |
+|--------|------------------------|
+| Marc Fiume | Discovery |
+| Ian Fore | Discovery, FASP |
+| Craig Voisin | DURI |
+| Kathy Reinold | DaMaSC |
+| Jeremy Adams | TASC Lead, Staff Technical Team|
+| Melissa Konopko | TASC Lead, Staff Technical Team |
+| Rishi Nag | TASC Lead, Staff Technical Team |
+| Susan Fairley | Chief Product Officer |
+| Yasasvini Puligundla | Staff Technical Team |
+| Amreen Mohamed | Staff Technical Team |
+| Neerjah Skantharajah | Staff Technical Team |
+| Yasmeen Kurdi | Staff Technical Team |
+| Alex Tsai | Staff Technical Team |
 
 ## What kinds of issues should be submitted to TASC?
 *TASC aids the harmonisation of aspects of GA4GH's various products that would otherwise prevent different products from being used together conveniently.*
