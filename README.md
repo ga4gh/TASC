@@ -59,7 +59,7 @@ TASC benefits from dedicated support provided by the GA4GH Staff Technical Team,
 | Jeremy Adams | TASC Lead, Staff Technical Team|
 | Melissa Konopko | TASC Lead, Staff Technical Team |
 | Rishi Nag | TASC Lead, Staff Technical Team |
-| Susan Fairley | Chief Product Officer |
+| Susan Fairley | Chief Standards Officer |
 | Yasasvini Puligundla | Staff Technical Team |
 | Amreen Mohamed | Staff Technical Team |
 | Neerjah Skantharajah | Staff Technical Team |
