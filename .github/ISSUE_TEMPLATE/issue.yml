@@ -8,29 +8,31 @@ body:
         Please fill out the form to raise an issue at TASC. Your issue will be reviewed at the earliest oppertunity
   - type: textarea
     id: problem
-    label: Issue statement
-    description: What is the issue you have noted
-    value: Please describe the issue here
+    attributes:
+      label: Issue statement
+      description: What is the issue you have noted
+      value: Please describe the issue here
     validations:
       required: true
   - type: textarea
     id: solution
-    label: Proposed solution(s)
-    description: What solutions have you considered to resolve this issue?
-    value: Please describe your solution. If you do not have one yet leave this section blank
+    attributes:
+      label: Proposed solution(s)
+      description: What solutions have you considered to resolve this issue?
+      value: Please describe your solution. If you do not have one yet leave this section blank
     validations:
       required: false
   - type: textarea
     id: context
-    label: Additional context
-    description: What additional context or knowledge is needed?
-    value: Please provide any additional pieces of information you feel is relevant to this issue
+    attributes:
+      label: Additional context
+      description: What additional context or knowledge is needed?
+      value: Please provide any additional pieces of information you feel is relevant to this issue
     validations:
       required: false
   - type: checkboxes
-    id: workstream
+    id: raising-group
     attributes:
-      id: raising-group
       label: Which work stream/groups are raising the issue?
       description: You may select more than one. You can select other and mention the group below
       options:
@@ -46,16 +48,16 @@ body:
         - label: GIF
         - label: Tech team
         - label: Other
-      validations:
-        required: true
+    validations:
+      required: true
   - type: input
+    id: other-raising-group
     attributes:
-      id: other-raising-group
-      label: Which other group is raising the issue?
+      label: If you selected other, please state the additional groups
       placeholder: Please state the groups and comma separate them
   - type: checkboxes
+    id: impact-group
     attributes:
-      id: impact-group
       label: Which work stream/groups do you think will be impacted by this?
       description: You may select more than one or leave this blank
       options:
@@ -71,12 +73,12 @@ body:
         - label: GIF
         - label: Tech team
         - label: Other
-      validations:
-        required: false
+    validations:
+      required: false
   - type: input
+    id: other-impact-group
     attributes:
-      id: other-impact-group
-      label: Which other group is raising the issue?
+      label: If you selected other, please state those impacted groups
       placeholder: Please state the groups and comma separate them
-      validations:
-        required: false
+    validations:
+      required: false
