@@ -59,12 +59,12 @@ A representative from the DaMaSC sub-group participates in TASC decisions as a v
 TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
 
 | Member | Role |
-|--------|-------|------|
-| **Reggan Thomas** (reggan.thomas@ga4gh.org | Staff Technical Team Support |
-| **Jimmy Payyappilly** | Staff Technical Team |
-| **Chen Chen** | Staff Technical Team |
-| **Dashrath Chauhan** | Staff Technical Team |
-| **Deeptha Srirangam** | Staff Technical Team |
+|--------|------|
+| **Reggan Thomas** (reggan.thomas@ga4gh.org) | Technical Team Support |
+| **Jimmy Payyappilly** | Technical Team |
+| **Chen Chen** | Technical Team |
+| **Dashrath Chauhan** | Technical Team |
+| **Deeptha Srirangam** | Technical Team |
 | **Angela Page** | Communications Team |
 | **Jon Turner** | Web Development Team |
 
@@ -80,15 +80,15 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 | Marc Fiume | Discovery |
 | Ian Fore | Discovery, FASP |
 | Craig Voisin | DURI |
-| Jeremy Adams | TASC Lead, Staff Technical Team|
-| Melissa Konopko | TASC Lead, Staff Technical Team |
-| Rishi Nag | TASC Lead, Staff Technical Team |
+| Jeremy Adams | TASC Lead, Technical Team|
+| Melissa Konopko | TASC Lead, Technical Team |
+| Rishi Nag | TASC Lead, Technical Team |
 | Susan Fairley | Chief Standards Officer |
-| Yasasvini Puligundla | Staff Technical Team |
-| Amreen Mohamed | Staff Technical Team |
-| Neerjah Skantharajah | Staff Technical Team |
-| Yasmeen Kurdi | Staff Technical Team |
-| Alex Tsai | Staff Technical Team |
+| Yasasvini Puligundla | Technical Team |
+| Amreen Mohamed | Technical Team |
+| Neerjah Skantharajah | Technical Team |
+| Yasmeen Kurdi | Technical Team |
+| Alex Tsai | Technical Team |
 
 ## Group Meeting Format
 
