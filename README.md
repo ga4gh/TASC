@@ -41,7 +41,7 @@ The CPO ensures that the team creates GA4GH-wide technical alignment and that th
 | **Michael Baudis** | Discovery |
 | **Venkat Malladi & Alex Kanitz** | Cloud |
 | **John Marshall** | Large Scale Genomics |
-| **Jonathan Lawson** | DURI |
+| **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
 | **Bob Freimuth & Alex Wagner** | GKS |
 | **Francesca Frexia** | Clin/Pheno |
 | **David Bernick** | Data Security |
