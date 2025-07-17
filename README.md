@@ -2,101 +2,169 @@
 
 # GA4GH Technical Alignment Sub Committee (TASC) [![](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/ga4gh-discovery/ga4gh-service-registry/develop/LICENSE)
 
-The Tech Alignment Sub-Committee (TASC) Team provides mechanisms and recommendations to create internal consistency and technical alignment across GA4GH Work Streams and deliverables.
+The Technical Alignment Sub-Committee (TASC) of the GA4GH Product Steering Committee (PSC) aids the harmonisation of GA4GH's technical products to ensure they can be used together effectively. TASC provides outputs and decisions to create internal consistency and technical alignment across GA4GH Work Streams and deliverables.
 
-GA4GH aims to balance agility with mechanisms that will allow our teams to develop an interconnected suite of standards and reduce the burden of repeated internal landscape analyses. The alignment-focused Sub-Committee of the GA4GH Steering Committee TASC will function as a central decision-making group, including the documentation and communication of these decisions across multiple stakeholders.
+While TASC functions as a central decision-making body, all of its decisions are informed by relevant stakeholders. The TASC outputs, including all decisions, are regularly and openly communicated back to the GA4GH community. Where appropriate, TASC will action product development related to technical alignment within its structure when a need is identified and would benefit the GA4GH community, the nature of the work does not naturally fit within one of the workstreams, the work requires significant cross-workstream development, and where sufficient interest and resources exist to develop the solution.
 
-The collective resources in the TASC will help inform the peer review of standards inside of GA4GH but do not by themselves mandate adoption. The benefit of participating in the interoperable GA4GH suite of standards, rather, would drive uptake.
+TASC organizes and monitors its technical alignment activities through a [GitHub Project board](https://github.com/orgs/ga4gh/projects/9/views/1), where you can find and track the progress of current issues and initiatives.
 
 ## Table of Contents
-- [TASC members](#tasc-members)   
-- [What kinds of issues should be submitted to TASC?](#what-kinds-of-issues-should-be-submitted-to-tasc)  
-- [How to submit](#how-to-submit)   
-- [What should be included in the submission](#what-should-be-included-in-the-submission)   
-- [What to Expect](#what-to-expect)   
+- [TASC Structure](#tasc-structure)
+- [TASC Members](#tasc-members)   
+- [Group Meeting Format](#group-meeting-format)
+- [Decision-Making Process](#decision-making-process)   
 - [Issue labels](#issue-labels)   
 
+## TASC Structure
+
+TASC is responsible for the development and oversight of solutions (including directives and products) to technical alignment issues across GA4GH workstreams. The TASC member network consists of participants to relay technical alignment issues and insights based on product knowledge and expertise, as well as voting members who will make and uphold decisions regarding solutions in the best interest of GA4GH products collectively.
+
 ## TASC members
-TASC consists of at least 1 volunteer representative from each Work Stream from members of the Steering Committee or a proxy nominated by the SC member, representing multiple countries and organizations.
 
-[TASC Github Project board](https://github.com/orgs/ga4gh/projects/7)
+### Voting Members
 
-| Member                           | Work Stream          |
-|----------------------------------|----------------------|
-| Ian Fore & Michael Baudis        | Discovery            |
-| James Eddy & Alex Kanitz         | Cloud                |
-| John Marshall    | Large Scale Genomics |
-| Jonathan Lawson  | DURI                 |
-| Bob Freimuth & Alex Wagner     | GKS                  |
-| Francesca Frexia | Clin/Pheno           |
-| David Bernick    | Security             |
-| Mamana Mbiyavanga| Lead                 |
-| Andy Yates    | Lead                 |
-| Susan Fairley    | Chief Standards Officer |
+#### TASC Leadership
+- **Mamana Mbiyavanga** - Co-lead
+- **Andy Yates** - Co-lead
 
-### Tech Team Support
+The TASC Leadership is composed of two volunteer co-leads who are responsible for convening the group, setting its agenda, facilitating decisions, and serving as the central point of communication for stakeholders. The CPO decides who holds the co-lead positions.
 
+#### Chief Product Officer (CPO)
+- **Sasha Siegel** - Chief Product Officer
+
+The CPO ensures that the team creates GA4GH-wide technical alignment and that the needs of GA4GH are appropriately considered in any TASC outputs.
+
+#### Work Stream Representatives
+
+| Member | Work Stream |
+|--------|-------------|
+| **Michael Baudis** | Discovery |
+| **Venkat Malladi & Brian O’Connor** | Cloud |
+| **John Marshall** | Large Scale Genomics |
+| **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
+| **Alex Wagner & Melissa Cline** | GKS |
+| **Benjamin Berk & Monica Munoz-Torres** | Clin/Pheno |
+| **Tom Conner & Jaime Delgado** | Data Security |
+
+Two volunteer representatives from each technical Work Stream and Data Security–preferably the Work Stream Co-leads–provide knowledge and insight for their respective GA4GH products and communicate as liaisons.
+
+#### DaMaSC Sub-group Representative
+- **Kathy Reinold** - DaMaSC
+
+A representative from the DaMaSC sub-group participates in TASC decisions as a voting member.
+
+### Non-Voting Members (Advisory/Contributors)
+
+#### GA4GH Staff
 TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
 
-| Member               | Email                          | Github Handle                                         |
-|----------------------|--------------------------------|-------------------------------------------------------|
-| Amreen Mohamed | amreen.mohamed@ga4gh.org | |
-| Neerjah Skantharajah |||
-| Jimmy Payyappilly |||
-| Yasmeen Kurdi |||
-| Reggan Thomas |||
-| Angela Page |||
-| Chen Chen            || [Chen2x](https://github.com/Chen2x)                   |
-| Alex Tsai            || [alextsaihi](https://github.com/alextsaihi)           |
+| Member | Role |
+|--------|-------|------|
+| **Reggan Thomas** (reggan.thomas@ga4gh.org | Staff Technical Team Support |
+| **Jimmy Payyappilly** | Staff Technical Team |
+| **Chen Chen** | Staff Technical Team |
+| **Dashrath Chauhan** | Staff Technical Team |
+| **Deeptha Srirangam** | Staff Technical Team |
+| **Angela Page** | Communications Team |
+| **Jon Turner** | Web Development Team |
 
+#### Other Non-Voting Members
+- Invited representative(s) from the Strategic Leadership Committee (SLC)
+- Invited experts from the GA4GH community
+- Other appropriate members of the GA4GH staff
 
-## What kinds of issues should be submitted to TASC?
-*TASC aids the harmonisation of aspects of GA4GH's various products that would otherwise prevent different products from being used together conveniently.*
+### Past contributors
 
-**TASC works on projects that address issues that lower the barriers to organisation-wide harmonisation between GA4GH products.**
+| Member | Work Stream / Role |
+|--------|------------------------|
+| Marc Fiume | Discovery |
+| Ian Fore | Discovery, FASP |
+| Craig Voisin | DURI |
+| Jeremy Adams | TASC Lead, Staff Technical Team|
+| Melissa Konopko | TASC Lead, Staff Technical Team |
+| Rishi Nag | TASC Lead, Staff Technical Team |
+| Susan Fairley | Chief Standards Officer |
+| Yasasvini Puligundla | Staff Technical Team |
+| Amreen Mohamed | Staff Technical Team |
+| Neerjah Skantharajah | Staff Technical Team |
+| Yasmeen Kurdi | Staff Technical Team |
+| Alex Tsai | Staff Technical Team |
 
-### Some examples of these might be
-- Ongoing reviews for proposals either within TASC or in a further subgroup
-- Creation of a register (e.g. service info types, schema blocks) together with a management process
-- Production of a guideline document
-- Update to the Product Approval Process Documentation
+## Group Meeting Format
 
-### TASC will not work on projects that
-- Should be a Work Stream product: ie it will be a specification, intended for outside use, is something that would need to go through the approval process.
-- Should be decided by the full SC; for example is a matter of GA4GH governance
-- Not feasible e.g. too onerous to manage
-- Major software development required
-- Too imposing on how teams manage their operations
+TASC meets monthly in either *open* or *closed* sessions to review unresolved issues, discuss unmet needs, review TASC work, and review GA4GH technical standards submitted to PSC for approval. Topics requiring sensitive discussion or voting are conducted in closed sessions.
 
-## How to submit
-Project ideas should be submitted through the [Github issues](https://github.com/ga4gh/TASC/issues) on the TASC repository.
+For asynchronous discussion, members use:
+- **Mailing List**: [tasc@ga4gh.org](mailto:tasc@ga4gh.org)
+- **GitHub**: [https://github.com/ga4gh/TASC](https://github.com/ga4gh/TASC)
+- **Slack**: GA4GH Slack Workspace, #tasc channel
 
-## What should be included in the submission
-- Clear problem statement
-- Explanation of how this impacts alignment between GA4GH standards
-- Background research and landscape analysis
-- Proposed solution
+## Decision-Making Process
 
-## What to Expect
+### **Step 1: Collecting and Evaluating Issues**
+1. Any GA4GH community member may raise technical alignment concerns as [new Issues](https://github.com/ga4gh/TASC/issues)
+2. TASC co-leads and CPO triage issues and present them to the wider TASC group
+3. TASC group decides whether to accept IN SCOPE issues or close OUT OF SCOPE issues based on criteria:
+   - **IN SCOPE**: Multiple invested adopters AND must do one or more of the following:
+     - Aid the harmonisation of aspects of GA4GH's various products, including the development, documentation, and deployment of said products (e.g., supporting schema alignment via DaMaSC)
+     - Lower the barriers to organisation-wide harmonisation between GA4GH products
+     - Produce directives, policies, and other documents that may enable greater harmonisation, interoperability, or use of specific GA4GH standards
+   - **OUT OF SCOPE**: Issues may be closed if they:
+     - Are not feasible (e.g., too onerous to manage)
+     - Require significant development with lack of sufficient resources/interest to develop within TASC
+     - Impose significant operational requirements on existing teams
 
-A project submitted to the TASC will go through several steps.
-- **New issues**: Issues will enter a queue for review. 
-    - Inputs expected from the issue submitter.
-- **Assessment**: After submission, the TASC leadership team will review the issue to ensure that it contains the required elements as stated in the previous section and if it meets the guidelines of what kinds of projects TASC will undertake.  If it needs additional information, the submitter will be notified, the issue will be returned to the “New Issues” queue, and it will be tagged for Revision. 
-    - Inputs expected from the TASC leadership and the issue submitter.
-- **Under Discussion**: Once a project has been accepted by TASC leadership, it is passed to the team for discussion.  As in the assessment stage, the full team can also request more information or determine if the meets the TASC guidelines as they analyze the issue in more detail.  In this stage, the team determines a way forward for the project. 
-    - Inputs expected from the TASC team
-- **Solution Building**:  The team works on a solution to the problem. 
-    - Inputs expected from the TASC team
-- **Blocked**: A temporary holding place while we wait for external issues to be resolved.
-    - Inputs expected from the TASC team
-- **Resolution**: A resolution is proposed and discussed by the team.  The team and leadership vote on the solution.  If work needs to continue, the project is sent back to the Under Discussion or Solution Building phase. 
-    - Inputs expected from the TASC leadership.
-- **Complete**: The agreed-upon solution is disseminated to the GA4GH workstreams.  Note: The Steering Committee has the ability to overrule TASC solutions that they find to be problematic. 
-    - Inputs expected from the TASC leadership and the Steering Committee.
+4. **TASC Product Development Criteria**: TASC will action product development when:
+   - A need is identified and would benefit the GA4GH community
+   - The nature of the work does not naturally fit within one of the workstreams
+   - The work requires significant cross-workstream development
+   - Sufficient interest and resources exist to develop the solution
 
-You can track the status of your issue in the [TASC’s Github projects board](https://github.com/orgs/ga4gh/projects/7).
+5. **Cross-Workstream Development**: IN SCOPE issues that would generate outputs requiring sufficient levels of cross-work stream development, that can't realistically be developed in the conventional work streams, may be developed at the discretion of TASC and/or PSC
 
+6. **Output Types and Approval Process**:
+   - Internal-use outputs (enterprise tools, infrastructure) WILL NOT be subject to product development and approval process
+   - Directives and policy statements WILL NOT be subject to product development and approval process but MUST be reviewed and approved by PSC
+   - External-facing products (e.g., standard specifications) WILL be subject to product development and approval process
+   - Other outputs will be reviewed and governed as per the discretion of TASC
+
+### **Step 2: Working on a Solution**
+1. **Project Board Management**: Issues are added to the [TASC project board](https://github.com/orgs/ga4gh/projects/9/views/1?filterQuery=-status%3ADone) and scoped accordingly. Any proposals deemed out of scope are documented with reasons to maintain a decision log and retired. Any issue can be reactivated should interest and resources become available in the future.
+
+2. **Product Owner Assignment**: Two TASC members (product owners) must be assigned to in-scope issues. In the event that the most appropriate team to work on a solution is a subgroup, the issue will be actioned there. TASC will also seek adopters to help contribute towards solutions.
+
+3. **Research and Stakeholder Consultation**: Product owners research the issue, talking to relevant stakeholders and summarising their findings in a brief memo (as a Google document or GitHub repository).
+
+4. **Open Community Review**: GA4GH staff makes the memo available for open comment on the GA4GH website.
+
+5. **Development Planning**: Any outputs proposed for development following stakeholder consultation are brought to TASC for discussion. Any output approved for development may need larger teams, and the product owner is accountable for creating the development team needed for the work, including the formation of subgroups.
+
+6. **Community Input**: All GA4GH active contributors, including TASC members, have a chance to weigh in on the memo.
+
+7. **Pre-Vote Preparation**: ALL TASC members are expected to have read the memo prior to the scheduled vote.
+
+### **Step 3: Making Decisions**
+1. Two issue owners seek a vote from TASC members (asynchronous, one calendar month)
+2. Voting options: approve, reject, or abstain
+3. Approval threshold: 70% of total eligible members with "yes" vote
+4. **Voting Process Aims**:
+   - Ascertain high level of consensus rather than unanimity
+   - Ensure those with opinions, objections, or contributions have opportunity to share thoughts
+   - Ensure relevant GA4GH processes have been followed correctly
+5. **Product Requirements**: Members must ensure products/outcomes:
+   - Do what they're designed to do without unduly constraining future development
+   - Are intentionally aligned with other specs at key touchpoints
+   - Do not create unnecessary barriers to interoperability
+6. If approval not reached through multiple rounds, TASC Leadership makes final decision
+7. Leadership can take decisions if two consecutive meetings are not quorate
+8. Proposals open for more than 12 months must be taken to vote
+9. Final decisions recorded in [Architectural Decision Records](https://adr.github.io/)
+10. CPO may reopen issues or review decisions in consultation with PSC, TASC, SLC, or GA4GH Executive Committee
+
+### **Step 4: Dissemination**
+1. Decisions included in GA4GH communications and published to website
+2. TASC members maintain awareness within their work streams
+3. Content-specific indices and repositories created as needed
 
 ## Issue labels
 ### By Status (Open)
@@ -108,7 +176,7 @@ You can track the status of your issue in the [TASC’s Github projects board](h
 - **Out of Scope**: Issue or pull request not a TASC task and will not be looked at
 
 ### By Area
-- **Documentation**: Improvements or additions to a documentation
+- **Documentation**: Improvements or additions to documentation
 - **Product Approval Process**: Going through GA4GH approval's process
 - **Update to existing TASC managed process**: Improvements or additions to TASC managed process
 
