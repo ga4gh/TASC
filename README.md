@@ -44,7 +44,7 @@ The CPO ensures that the team creates GA4GH-wide technical alignment and that th
 | **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
 | **Bob Freimuth & Alex Wagner** | GKS |
 | **Francesca Frexia** | Clin/Pheno |
-| **David Bernick** | Data Security |
+| **Tom Conner & Jaime Delgado** | Data Security |
 
 Two volunteer representatives from each technical Work Stream and Data Security–preferably the Work Stream Co-leads–provide knowledge and insight for their respective GA4GH products and communicate as liaisons.
 
