@@ -39,11 +39,11 @@ The CPO ensures that the team creates GA4GH-wide technical alignment and that th
 | Member | Work Stream |
 |--------|-------------|
 | **Michael Baudis** | Discovery |
-| **Venkat Malladi & Alex Kanitz** | Cloud |
+| **Venkat Malladi & Brian O’Connor** | Cloud |
 | **John Marshall** | Large Scale Genomics |
 | **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
-| **Bob Freimuth & Alex Wagner** | GKS |
-| **Francesca Frexia** | Clin/Pheno |
+| **Alex Wagner & Melissa Cline** | GKS |
+| **Benjamin Berk & Monica Munoz-Torres** | Clin/Pheno |
 | **Tom Conner & Jaime Delgado** | Data Security |
 
 Two volunteer representatives from each technical Work Stream and Data Security–preferably the Work Stream Co-leads–provide knowledge and insight for their respective GA4GH products and communicate as liaisons.
@@ -55,21 +55,40 @@ A representative from the DaMaSC sub-group participates in TASC decisions as a v
 
 ### Non-Voting Members (Advisory/Contributors)
 
-#### GA4GH Staff Technical Team
+#### GA4GH Staff
 TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
 
-| Member | Email | Role |
+| Member | Role |
 |--------|-------|------|
-| **Reggan Thomas** | reggan.thomas@ga4gh.org | Staff Technical Team Support |
-| **Jimmy Payyappilly** | | Staff Technical Team |
-| **Angela Page** | | Staff Technical Team |
-| **Chen Chen** | | Staff Technical Team |
-| **Jon Turner** | | Staff Technical Team |
+| **Reggan Thomas** (reggan.thomas@ga4gh.org | Staff Technical Team Support |
+| **Jimmy Payyappilly** | Staff Technical Team |
+| **Chen Chen** | Staff Technical Team |
+| **Dashrath Chauhan** | Staff Technical Team |
+| **Deeptha Srirangam** | Staff Technical Team |
+| **Angela Page** | Communications Team |
+| **Jon Turner** | Web Development Team |
 
 #### Other Non-Voting Members
 - Invited representative(s) from the Strategic Leadership Committee (SLC)
 - Invited experts from the GA4GH community
 - Other appropriate members of the GA4GH staff
+
+### Past contributors
+
+| Member | Work Stream / Role |
+|--------|------------------------|
+| Marc Fiume | Discovery |
+| Ian Fore | Discovery, FASP |
+| Craig Voisin | DURI |
+| Jeremy Adams | TASC Lead, Staff Technical Team|
+| Melissa Konopko | TASC Lead, Staff Technical Team |
+| Rishi Nag | TASC Lead, Staff Technical Team |
+| Susan Fairley | Chief Standards Officer |
+| Yasasvini Puligundla | Staff Technical Team |
+| Amreen Mohamed | Staff Technical Team |
+| Neerjah Skantharajah | Staff Technical Team |
+| Yasmeen Kurdi | Staff Technical Team |
+| Alex Tsai | Staff Technical Team |
 
 ## Group Meeting Format
 
