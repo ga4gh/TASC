@@ -24,6 +24,24 @@ prefixes:
       schema: https://w3id.org/ga4gh/schema/vrs/2.0/json/Allele
 ```
 
+### Type Prefixes
+
+![GA4GH type prefixes](./img/type-prefixes.png)
+
+A GA4GH identifier is constructed according to this syntax:
+
+```
+"ga4gh" ":" type_prefix "." digest
+```
+
+The `digest` is computed as described above. The type_prefix is a short alphanumeric code that corresponds to the type of object being represented.
+
+These are our recommendations for type prefixes:
+
+* Prefixes SHOULD be short, ideally 2-4 characters.
+* Prefixes SHOULD be for concrete types, not polymorphic parent classes.
+* A prefix MUST map 1:1 with a schema type.
+
 ## Process
 
 Additional namespace type prefixes raised as required for standards. It is recommended that this is done in conjunction with the preparation of Product Approval documentation. Prefix requests require the approval of the specification product owners. For further guidelines see [the GA4GH Product Approval Process Guide](https://w3id.org/ga4gh/product-approval).
