@@ -79,6 +79,7 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 |--------|------------------------|
 | Marc Fiume | Discovery |
 | Ian Fore | Discovery, FASP |
+| David Bernick | Data Security |
 | Craig Voisin | DURI |
 | Jeremy Adams | TASC Lead, Technical Team|
 | Melissa Konopko | TASC Lead, Technical Team |
