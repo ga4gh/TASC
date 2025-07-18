@@ -37,6 +37,7 @@ The `digest` is computed as described above. The type_prefix is a short alphanum
 These are our recommendations for type prefixes:
 
 * Prefixes SHOULD be short, ideally 2-4 characters.
+* Characters MUST be uppercase only.
 * Prefixes SHOULD be for concrete types, not polymorphic parent classes.
 * A prefix MUST map 1:1 with a schema type.
 
@@ -57,3 +58,7 @@ If an item is to be retired or renamed, the existing entry should be retained wi
 
 - `status`, which must be one of `"superseded"` or `"withdrawn"`;
 - `note`, which is a free-form string describing why the item is no longer active.
+
+## Notes
+
+It is strongly recommended that these prefixes do not change with new versions of the product.
