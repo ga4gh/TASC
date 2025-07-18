@@ -26,7 +26,7 @@ prefixes:
 
 ## Process
 
-Additional namespace type prefixes raised as required for standards. It is recommended that this is done in conjunction with the preparation of Product Approval documentation. For further guidelines see [the GA4GH Product Approval Process Guide](https://w3id.org/ga4gh/product-approval).
+Additional namespace type prefixes raised as required for standards. It is recommended that this is done in conjunction with the preparation of Product Approval documentation. Prefix requests require the approval of the specification product owners. For further guidelines see [the GA4GH Product Approval Process Guide](https://w3id.org/ga4gh/product-approval).
 
 To add an item to this list, please take the following steps:
 
