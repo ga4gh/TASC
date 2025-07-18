@@ -1,4 +1,4 @@
-# GA4GH Service Info Types
+# GA4GH Persistent URL Redirects
 
 This file details how to register prefixes and resolution patterns for the `GA4GH` namespace.
 
