@@ -82,3 +82,11 @@ body:
       placeholder: Please state the groups and comma separate them
     validations:
       required: false
+  - type: textarea
+    id: products
+    attributes:
+      label: Products affected
+      description: Are there any products affected by this issue
+      value: Please list them here. It does not need to be exhaustive
+    validations:
+      required: false
