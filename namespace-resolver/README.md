@@ -26,8 +26,6 @@ prefixes:
 
 ### Type Prefixes
 
-![GA4GH type prefixes](./img/type-prefixes.png)
-
 A GA4GH identifier is constructed according to this syntax:
 
 ```
