@@ -43,15 +43,15 @@ body:
       label: Problem Statement
       description: Describe the technical alignment issue clearly
       placeholder: |
-        **Current State:**
+        Current State:
         - What is the current situation?
         - What specific problems exist?
         
-        **Desired State:**
+        Desired State:
         - What should the ideal situation be?
         - What would success look like?
         
-        **Impact:**
+        Impact:
         - How does this affect GA4GH products?
         - What interoperability issues does this create?
     validations:
@@ -64,10 +64,10 @@ body:
       placeholder: |
         Please address each of the following:
         
-        ✅ **Harmonization Impact**: How does this aid harmonization of GA4GH products?
-        ✅ **Barrier Reduction**: What barriers to organization-wide harmonization does this address?
-        ✅ **Alignment Challenges**: Which specific alignment challenges does this solve?
-        ✅ **Cross-Work Stream**: Does this require cross-work stream development?
+        ✅ Harmonization Impact: How does this aid harmonization of GA4GH products?
+        ✅ Barrier Reduction: What barriers to organization-wide harmonization does this address?
+        ✅ Alignment Challenges: Which specific alignment challenges does this solve?
+        ✅ Cross-Work Stream: Does this require cross-work stream development?
         
         If your issue doesn't address these criteria, it may be better suited for a specific work stream.
     validations:
@@ -78,11 +78,11 @@ body:
       label: Proposed Solution(s)
       description: What solutions have you considered?
       placeholder: |
-        **Approach Options:**
+        Approach Options:
         - What specific approach do you recommend?
         - Are there alternative solutions to consider?
         
-        **Implementation:**
+        Implementation:
         - Does this require TASC subgroup formation?
         - What resources would be needed?
         - Are there existing solutions or work in progress?
@@ -106,15 +106,15 @@ body:
       label: Success Criteria
       description: How will you know this issue is resolved?
       placeholder: |
-        **Measurable Outcomes:**
+        Measurable Outcomes:
         - What specific deliverables are expected?
         - How will success be measured?
         
-        **Key Metrics:**
+        Key Metrics:
         - What indicators will show progress?
         - What would constitute completion?
         
-        **Timeline:**
+        Timeline:
         - When should this be completed?
         - Are there any milestones or checkpoints?
     validations:
@@ -197,15 +197,15 @@ body:
       label: Key Stakeholders to Consult
       description: Identify stakeholders who should be involved in the solution
       placeholder: |
-        **Organizations/Communities:**
+        Organizations/Communities:
         - Which organizations will be affected?
         - What communities should be consulted?
         
-        **Technical Experts:**
+        Technical Experts:
         - Who has relevant technical expertise?
         - Are there subject matter experts to involve?
         
-        **Decision Makers:**
+        Decision Makers:
         - Who needs to approve or be informed?
         - Are there external partners to engage?
     validations:
@@ -224,15 +224,15 @@ body:
       label: Additional Context
       description: Any other relevant information
       placeholder: |
-        **Background Research:**
+        Background Research:
         - What research or analysis has been done?
         - Are there existing discussions or documents?
         
-        **Related Work:**
+        Related Work:
         - Are there similar issues or related projects?
         - What lessons can be learned from past work?
         
-        **References:**
+        References:
         - Links to relevant documentation
         - Citations to standards or specifications
         - References to existing implementations
