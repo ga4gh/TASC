@@ -1,4 +1,4 @@
-# GA4GH Service Info Types
+# GA4GH Namespaced Identifier Registration
 
 This file details how to register prefixes and resolution patterns for the `GA4GH` namespace.
 
