@@ -8,7 +8,7 @@ GA4GH standards such as refget and VRS provide methods for the construction of c
 
 ## Using This File
 
-`identifier-prefixes.yaml` captures the identifier name, schema URI, and documentation URI, as applicable.
+`identifier-prefixes.yaml` captures the identifier name, schema URI, and documentation URI, as applicable. Prefixes are used to represent specific concepts, though schemas for these concepts may change over time. The schema URI, therefore, can be used as a representative of this concept but SHOULD NOT be assumed to be the only schema for this concept. Concept definitions should be retrievable from the documentation URI.
 
 ### YAML format
 
