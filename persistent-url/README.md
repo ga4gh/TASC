@@ -20,4 +20,8 @@ Creating a persistent URL redirect rule requires taking the following actions:
   2. Ensure that your redirect rules point to the correct location
   3. Fork the [ga4gh w3id.org](https://github.com/ga4gh/w3id.org) repository
   4. Create a Pull Request adding your redirect rule(s) to the [.htaccess file](https://github.com/ga4gh/w3id.org/blob/master/ga4gh/.htaccess)
-  5. GA4GH TASC will review and inform on subsequent steps
+  5. GA4GH TASC will review and inform on subsequent steps, including squash merge and PRs to the upstream w3id.org repo
+
+## TASC Responsibilities
+
+TASC will maintain a regular sync interval with the upstream w3id.org repository.
