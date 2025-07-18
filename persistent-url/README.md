@@ -14,7 +14,7 @@ Currently, TASC requires persistent URL patterns related to schemas to use the f
 
 ## Process
 
-Creating a persistent URL redirect rule requires taking the following actions:
+Creating or editing a persistent URL redirect rule requires taking the following actions:
 
   1. Ensure that your persistent URL pattern meets the above criteria
   2. Ensure that your redirect rules point to the correct location
