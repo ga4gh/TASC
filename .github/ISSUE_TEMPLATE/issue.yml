@@ -1,0 +1,277 @@
+name: TASC issue
+description: Raise an issue for TASC to review
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # TASC Issue Submission Form
+        
+        Welcome! This form helps you submit technical alignment issues to the TASC (Technical Alignment Sub-Committee).
+        
+        **Before you begin:**
+        - Review the [TASC governance process](https://github.com/ga4gh/TASC/blob/main/README.md#what-kinds-of-issues-should-be-submitted-to-tasc)
+        - Ensure your issue aligns with TASC scope criteria
+        - Gather relevant information about affected work streams
+        
+        ---
+  - type: input
+    id: issue-title
+    attributes:
+      label: Issue Title
+      description: Provide a clear, concise title for your issue
+      placeholder: "e.g., Standardize API response format across Discovery services"
+    validations:
+      required: true
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of technical alignment issue is this?
+      options:
+        - Product Harmonization
+        - Schema Alignment
+        - Cross-Work Stream Development
+        - Directive Document
+        - Process Improvement
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Describe the technical alignment issue clearly
+      placeholder: |
+        **Current State:**
+        - What is the current situation?
+        - What specific problems exist?
+        
+        **Desired State:**
+        - What should the ideal situation be?
+        - What would success look like?
+        
+        **Impact:**
+        - How does this affect GA4GH products?
+        - What interoperability issues does this create?
+    validations:
+      required: true
+  - type: textarea
+    id: scope-validation
+    attributes:
+      label: Scope Validation
+      description: Explain how this issue fits TASC scope criteria
+      placeholder: |
+        Please address each of the following:
+        
+        ✅ **Harmonization Impact**: How does this aid harmonization of GA4GH products?
+        ✅ **Barrier Reduction**: What barriers to organization-wide harmonization does this address?
+        ✅ **Alignment Challenges**: Which specific alignment challenges does this solve?
+        ✅ **Cross-Work Stream**: Does this require cross-work stream development?
+        
+        If your issue doesn't address these criteria, it may be better suited for a specific work stream.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution(s)
+      description: What solutions have you considered?
+      placeholder: |
+        **Approach Options:**
+        - What specific approach do you recommend?
+        - Are there alternative solutions to consider?
+        
+        **Implementation:**
+        - Does this require TASC subgroup formation?
+        - What resources would be needed?
+        - Are there existing solutions or work in progress?
+        
+        *If you don't have a solution yet, describe what you've tried or researched.*
+    validations:
+      required: false
+  - type: dropdown
+    id: effort-level
+    attributes:
+      label: Estimated Effort Level
+      description: How much work do you think this will require?
+      options:
+        - Low (1-2 months, minimal resources)
+        - Medium (3-6 months, moderate resources)
+        - High (6+ months, significant resources)
+        - Unknown (needs further assessment)
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How will you know this issue is resolved?
+      placeholder: |
+        **Measurable Outcomes:**
+        - What specific deliverables are expected?
+        - How will success be measured?
+        
+        **Key Metrics:**
+        - What indicators will show progress?
+        - What would constitute completion?
+        
+        **Timeline:**
+        - When should this be completed?
+        - Are there any milestones or checkpoints?
+    validations:
+      required: false
+  - type: textarea
+    id: alignment
+    attributes:
+      label: How will this issue aid GA4GH harmonization?
+      description: Explain how this issue fits TASC scope criteria
+      value: |
+        - How does this aid harmonization of GA4GH products?
+        - What barriers to organization-wide harmonization does this address?
+        - Which specific alignment challenges does this solve?
+        - Does this require cross-work stream development?Please describe the issue here
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: What additional context or knowledge is needed?
+      value: Please provide any additional pieces of information you feel is relevant to this issue
+    validations:
+      required: false
+  - type: checkboxes
+    id: raising-workstreams
+    attributes:
+      label: Work Streams Raising This Issue
+      description: Select all work streams that are raising this issue
+      options:
+        - label: Clinical & Phenotypic Data (Clin/Pheno)
+        - label: Cloud Work Stream
+        - label: Data Security
+        - label: Data Use & Researcher IDs (DURI)
+        - label: Discovery
+        - label: Genomic Knowledge Standards (GKS)
+        - label: Large Scale Genomics (LSG)
+        - label: Regulatory & Ethics (REWS)
+        - label: Data Models & Schemas Committee (DaMaSC)
+        - label: Genomic Implementation Forum (GIF)
+        - label: Technical Team
+        - label: Other (specify below)
+    validations:
+      required: true
+  - type: input
+    id: other-raising-groups
+    attributes:
+      label: Other Groups Raising This Issue
+      description: If you selected "Other", please specify the groups
+      placeholder: "e.g., Driver Projects, External Partners, etc."
+  - type: checkboxes
+    id: impacted-workstreams
+    attributes:
+      label: Work Streams That Will Be Impacted
+      description: Select all work streams that will be affected by this issue
+      options:
+        - label: Clinical & Phenotypic Data (Clin/Pheno)
+        - label: Cloud Work Stream
+        - label: Data Security
+        - label: Data Use & Researcher IDs (DURI)
+        - label: Discovery
+        - label: Genomic Knowledge Standards (GKS)
+        - label: Large Scale Genomics (LSG)
+        - label: Regulatory & Ethics (REWS)
+        - label: Data Models & Schemas Committee (DaMaSC)
+        - label: Genomic Implementation Forum (GIF)
+        - label: Technical Team
+        - label: Other (specify below)
+    validations:
+      required: false
+  - type: input
+    id: other-impacted-groups
+    attributes:
+      label: Other Groups That Will Be Impacted
+      description: If you selected "Other", please specify the groups
+      placeholder: "e.g., Driver Projects, External Partners, etc."
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Key Stakeholders to Consult
+      description: Identify stakeholders who should be involved in the solution
+      placeholder: |
+        **Organizations/Communities:**
+        - Which organizations will be affected?
+        - What communities should be consulted?
+        
+        **Technical Experts:**
+        - Who has relevant technical expertise?
+        - Are there subject matter experts to involve?
+        
+        **Decision Makers:**
+        - Who needs to approve or be informed?
+        - Are there external partners to engage?
+    validations:
+      required: false
+  - type: textarea
+    id: products
+    attributes:
+      label: Products affected
+      description: Are there any products affected by this issue
+      value: Please list them here. It does not need to be exhaustive
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: |
+        **Background Research:**
+        - What research or analysis has been done?
+        - Are there existing discussions or documents?
+        
+        **Related Work:**
+        - Are there similar issues or related projects?
+        - What lessons can be learned from past work?
+        
+        **References:**
+        - Links to relevant documentation
+        - Citations to standards or specifications
+        - References to existing implementations
+    validations:
+      required: false
+  - type: dropdown
+    id: priority-level
+    attributes:
+      label: Priority Level
+      description: How urgent is this issue?
+      options:
+        - Low (can be addressed in normal course of work)
+        - Medium (should be addressed within 3-6 months)
+        - High (blocking other work, needs attention soon)
+        - Critical (blocking multiple work streams, immediate attention needed)
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Additional Tags
+      description: Select any additional tags that apply
+      options:
+        - label: Documentation
+        - label: API
+        - label: Schema
+        - label: Security
+        - label: Performance
+        - label: Interoperability
+        - label: Compliance
+        - label: User Experience
+        - label: Infrastructure
+        - label: Testing
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **Next Steps:**
+        1. Your issue will be reviewed by TASC leadership
+        2. If accepted, it will be assigned to TASC members for investigation
+        3. You'll be notified of progress and invited to participate in discussions
+        
+        **Questions?** Contact the TASC team at [tasc@ga4gh.org](mailto:tasc@ga4gh.org) 
