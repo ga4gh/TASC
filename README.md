@@ -86,9 +86,9 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 | Rishi Nag | TASC Lead, Technical Team |
 | Susan Fairley | Chief Standards Officer |
 | Yasasvini Puligundla | Technical Team |
-| Amreen Mohamed | Technical Team |
-| Neerjah Skantharajah | Technical Team |
-| Yasmeen Kurdi | Technical Team |
+| Amreen Mohamed | Work Stream Coordinator |
+| Neerjah Skantharajah | Partner Engagement Manager |
+| Yasmeen Kurdi | Partner Engagement Coordinator |
 | Alex Tsai | Technical Team |
 
 ## Group Meeting Format
