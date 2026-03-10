@@ -1,4 +1,7 @@
 prefixes:
+  - SC:
+      name: refget sequence collection
+      documentation: https://ga4gh.github.io/refget/seqcols/#seqcol-protocol-functionality
   - SQ:
       name: refget sequence
       documentation: https://ga4gh.github.io/refget/sequences/#refget-checksum-algorithm
