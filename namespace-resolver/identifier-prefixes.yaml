@@ -5,6 +5,7 @@ prefixes:
   - SQC:
       name: refget sequence collection
       documentation: https://ga4gh.github.io/refget/seqcols/#seqcol-protocol-functionality
+      schema: https://ga4gh.github.io/refget/schemas/seqcol_extended_v1.0.0.json
   - VA:
       name: VRS Allele
       documentation: https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Allele.html
