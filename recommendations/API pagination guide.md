@@ -1,4 +1,4 @@
-# API pagination guide recommendation
+# API pagination guide
 
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-01  
@@ -18,34 +18,32 @@ The recommendation is a summary of the discussion at the London GA4GH Connect to
 
 ## Table of contents
 
-- [Recommendation](\#recommendation)
-- [Purpose of pagination](\#purpose-of-pagination)
-- [Pagination method recommendations](\#pagination-method-recommendations)
-  - [Page-based pagination](\#page-based-pagination)
-  - [Token-based pagination](\#token-based-pagination)
-  - [Security](\#security)
-  - [Consistency of results](\#consistency-of-results)
-- [Use cases](\#use-cases)
-  - [Use case - random seeking within a result set](\#use-case-random-seeking-within-a-result-set)
-  - [Use case - parallel block retrieval](\#use-case-parallel-block-retrieval)
-  - [Use case - streaming large result sets](\#use-case-streaming-large-result-sets)
-- [Pagination logic](\#pagination-logic)
-  - [Client side driven logic](\#client-side-driven-logic)
-  - [Server side driven logic](\#server-side-driven-logic)
-- [Considerations](\#considerations)
-  - [Existing GA4GH products implementing pagination](\#existing-ga4gh-products-implementing-pagination)
-- [References](\#references)
-- [Contributors](\#contributors)
+- [Recommendation](#recommendation)
+- [Background](#background)
+- [Detailed Guidance](#detailed-guidance)
+  - [Page-based pagination](#page-based-pagination)
+  - [Token-based pagination](#token-based-pagination)
+  - [Security](#security)
+  - [Consistency of results](#consistency-of-results)
+  - [Pagination logic](#pagination-logic)
+- [Use Cases](#use-cases)
+  - [Use case - random seeking within a result set](#use-case---random-seeking-within-a-result-set)
+  - [Use case - parallel block retrieval](#use-case---parallel-block-retrieval)
+  - [Use case - streaming large result sets](#use-case---streaming-large-result-sets)
+- [Considerations](#considerations)
+  - [Existing GA4GH products implementing pagination](#existing-ga4gh-products-implementing-pagination)
+- [References](#references)
+- [Contributors](#contributors)
 
 ## Recommendation
 
 Existing GA4GH products use a variety of pagination approaches which have been documented briefly below. GA4GH supports two types of pagination; token and page based pagination. A new GA4GH product SHOULD NOT use another pagination method without prior discussion with TASC. Page-based SHOULD be used when random seeking into a result set and when client querying flexibility must be retained. Token-based pagination SHOULD be used when streaming large multi-paged responses. Implementations MAY encode pagination logic into their responses. Existing products are not subject to this recommendation.
 
-## Purpose of pagination
+## Background
 
 Pagination allows clients to retrieve data in smaller, manageable chunks instead of receiving an entire result set in a single response. It intends to improve performance, reduce the size of result payloads, and to enhance user experience. In addition, pagination provides a structured approach to navigating data, making it easier to process, display, and analyse information. Regardless of the pagination technique chosen, a set of consistent parameters to control pagination in an API should be defined. The structure of the paginated response should follow a consistent format to aid clients in consuming the data as is detailed in this document.
 
-## Pagination method recommendations
+## Detailed Guidance
 
 ### Page-based pagination
 
@@ -145,8 +143,7 @@ After a successful response, the server MUST respond with the token to use in th
 - **total (optional)** \- The total number of results available in the result set. It is important for implementations to convey to clients that totals may be unpredictable due to the underlying nature of the technology used or query being performed.  
 - **prev\_page\_token (optional)** \- If available, the server might return the token representing the previous page.
 
-Clients SHOULD assume that tokens expire after 48 hours ("token lifetime") unless the product explicitly states otherwise. When servers migrate between token schemes they SHOULD support older schemes as well as new schemes for at least the token lifetime.  
-3\.
+Clients SHOULD assume that tokens expire after 48 hours ("token lifetime") unless the product explicitly states otherwise. When servers migrate between token schemes they SHOULD support older schemes as well as new schemes for at least the token lifetime.
 
 #### HTTP Response codes
 
@@ -198,47 +195,27 @@ In the case of APIs which require a client to provide authorization to access a 
 
 Because pagination forces data streaming over multiple requests, there is a possibility that new data has been added/deleted/modified between the first request and subsequent requests. A pagination implementation SHOULD attempt to maintain the consistency of pagination results to avoid duplication or missed records. If consistency of results is not guaranteed, this MUST be indicated in the product’s documentation. The ability to provide consistent results will depend on the underlying implementation of a product.
 
-## Use cases
-
-### Use case random seeking within a result set
-
-**Use page-based pagination**  
-
-Random-seeking is a functionality normally requested in human interaction interfaces or where more flexibility needs to be afforded to a client. In the first example, consider an interface which displays the results of a search. Using random-seeking allows a client to skip an arbitrary number of pages ahead in the results or configure the number of records displayed per page. By using random-seeking a product can afford future clients the ability to configure their paging requirements without enforcing a predetermined policy on all clients. It also allows a client to walk back and forth along a result set. Many underlying data querying technologies implement random seeking (e.g. Solr, ElasticSearch, MongoDB) and as such adoption is easy.
-
-### Use case parallel block retrieval
-
-**Use page-based pagination**  
-
-To speed up results retrieval, a client may wish to split results retrieval into multiple parallel requests. A client can construct URLs representing a block of data to retrieve based on a specified size and page into the results set. Parameters must be predictable and allow random seeking within a response (see above use-case).
-
-### Use case streaming large result sets
-
-**Use page-based pagination**  
-
-When encountering the “Deep Paging” issue i.e. where the number of results is a large number, many data querying technologies switch to a token-based system where the last result returned is remembered to ensure pagination consistency and predictability. Results processing is normally a one-way process i.e. you cannot request a prior page.
-
 ### Pagination logic
 
 An implementation may choose to drive the pagination logic from a client or from the server, however the server ultimately controls how to paginate through a results set.
 
-### Client side driven logic
+#### Client side driven logic
 
 Client side driven logic indicates the client itself is responsible for the development of code to paginate. If page pagination is used the client SHOULD be capable of knowing when results are exhausted and avoiding the need to make additional requests i.e. by providing the total number of known results. If token based pagination is used, the client needs to construct the correct corresponding URL.
 
-See Beacon 2 \[BEACON 2\] for an example of this pattern. N.B. whilst the Tool Registry Service implements page-based pagination, it constructs appropriate URLs for the client and therefore encapsulates the logic server side.
+See Beacon 2 \[B2\] for an example of this pattern. N.B. whilst the Tool Registry Service implements page-based pagination, it constructs appropriate URLs for the client and therefore encapsulates the logic server side.
 
-### Server side driven logic
+#### Server side driven logic
 
 Server side driven logic places responsibility for constructing a valid request for the next page of data to a server implementation. If used the client MUST be passed a URL which MAY be fully-resolved or relative to the server \[RFC 3986\] and when executed will return the next page of data. The links MUST be encoded in the payload (following HATEOAS patterns) to avoid a dependency upon transport protocol. The links MAY be encoded in the underlying protocol transfer headers such as HTTP Headers \[RFC 5988\], \[RFC 8288\]. Encoding logic into the server allows a server to control client behaviour explicitly e.g. no longer providing a next URL when the results have been exhausted.
 
-#### Parameters
+##### Parameters
 
 - **next**: A url representing the next payload of data. MUST be presented. MUST be null if there is no subsequent page  
 - **last**: A url representing the last payload of data. MAY be presented  
 - **self**: A url representing the current payload of data. MAY be presented
 
-#### Example body payload
+##### Example body payload
 
 ```json
 {  
@@ -252,6 +229,26 @@ Server side driven logic places responsibility for constructing a valid request 
   }  
 }
 ```
+
+## Use Cases
+
+### Use case - random seeking within a result set
+
+**Recommended approach:** Use page-based pagination.
+
+Random-seeking is a functionality normally requested in human interaction interfaces or where more flexibility needs to be afforded to a client. In the first example, consider an interface which displays the results of a search. Using random-seeking allows a client to skip an arbitrary number of pages ahead in the results or configure the number of records displayed per page. By using random-seeking a product can afford future clients the ability to configure their paging requirements without enforcing a predetermined policy on all clients. It also allows a client to walk back and forth along a result set. Many underlying data querying technologies implement random seeking (e.g. Solr, ElasticSearch, MongoDB) and as such adoption is easy.
+
+### Use case - parallel block retrieval
+
+**Recommended approach:** Use page-based pagination.
+
+To speed up results retrieval, a client may wish to split results retrieval into multiple parallel requests. A client can construct URLs representing a block of data to retrieve based on a specified size and page into the results set. Parameters must be predictable and allow random seeking within a response (see above use-case).
+
+### Use case - streaming large result sets
+
+**Recommended approach:** Use page-based pagination.
+
+When encountering the “Deep Paging” issue i.e. where the number of results is a large number, many data querying technologies switch to a token-based system where the last result returned is remembered to ensure pagination consistency and predictability. Results processing is normally a one-way process i.e. you cannot request a prior page.
 
 ## Considerations
 
@@ -274,13 +271,17 @@ A number of GA4GH products implement pagination, not limited to TRS, Data Connec
 
 ## Contributors
 
-Need to fill in here with all contributors and reviewers who have provided input. Contributions should be matched against [CRediT](https://credit.niso.org/).
+Contributions are matched against [CRediT](https://credit.niso.org/) taxonomy roles. Organisation affiliations are not currently recorded for these contributors.
 
-Javed Habib: Investigation  
-Alex Kanitz: Writing – review & editing  
-Mamana Mbiyavanga: Writing – review & editing  
-Jordi Rambla De Argila: Writing – review & editing  
-Jürgen Reichardt: Investigation  
-Craig Voisin: Investigation  
-Andy Yates: Writing – original draft, Writing – review & editing  
-Technical Alignment Sub Committee (TASC): Investigation, Writing \- review & editing  
+| Name | Organisation |
+|------|-------------|
+| Javed Habib | — |
+| Alex Kanitz | — |
+| Mamana Mbiyavanga | — |
+| Jordi Rambla De Argila | — |
+| Jürgen Reichardt | — |
+| Craig Voisin | — |
+| Andy Yates | — |
+| Technical Alignment Sub Committee (TASC) | — |
+
+CRediT roles: Javed Habib (Investigation); Alex Kanitz (Writing – review & editing); Mamana Mbiyavanga (Writing – review & editing); Jordi Rambla De Argila (Writing – review & editing); Jürgen Reichardt (Investigation); Craig Voisin (Investigation); Andy Yates (Writing – original draft, Writing – review & editing); Technical Alignment Sub Committee (TASC) (Investigation, Writing – review & editing).
