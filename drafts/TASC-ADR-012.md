@@ -11,7 +11,7 @@
 
 ## Context
 
-TASC-GOV-01 establishes TASC's general mission — to aid the harmonisation of GA4GH's technical products so they can be used together effectively — and its decision-making structure. With the adoption of the PDAP technical product requirements ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-010](TASC-ADR-010.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011.md)), TASC needed to formally record its specific operational role within the PDAP v2 process itself, rather than leaving that role implicit across several separate documents.
+TASC-GOV-01 establishes TASC's role to aid the harmonisation of GA4GH's technical products so they can be used together and its decision-making structure. With the adoption of the PDAP technical product requirements ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-010](TASC-ADR-010.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011.md)), TASC needed to formally record its specific operational role within the PDAP v2 process itself, rather than leaving that role implicit across several separate documents.
 
 **The Problem:**
 
