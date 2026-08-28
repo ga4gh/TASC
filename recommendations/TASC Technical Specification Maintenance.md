@@ -12,25 +12,35 @@
 **Work Streams Impacted**: All work streams  
 **Products Affected**: All GA4GH specifications  
 
-## Table of contents
-
-- [Abstract](#abstract)
-- [Document Purpose](#document-purpose)
-- [Alignment with the GA4GH Product Development Processes](#alignment-with-the-ga4gh-product-development-processes)
-- [Feature Maturity Levels](#feature-maturity-levels)
-  - [Maturity Level Criteria](#maturity-level-criteria)
-  - [Maturity Advancement Process](#maturity-advancement-process)
-  - [Data Class Inheritance and Property Maturity](#data-class-inheritance-and-property-maturity)
-  - [Communicating Maturity Level](#communicating-maturity-level)
-- [Product Feature Development Process](#product-feature-development-process)
-- [Specification Releases and Versioning](#specification-releases-and-versioning)
-- [Contributors](#contributors)
-
 ## Abstract
 
 This policy defines the maturity model and release process for developing and maintaining GA4GH technical specifications. It establishes a four-level maturity framework (Draft, Trial Use, Normative, Deprecated) to communicate feature stability across the Innovation Adoption Lifecycle. The document describes advancement criteria, versioning rules following semantic versioning with maturity-based increments, annotation requirements in JSON Schema, and community ballot processes. This framework balances the need for specification evolution with stability commitments, enabling timely adoption while preventing breaking changes to mature features. Related Architectural Decision Records document the rationale for key design decisions.
 
-## **Document Purpose**
+## Table of contents
+
+- [Recommendation](#recommendation)
+- [Background](#background)
+- [Detailed Guidance](#detailed-guidance)
+  - [Feature Maturity Levels](#feature-maturity-levels)
+    - [Maturity Level Criteria](#maturity-level-criteria)
+    - [Maturity Advancement Process](#maturity-advancement-process)
+    - [Data Class Inheritance and Property Maturity](#data-class-inheritance-and-property-maturity)
+    - [Communicating Maturity Level](#communicating-maturity-level)
+  - [Product Feature Development Process](#product-feature-development-process)
+  - [Specification Releases and Versioning](#specification-releases-and-versioning)
+- [Use Cases](#use-cases)
+  - [Use case - advancing a data class from Draft to Trial Use](#use-case---advancing-a-data-class-from-draft-to-trial-use)
+  - [Use case - annotating maturity in a JSON Schema](#use-case---annotating-maturity-in-a-json-schema)
+  - [Use case - a breaking change to a Normative data class](#use-case---a-breaking-change-to-a-normative-data-class)
+- [Considerations](#considerations)
+- [References](#references)
+- [Contributors](#contributors)
+
+## Recommendation
+
+GA4GH technical specifications MUST communicate the stability of their product features using a four-level maturity model: Draft, Trial Use, Normative, and Deprecated, as defined in Table 1. Product features that would otherwise warrant a major or minor version increment SHOULD be annotated with a maturity level; categories such as validation tests or documentation appendices need not be annotated. A product feature MUST NOT advance to Trial Use without at least two independent product implementers committed to supporting it, at least one of which MUST be open, and advancement to Trial Use or Normative MUST be accompanied by a minor version increment at the next release. A child data class MUST NOT have a maturity level greater than the data class it inherits from, and a data class's properties MUST NOT exceed the maturity of the data class as a whole. Maturity levels MUST be annotated in machine-readable form (e.g. the `maturity` property in JSON Schema) on primary documentation sites. Specification releases MUST follow Semantic Versioning (SemVer) v2, with the version increment (major/minor/patch) determined by the maturity level and backward-compatibility impact of the changes it contains, as set out in [Specification Releases and Versioning](#specification-releases-and-versioning). Pre-release snapshots MUST use SemVer pre-release syntax.
+
+## Background
 
 The GA4GH is developing data exchange [**standards**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.1x756gyh0d77) for federated genomic data sharing. To address this, new [**technical specifications**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.hayv0rmdfa79) are required, such as the VRS standard, which must be developed and iterated upon through application across community [**implementations**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.xrzt0hhbuek1). This creates a tension between the need to create [**products**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.8r6pvv79hano) with enough stability for initial community adoption, while ensuring that they can evolve with minimal disruption to interoperate smoothly across a diverse set of genomic data resources. Mechanisms for communicating the stability, uptake, and development of technical specifications are therefore of paramount importance to addressing this balance.
 
@@ -38,19 +48,19 @@ A maturity model is a useful mechanism for communicating varying stability acros
 
 The purpose of this document is to clearly define the maturity model and release process for developing and maintaining GA4GH standards, with the goal of enabling timely specification adoption by the community.
 
-![][image1]
+![The Innovation Adoption Lifecycle: adoption rate over time, showing Innovators, Early Adopters, Early Majority, Late Majority, and Laggards](images/innovation-adoption-lifecycle.png)
 
 ***Figure 1 \- The Innovation Adoption Lifecycle*** ([**source**](https://en.wikipedia.org/wiki/Technology_adoption_life_cycle))***.** The Innovation Adoption Lifecycle illustrates adoption rates (y-axis) for new technologies over time (x-axis). Innovators (leftmost on the time axis) are among the first to adopt a new technology, and laggards (rightmost) are among the last, reflecting the differing needs for innovation and stability by these community groups. Adopters in every category along the innovation adoption lifecycle benefit from communication about the maturity of technical specification components generated in GA4GH technical products. Communicating when a component is ready for implementation by groups along the innovation / stability spectrum is a primary goal of the maturity model, enabling adopters to engage at a time that is appropriate for their organizational needs.*  
-
-## *Alignment with the GA4GH Product Development Processes*
 
 Developing a new GA4GH standard would still require that the product go through the full GA4GH Product Development and Approval processes. This document complements those processes by providing a maturity, release, and versioning strategy that may be referenced by the product proposal for developing, maintaining, and extending standards using a maturity model for product features. The processes outlined here may also be applied to technical specifications that support downstream products but are not themselves GA4GH Standards (e.g. the [**GKS Common Library**](https://github.com/ga4gh/gks-common)).
 
 It is not expected that every category of product feature developed for a GA4GH technical specification will be annotated with the maturity model (e.g. validation tests or documentation appendices would likely not be annotated with maturity), though some categories (e.g. data classes and protocols) are expected to always be annotated with maturity levels. Generally, if a product feature would be sufficient for a major or minor version increment in the absence of a maturity system, it should be annotated with a maturity level using this system.
 
-# **Feature Maturity Levels**
+## Detailed Guidance
 
-## *Maturity Level Criteria*
+### Feature Maturity Levels
+
+#### Maturity Level Criteria
 
 | Level | Criteria | Specification Changes | Support |
 | :---- | :---- | :---- | :---- |
@@ -61,11 +71,11 @@ It is not expected that every category of product feature developed for a GA4GH 
 
 ***Table 1 \- Product feature maturity level criteria and commitments.***  
 
-## *Maturity Advancement Process*
+#### Maturity Advancement Process
 
-Product feature maturity levels are to be reviewed and advanced by consensus among defined decision-makers following Work Stream and GA4GH processes, in consultation with the associated [**product group**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.ij15j31aj6jd) membership. Factors to be considered for product feature maturity advancement include the criteria specified in **Table 1**, the degree of adoption observed in the community, feedback provided by adopters, and availability of specification maintainers to provide the level of support required. 
+Product feature maturity levels are to be reviewed and advanced by consensus among defined decision-makers following Work Stream and GA4GH processes, in consultation with the associated [**product group**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.ij15j31aj6jd) membership. Factors to be considered for product feature maturity advancement include the criteria specified in **Table 1**, the degree of adoption observed in the community, feedback provided by adopters, and availability of specification maintainers to provide the level of support required.
 
-### Developing a Draft Product Feature
+##### Developing a Draft Product Feature
 
 **Decision-makers: [Feature developers](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.69fvnn4tbegq)**, [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4)  
 
@@ -73,7 +83,7 @@ Product feature maturity levels are to be reviewed and advanced by consensus amo
 
 **Process:** Follow [**the GA4GH product feature development process**](#product-feature-development-process). As part of this process, it is expected that consensus among the decision-makers was reached and major design decisions documented. Disagreements are resolved per Work Stream and GA4GH processes.  
 
-### Advancing from Draft to Trial Use
+##### Advancing from Draft to Trial Use
 
 **Decision-makers: [Feature developers](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.69fvnn4tbegq)**, [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4), [**product implementers**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.cg3l1hng99o2)  
 
@@ -88,13 +98,13 @@ Product feature maturity levels are to be reviewed and advanced by consensus amo
 
 There is a minimum 1-week review period for Product Implementers to respond, though this may be longer at the discretion of the product owners. More time for individual contributors may be permitted on request.
 
-### Advancing from Trial Use to Normative
+##### Advancing from Trial Use to Normative
 
 **Decision-makers: [Feature developers](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.69fvnn4tbegq)**, [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4), [**product implementers**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.cg3l1hng99o2), [**Work Stream leads**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.mg8fktfu4p72)  
 
 **Criteria:** A *normative* model should have demonstrated interoperability of multiple data generation and data consumption implementations, and should include implementations beyond those used to advance a model to Trial Use. Advancing a product feature to *normative* also mandates a minor version increment at the next [**release**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.1ent9dk649ub). As part of this process, it is expected that consensus among the decision-makers was reached and major design decisions documented. Community consultation and disagreement resolution are handled per Work Stream and GA4GH processes.  
 
-## *Data Class Inheritance and Property Maturity*
+#### Data Class Inheritance and Property Maturity
 
 [**Data models**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.1jbzkl8z59lm) may (and often do) include child [**data classes**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.i5ybdkaca3ah) that inherit properties from a parent data class. For example, the [**Entity**](https://github.com/ga4gh/gks-common/blob/1b7e52d6013c6785300aa933efa9210e2aafa57b/schema/gks.common-source.yaml#L7-L31) data class from the GKS Common Library provides shared properties (e.g. *id*, *label*, *extensions*) that are inherited by several child data classes across the VRS and Variant Annotation specifications.
 
@@ -102,13 +112,13 @@ To address inheritance used in a data model, we place additional constraints on 
 
 These rules also allow for extending more mature data classes with new properties that exist in a less mature state.
 
-## *Communicating Maturity Level*
+#### Communicating Maturity Level
 
 Minimally, primary documentation sites (e.g. [**vrs.ga4gh.org**](https://vrs.ga4gh.org/)) will annotate data classes, data class properties, protocols, and other important documentation with their corresponding maturity levels.
 
 In JSON Schema, this is accomplished using the maturity property for data classes (see the JSON Schema [**maturity annotation for the VRS Allele**](https://github.com/ga4gh/vrs/blob/454c5312e8e425eb170901c7520311f3ca7904e3/schema/vrs/json/Allele#L6) class) or data class properties (see this JSON Schema [**property-level maturity annotation in the VA-Spec Cohort Allele Frequency**](https://github.com/ga4gh/va-spec/blob/4c14e9f7f033dce3b6701ecd0fccca415476fd76/schema/va-spec/profiles/caf/json/CohortAlleleFrequency#L142-L143) profile).
 
-# **Product Feature Development Process** {#product-feature-development-process}
+### Product Feature Development Process
 
 Development of GA4GH standards involves a community-oriented process that iterates on the general pattern of:
 
@@ -117,11 +127,11 @@ Development of GA4GH standards involves a community-oriented process that iterat
 3. Propose Solutions  
 4. Develop Product Feature
 
-## *Discuss Issues*
+#### Discuss Issues
 
 Emerging discussion topics should first be created as Discussions in the repository of the associated GA4GH product (e.g. the VRS Discussion board at [**github.com/ga4gh/vrs/discussions**](https://github.com/ga4gh/vrs/discussions)). The [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4) monitor these discussions and coordinate their addition to the agenda on community calls.
 
-## *Gather Requirements*
+#### Gather Requirements
 
 On a community call, the discussion topic is first announced as a future call agendum by the [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4), and a request made for asynchronous discussion and community-driven requirements gathering on the GitHub Discussion thread.
 
@@ -142,23 +152,23 @@ It is expected that there will be at least two product implementers supporting a
 
 Once the above criteria are met, the development process may advance.
 
-## *Propose Solutions*
+#### Propose Solutions
 
 Product implementers should propose solutions on the GitHub Discussion thread. On a subsequent call, the topic is raised for review of requirements and discussion of proposed solutions. Action items may include advancing to solution implementation, furthering investigation of requirements, or continued discussion on a subsequent call. When one or more solutions are identified as ready to advance to implementation, a GitHub Issue is created (e.g. the VRS Issue board at [**github.com/ga4gh/vrs/issues**](https://github.com/ga4gh/vrs/discussions)) and assigned to one or more [**feature developers**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.69fvnn4tbegq).
 
-## *Develop Product Feature*
+#### Develop Product Feature
 
 The assigned [**feature developers**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.69fvnn4tbegq) will develop the product feature on a separate feature branch reflecting the associated GitHub Issue, and make a Pull Request for community review. The [**product owners**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.j3wp65n0i1d4) are responsible for review and recommend action on Pull Requests within 2 weeks. Once merged, the product feature is developed.
 
-# **Specification Releases and Versioning**
+### Specification Releases and Versioning
 
-## *Versioning*
+#### Versioning
 
-[**Versions**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.sz593b8vre9l) are used to identify releases of technical specifications, *not* to individual product features. 
+[**Versions**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.sz593b8vre9l) are used to identify releases of technical specifications, *not* to individual product features.
 
 Technical specification development is intrinsically linked to policy surrounding major and minor version identification, which follow semantic versioning v2 (SemVer; [**semver.org**](https://semver.org/#semantic-versioning-200)) practices for API versioning. Version syntax follows SemVer syntax. Examples of how product features at different maturity levels are applied to the SemVer major/minor/patch syntax as follows:
 
-### Major Version Increment
+##### Major Version Increment
 
 * Backwards-incompatible changes to a *normative* product feature  
 * Backwards-incompatible changes to property names of a previously-released *normative* data class  
@@ -166,7 +176,7 @@ Technical specification development is intrinsically linked to policy surroundin
 * Backwards-incompatible changes to the digests of previously-released *normative* data class (as applicable)  
 * Addition of required fields to previously-released *normative* data class
 
-### Minor Version Increment
+##### Minor Version Increment
 
 * Backwards-incompatible changes to a *trial use* product feature  
 * Addition of optional fields to data models at the *trial use* or *normative* level  
@@ -176,24 +186,73 @@ Technical specification development is intrinsically linked to policy surroundin
 * Backwards-incompatible changes to the digests of previously-released *trial use* data class (as applicable)  
 * Addition of required fields to previously-released *trial use* data class
 
-### Patch Version Increment
+##### Patch Version Increment
 
 * A new product feature at the *draft* maturity level  
 * Any changes made to *draft* product features  
 * Addition of implementation guidance, tests, or other supporting product features that do not directly affect data compatibility
 
-Versioning of approved GA4GH standards should additionally follow the procedures for [**GA4GH Product Updates**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7). Specifically, advancement of data classes to the *trial use* or *normative* levels must be accompanied by a minor release increment, and therefore may only be included in a release following an appropriate community and PRC consultation process ([**GA4GH Product Development 32**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7:~:text=32.%20Public%20comment,reduced%20or%20omitted.)). 
+Versioning of approved GA4GH standards should additionally follow the procedures for [**GA4GH Product Updates**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7). Specifically, advancement of data classes to the *trial use* or *normative* levels must be accompanied by a minor release increment, and therefore may only be included in a release following an appropriate community and PRC consultation process ([**GA4GH Product Development 32**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7:~:text=32.%20Public%20comment,reduced%20or%20omitted.)).
 
-## *Releases*
+#### Releases
 
 A [**release**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.1ent9dk649ub) of a technical specification contains all of the content of the specification repository. This includes all features, including [**data models**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.1jbzkl8z59lm) (source and derived artifacts), linked upstream dependencies, documentation, implementation guidance, validation tests, and examples. Releases provide a comprehensive and static snapshot of a technical specification that may be referenced for adoption by downstream products and implementations.
 
-### Pre-releases {#pre-releases}
+##### Pre-releases
 
 In order to support continuous development of a technical specification, pre-release snapshots are allowed and must use the SemVer syntax for pre-releases. Pre-release snapshots may be created for purpose at any time by the product leads. Examples of pre-release snapshots following this process may be found [in the VRS repository](https://github.com/ga4gh/vrs/releases).
 
-[image1]: <data:image/png;base64,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>
+## Use Cases
+
+### Use case - advancing a data class from Draft to Trial Use
+
+**Scenario**: A newly developed data class in a GA4GH specification has been implemented by its original developers and is ready to be proposed for wider adoption.
+
+**Solution**: Per [Advancing from Draft to Trial Use](#maturity-advancement-process), the product owners confirm at least two independent product implementers (at least one open) are committed to supporting the feature, issue a ballot release and implementer survey, and schedule a minor version increment at the next release once consensus is reached.
+
+**Benefits**: Ensures a feature only reaches Trial Use once real independent implementation commitment exists, giving adopters confidence the feature is worth engaging with.
+
+### Use case - annotating maturity in a JSON Schema
+
+**Scenario**: A specification maintainer publishes a new version of a data class and needs to communicate its stability to downstream implementers.
+
+**Solution**: Per [Communicating Maturity Level](#communicating-maturity-level), the maintainer adds a `maturity` property to the data class (or its individual properties) in the JSON Schema, consistent with the maturity level recorded for that feature.
+
+**Benefits**: Implementers can programmatically determine which parts of a specification are safe to build against without manually cross-referencing separate documentation.
+
+### Use case - a breaking change to a Normative data class
+
+**Scenario**: A Normative data class needs a backwards-incompatible change to its property names.
+
+**Solution**: Per [Major Version Increment](#versioning), this change MUST be released as a new major version of the specification, following the community and PRC consultation process for GA4GH Product Updates.
+
+**Benefits**: Protects downstream adopters of Normative features from unannounced breaking changes, preserving the stability commitment associated with Normative maturity.
+
+## Considerations
+
+Not every product feature category needs a maturity annotation. Validation tests and documentation appendices, for example, would not typically be annotated, while data classes and protocols are expected to always carry a maturity level. The inheritance constraint (a child data class or property cannot exceed the maturity of its parent) means upstream maturity advancement must be addressed before dependent classes can advance, which can slow advancement of a feature that depends on a less mature upstream class. Because advancing to Trial Use or Normative depends on independent implementer commitments and specification-maintainer support capacity, advancement timelines are inherently dependent on community adoption and are not solely within a Work Stream's control. This policy applies to new and evolving GA4GH technical specifications. It does not retroactively require existing specification content to be re-annotated, though Work Streams are encouraged to adopt it going forward.
+
+## References
+
+- [SEMVER] Semantic Versioning v2.0.0: https://semver.org/#semantic-versioning-200
+- [GA4GH-DEV-PROCESS] GA4GH Product Development and Approval Process: https://www.ga4gh.org/our-products/development-and-approval-process/
+- [ADOPTION-LIFECYCLE] Technology adoption life cycle (Wikipedia): https://en.wikipedia.org/wiki/Technology_adoption_life_cycle
+- [GKS-COMMON] GKS Common Library repository: https://github.com/ga4gh/gks-common
+- [VRS-MATURITY-EXAMPLE] JSON Schema maturity annotation example (VRS Allele): https://github.com/ga4gh/vrs/blob/454c5312e8e425eb170901c7520311f3ca7904e3/schema/vrs/json/Allele#L6
+- [VA-SPEC-MATURITY-EXAMPLE] JSON Schema property-level maturity annotation example (VA-Spec Cohort Allele Frequency): https://github.com/ga4gh/va-spec/blob/4c14e9f7f033dce3b6701ecd0fccca415476fd76/schema/va-spec/profiles/caf/json/CohortAlleleFrequency#L142-L143
+- [GKS-IMPLEMENTER-FORM] GKS Product Implementer Form: https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform?usp=sf_link
+- [VRS-RELEASES] Example pre-release snapshots (VRS repository): https://github.com/ga4gh/vrs/releases
+- [VRS-DISCUSSIONS] Example product Discussion board (VRS): https://github.com/ga4gh/vrs/discussions
+
+Detailed, section-specific definitions (e.g. *standards*, *technical specifications*, *implementations*, *products*, *product features*, *data classes*, *protocols*, *product group*, *feature developers*, *product owners*, *product implementers*, *Work Stream leads*, *versions*, *release*, *data models*) are maintained in the GA4GH terminology document linked inline throughout this recommendation.
 
 ## Contributors
 
-- GKS Work Stream
+Organisation affiliations are not currently recorded for these contributors.
+
+| Name | Organisation |
+|------|-------------|
+| Alex Wagner | — |
+| Larry Babb | — |
+| Robert Freimuth | — |
+| GKS Work Stream | — |
