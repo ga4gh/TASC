@@ -97,7 +97,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 ```markdown
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Decided:** [when the decision was taken, e.g. a meeting or workshop] | **Recorded:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
 **Deciders:** [List key decision-makers]  
 **Keywords:** [comma-separated keywords]  
 **Work Streams Impacted:** [affected work streams]  
@@ -116,6 +116,8 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 | **Raised by** | The person and work stream/role that originally raised the issue (recommendations only) |
 | **Authors** | Those who wrote the document |
 | **Deciders** | Those who made the decision (ADRs only) |
+| **Decided** | The date the decision was taken, e.g. at a meeting or workshop (ADRs only) |
+| **Recorded** | The date the ADR document was written (ADRs only) |
 | **Keywords** | Searchable tags for discoverability (e.g., api, pagination, governance, maturity-model) |
 | **Work Streams Impacted** | GA4GH work streams affected by the document |
 | **Products Affected** | Specific GA4GH products impacted |

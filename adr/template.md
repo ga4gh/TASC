@@ -1,6 +1,6 @@
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Decided:** [when the decision was taken, e.g. a meeting or workshop] | **Recorded:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
 
 **Deciders:** [List key decision-makers]  
 **Keywords:** [e.g., maturity-model, versioning, governance, api, security]  
