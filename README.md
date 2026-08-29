@@ -19,6 +19,8 @@ This repository is organized into the following directories:
 ├── /governance/ (TASC operating charter)
 ├── /recommendations/ (TASC outputs)
 ├── /drafts/ (work in progress)
+│   ├── /recommendations/ (draft recommendations & directives)
+│   └── /adr/ (draft ADRs)
 └── /service-info/ (service type registry)
 ```
 
@@ -30,7 +32,7 @@ This repository is organized into the following directories:
 
 - **`/recommendations/`** - Approved TASC recommendations and policy documents that provide guidance to GA4GH work streams. These include API standards, process guidelines, and technical specifications.
 
-- **`/drafts/`** - Work-in-progress documents under development. Documents move from drafts to recommendations upon approval.
+- **`/drafts/`** - Work-in-progress documents under development, organised into subdirectories that mirror their destination (`/drafts/recommendations/`, `/drafts/adr/`). A document moves up to the matching top-level directory on approval.
 
 - **`/service-info/`** - The GA4GH Service Info Type Registry, which maintains standardized service type identifiers for GA4GH API servers enabling service discovery.
 
@@ -83,7 +85,8 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 
 | Member | Role |
 |--------|------|
-| **Reggan Thomas** (reggan.thomas@ga4gh.org) | Technical Team Support |
+| **Jinny Park** (jinny.park@ga4gh.org) | Technical Team Support |
+| **Reggan Thomas** | Technical Team |
 | **Jimmy Payyappilly** | Technical Team |
 | **Chen Chen** | Technical Team |
 | **Dashrath Chauhan** | Technical Team |
