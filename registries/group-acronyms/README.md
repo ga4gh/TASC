@@ -20,7 +20,7 @@ Creating an acronym follows this process:
 
 ## TASC Responsibilities
 
-TASC will ensure this list is correctly maintained. 
+TASC will ensure this list is correctly maintained.
 
 ## Technical Team Responsibilities
 

@@ -1,10 +1,10 @@
-![](https://www.ga4gh.org/wp-content/themes/ga4gh-theme/gfx/GA-logo-horizontal-tag-RGB.svg)
-
 # GA4GH Technical Alignment Sub Committee (TASC)
+
+![GA4GH logo](https://www.ga4gh.org/wp-content/themes/ga4gh/dist/assets/svg/logos/logo-full-color.svg)
 
 The Technical Alignment Sub-Committee (TASC) of the GA4GH Product Steering Committee (PSC) aids the harmonisation of GA4GH's technical products to ensure they can be used together effectively. TASC provides outputs and decisions to create internal consistency and technical alignment across GA4GH Work Streams and deliverables.
 
-While TASC functions as a central decision-making body, all of its decisions are informed by relevant stakeholders. The TASC outputs, including all decisions, are regularly and openly communicated back to the GA4GH community. Where appropriate, TASC will action product development related to technical alignment within its structure when a need is identified and would benefit the GA4GH community, the nature of the work does not naturally fit within one of the workstreams, the work requires significant cross-workstream development, and where sufficient interest and resources exist to develop the solution.
+While TASC functions as a central decision-making body, all of its decisions are informed by relevant stakeholders. The TASC outputs, including all decisions, are regularly and openly communicated back to the GA4GH community. Where appropriate, TASC will action product development related to technical alignment within its structure when a need is identified and would benefit the GA4GH community, the nature of the work does not naturally fit within one of the work streams, the work requires significant cross-work stream development, and where sufficient interest and resources exist to develop the solution.
 
 TASC organizes and monitors its technical alignment activities through a [GitHub Project board](https://github.com/orgs/ga4gh/projects/9/views/1), where you can find and track the progress of current issues and initiatives.
 
@@ -12,7 +12,7 @@ TASC organizes and monitors its technical alignment activities through a [GitHub
 
 This repository is organized into the following directories:
 
-```
+```text
 /
 ├── README.md (overview & quick reference)
 ├── /adr/ (Architectural Decision Records)
@@ -64,11 +64,11 @@ See [all recommendations](recommendations/README.md) for the full list and statu
 - [TASC Members](#tasc-members)
 - [Group Meeting Format](#group-meeting-format)
 - [Decision-Making Process](#decision-making-process)
-- [Issue labels](#issue-labels)   
+- [Issue labels](#issue-labels)
 
 ## TASC Structure
 
-TASC is responsible for the development and oversight of solutions (including directives and products) to technical alignment issues across GA4GH workstreams. The TASC member network consists of participants to relay technical alignment issues and insights based on product knowledge and expertise, as well as voting members who will make and uphold decisions regarding solutions in the best interest of GA4GH products collectively.
+TASC is responsible for the development and oversight of solutions (including directives and products) to technical alignment issues across GA4GH work streams. The TASC member network consists of participants to relay technical alignment issues and insights based on product knowledge and expertise, as well as voting members who will make and uphold decisions regarding solutions in the best interest of GA4GH products collectively.
 
 ## TASC members
 
@@ -117,7 +117,6 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 | **Angela Page** | Communications Team |
 | **Jon Turner** | Web Development Team |
 
-
 #### Other Non-Voting Members
 - Invited representative(s) from the Strategic Leadership Committee (SLC)
 - Invited experts from the GA4GH community
@@ -142,7 +141,7 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 
 ## Group Meeting Format
 
-TASC meets monthly in either *open* or *closed* sessions to review unresolved issues, discuss unmet needs, review TASC work, and review GA4GH technical standards submitted to PSC for approval. Topics requiring sensitive discussion or voting are conducted in closed sessions.
+TASC meets monthly in either _open_ or _closed_ sessions to review unresolved issues, discuss unmet needs, review TASC work, and review GA4GH technical standards submitted to PSC for approval. Topics requiring sensitive discussion or voting are conducted in closed sessions.
 
 For asynchronous discussion, members use:
 - **Mailing List**: [tasc@ga4gh.org](mailto:tasc@ga4gh.org)
@@ -166,11 +165,11 @@ For asynchronous discussion, members use:
 
 4. **TASC Product Development Criteria**: TASC will action product development when:
    - A need is identified and would benefit the GA4GH community
-   - The nature of the work does not naturally fit within one of the workstreams
-   - The work requires significant cross-workstream development
+   - The nature of the work does not naturally fit within one of the work streams
+   - The work requires significant cross-work stream development
    - Sufficient interest and resources exist to develop the solution
 
-5. **Cross-Workstream Development**: IN SCOPE issues that would generate outputs requiring sufficient levels of cross-work stream development, that can't realistically be developed in the conventional work streams, may be developed at the discretion of TASC and/or PSC
+5. **Cross-Work stream Development**: IN SCOPE issues that would generate outputs requiring sufficient levels of cross-work stream development, that can't realistically be developed in the conventional work streams, may be developed at the discretion of TASC and/or PSC
 
 6. **Output Types and Approval Process**:
    - Internal-use outputs (enterprise tools, infrastructure) WILL NOT be subject to product development and approval process
@@ -229,4 +228,3 @@ For asynchronous discussion, members use:
 - **Documentation**: Improvements or additions to documentation
 - **Product Approval Process**: Going through GA4GH approval's process
 - **Update to existing TASC managed process**: Improvements or additions to TASC managed process
-

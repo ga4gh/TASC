@@ -54,7 +54,7 @@ The artifact identifier specifies the particular API or service type within the 
 
 Artifact identifiers MUST conform to the following regular expression pattern:
 
-```
+```text
 ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
 ```
 
@@ -143,6 +143,7 @@ Entries MAY include additional metadata:
 ### Example entries
 
 Active service type:
+
 ```json
 {
   "type": {
@@ -153,6 +154,7 @@ Active service type:
 ```
 
 Deprecated service type:
+
 ```json
 {
   "type": {
