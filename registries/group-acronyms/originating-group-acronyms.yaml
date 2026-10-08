@@ -21,6 +21,13 @@ originating_group_acronyms:
     type: work-stream
     status: live
 
+  - acronym: CLOUD
+    name: Cloud
+    type: work-stream
+    status: superseded
+    note: > 
+      Now FEDANALYSIS
+
   - acronym: DATASEC
     name: Data Security Work Stream
     type: work-stream
@@ -37,7 +44,7 @@ originating_group_acronyms:
     status: live
 
   - acronym: FEDANALYSIS
-    name: Cloud Work Stream
+    name: Federated Analysis
     type: work-stream
     status: live
 

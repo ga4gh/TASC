@@ -1,6 +1,6 @@
 ![](https://www.ga4gh.org/wp-content/themes/ga4gh-theme/gfx/GA-logo-horizontal-tag-RGB.svg)
 
-# GA4GH Technical Alignment Sub Committee (TASC) [![](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/ga4gh-discovery/ga4gh-service-registry/develop/LICENSE)
+# GA4GH Technical Alignment Sub Committee (TASC)
 
 The Technical Alignment Sub-Committee (TASC) of the GA4GH Product Steering Committee (PSC) aids the harmonisation of GA4GH's technical products to ensure they can be used together effectively. TASC provides outputs and decisions to create internal consistency and technical alignment across GA4GH Work Streams and deliverables.
 
