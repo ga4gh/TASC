@@ -2,10 +2,11 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Adopts the GA4GH 2026 TASC Interoperability framework as the basis for assessing interoperability across technical products.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** interoperability, pdap, risk-tiering, governance  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
@@ -72,7 +73,7 @@ TASC adopts the interoperability framework set out in "GA4GH 2026 TASC Interoper
 ## References
 
 - **Full Policy:** `2026 TASC Interoperability.md` (TASC internal framework document); GA4GH Strategic Road Map / 2020 Gap Analysis report, <https://www.ga4gh.org/about-us/strategic-road-map/>
-- **Related ADRs:** [TASC-ADR-009](TASC-ADR-009.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** n/a
 
 ---

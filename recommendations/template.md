@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-XX  
 **Title**: [Full descriptive title]  
+**Description**: [One sentence (max 300 characters) summarising the recommendation; shown in the TASC index]  
 **Related GitHub issues**: [#N](https://github.com/ga4gh/TASC/issues/N)  
 **Raised by**: [Name (Work Stream), e.g., Alex Wagner (GKS), Mamana Mbiyavanga (LSG)]  
 **Authors**: [Author names, comma-separated]  

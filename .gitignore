@@ -8,3 +8,10 @@ CLAUDE.md
 
 # Git sync
 .git.nosync/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/

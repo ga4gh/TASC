@@ -2,10 +2,11 @@
 
 **Date:** 2026-03-23 | **Status:** Proposed
 
+**Description:** GA4GH DOI suffixes are opaque and must not encode work stream, product, specification or version information.  
 **Deciders:** TASC, Technical Team, Work Stream Leads
 **Keywords:** metadata, governance, taxonomy, doi, identifiers
 **Work Streams Impacted:** All
-**Products Affected:** All
+**Products Affected:** All categories
 
 ---
 
@@ -90,7 +91,7 @@ GA4GH will generate DOI suffixes as opaque, non-semantic identifiers
 ## References
 
 - **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
-- **Related ADRs:** [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001.md)
+- **Related ADRs:** [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001%20Use%20Crossref%20for%20DOI.md)
 
 ---
 

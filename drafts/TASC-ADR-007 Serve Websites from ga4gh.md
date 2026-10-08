@@ -2,16 +2,17 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** GA4GH product and topic websites must be served from a ga4gh.org subdomain; standalone or third-party domains are not permitted.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** website, domain, branding, pdap, technical-product-requirements  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products with a public-facing website  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
 ## Context
 
-As part of TASC's review of the "GA4GH Technical Product Requirements", we defined the candidate set of required activities, artifacts, or states a technical product must satisfy to get through PDAP approval (see [TASC-ADR-010](TASC-ADR-010.md)). TASC needed to decide where product and topic websites should be hosted.
+As part of TASC's review of the "GA4GH Technical Product Requirements", we defined the candidate set of required activities, artifacts, or states a technical product must satisfy to get through PDAP approval (see [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)). TASC needed to decide where product and topic websites should be hosted.
 
 Standalone or third-party domains for GA4GH products create inconsistent branding, make it harder for adopters to trust that a site is an official GA4GH resource, and create risk if a third-party domain lapses, changes ownership, or is not maintained under GA4GH's control.
 
@@ -45,7 +46,7 @@ Any website representing a GA4GH product or topic MUST be served from a `ga4gh.o
 
 - Product and topic websites MUST use a `ga4gh.org` subdomain.
 - Standalone domains (e.g., `product.org`) and third-party-hosted domains are not permitted for representing a GA4GH product or topic.
-- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006.md), [TASC-ADR-008](TASC-ADR-008.md), [TASC-ADR-009](TASC-ADR-009.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010.md)).
+- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
@@ -71,7 +72,7 @@ Any website representing a GA4GH product or topic MUST be served from a `ga4gh.o
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006.md) (GitHub Repository), [TASC-ADR-008](TASC-ADR-008.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** Existing `*.ga4gh.org` product subdomains
 
 ---

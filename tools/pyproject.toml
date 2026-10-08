@@ -1,0 +1,25 @@
+# The index generator is run in place with `uv run`, not installed as a package.
+[project]
+name = "tasc-tools"
+version = "0.0.0"
+description = "Index and README generators for the GA4GH TASC repository"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.18,<5"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.6"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

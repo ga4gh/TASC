@@ -2,16 +2,17 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Every GA4GH technical product must have at least one GitHub repository that conforms to the TASC repository template.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** github, repository, pdap, technical-product-requirements  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
 ## Context
 
-As part of TASC's review of the "GA4GH Technical Product Requirements" (2026-07-09) the candidate set of required activities, artifacts, or states a technical product must satisfy to get through PDAP approval (see [TASC-ADR-010](TASC-ADR-010.md)). TASC needed to decide whether a GitHub repository, conforming to a shared template and policy set, should be a mandatory artifact for every technical product.
+As part of TASC's review of the "GA4GH Technical Product Requirements" (2026-07-09) the candidate set of required activities, artifacts, or states a technical product must satisfy to get through PDAP approval (see [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)). TASC needed to decide whether a GitHub repository, conforming to a shared template and policy set, should be a mandatory artifact for every technical product.
 
 Without a consistent, policy-conformant home for a product's source and collaboration activity, work streams create repositories with inconsistent structure, licensing, ownership, and access-control practices. This makes it harder for TASC and the PSC to assess a product, and harder for external adopters to know what to expect when engaging with a GA4GH product's codebase.
 
@@ -46,7 +47,7 @@ All GA4GH technical products MUST have at least one GitHub repository. Each repo
 - At least one GitHub repository is required per technical product.
 - The repository MUST conform to the TASC repository template.
 - The repository MUST comply with all GitHub policies referenced within that template.
-- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-007](TASC-ADR-007.md), [TASC-ADR-008](TASC-ADR-008.md), [TASC-ADR-009](TASC-ADR-009.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010.md)).
+- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
@@ -72,7 +73,7 @@ All GA4GH technical products MUST have at least one GitHub repository. Each repo
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-007](TASC-ADR-007.md) (Website), [TASC-ADR-008](TASC-ADR-008.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** TASC repository template (to be published under `recommendations/`)
 
 ---

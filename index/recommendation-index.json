@@ -1,0 +1,75 @@
+{
+  "$schema": "recommendation-index.schema.json",
+  "documents": [
+    {
+      "id": "GA4GH-REC-01",
+      "type": "recommendation",
+      "name": "API pagination guide",
+      "date": "2024-11-25",
+      "status": "Approved",
+      "description": "Describes the page-based and token-based pagination strategies approved for GA4GH APIs and when to use each.",
+      "path": "recommendations/API pagination guide.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/API%20pagination%20guide.md"
+    },
+    {
+      "id": "GA4GH-REC-02",
+      "type": "recommendation",
+      "name": "Service Info Type Registry Guide",
+      "date": "2025-01-28",
+      "status": "Approved",
+      "description": "Defines how service type identifiers are registered, named and managed in the GA4GH Service Info Type Registry.",
+      "path": "recommendations/Service Info Type Registry Guide.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/Service%20Info%20Type%20Registry%20Guide.md"
+    },
+    {
+      "id": "GA4GH-REC-03",
+      "type": "recommendation",
+      "name": "GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development",
+      "date": "2025-07-18",
+      "status": "Approved",
+      "description": "Defines the Product Owner role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight.",
+      "path": "recommendations/GA4GH product owner description.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH%20product%20owner%20description.md"
+    },
+    {
+      "id": "GA4GH-REC-04",
+      "type": "recommendation",
+      "name": "TASC Technical Specification Development: Policy and processes for developing and communicating maturity of GA4GH Technical Specifications",
+      "date": "2025-07-18",
+      "status": "Approved",
+      "description": "Sets out the policy and process for developing GA4GH technical specifications and communicating feature maturity levels.",
+      "path": "recommendations/TASC Technical Specification Maintenance.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/TASC%20Technical%20Specification%20Maintenance.md"
+    },
+    {
+      "id": "GA4GH-REC-05",
+      "type": "recommendation",
+      "name": "Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products",
+      "date": "2026-07-07",
+      "status": "Draft",
+      "description": "Provides a consistent way to cite GA4GH documentary outputs by minting DOIs through Crossref under the GA4GH prefix.",
+      "path": "recommendations/Citing GA4GH Documentation.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/Citing%20GA4GH%20Documentation.md"
+    },
+    {
+      "id": "TASC-GOV-01",
+      "type": "governance",
+      "name": "TASC Governance and Leadership Charter",
+      "date": "2024-08-25",
+      "status": "Approved",
+      "description": "The TASC charter: mission, membership, meeting format and the four-step decision-making process, including voting thresholds.",
+      "path": "governance/TASC_Governance_and_Leadership_Approved_240825.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/governance/TASC_Governance_and_Leadership_Approved_240825.md"
+    },
+    {
+      "id": "TASC-GOV-02",
+      "type": "governance",
+      "name": "TASC Document Standards: Format, Placement, and Communication Standards for TASC Outputs",
+      "date": "2026-02-01",
+      "status": "Draft",
+      "description": "Sets the format, placement, numbering and communication standards for TASC recommendations, governance documents and ADRs.",
+      "path": "governance/TASC_Document_Standards.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/governance/TASC_Document_Standards.md"
+    }
+  ]
+}

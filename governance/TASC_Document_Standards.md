@@ -4,6 +4,7 @@
 **Document ID**: TASC-GOV-02  
 **Source**: TASC  
 **Title**: TASC Document Standards: Format, Placement, and Communication Standards for TASC Outputs  
+**Description**: Sets the format, placement, numbering and communication standards for TASC recommendations, governance documents and ADRs.  
 **Related GitHub issues**: [#76](https://github.com/ga4gh/TASC/pull/76)  
 **Raised by**: Mamana Mbiyavanga (TASC)  
 **Authors**: Mamana Mbiyavanga, Andy Yates, Sasha Siegel, Jinny Park  
@@ -80,6 +81,7 @@ All recommendations and governance documents MUST include the following metadata
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-XX (or **Document ID**: TASC-GOV-XX)  
 **Title**: [Full descriptive title]  
+**Description**: [One-sentence summary, max 300 characters]  
 **Related GitHub issues**: [#N](https://github.com/ga4gh/TASC/issues/N)  
 **Raised by**: [Name (Work Stream/Role)]  
 **Authors**: [Author names, comma-separated]  
@@ -98,6 +100,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 # TASC-ADR-XXX: [Short Decision Title]
 
 **Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Description:** [One-sentence summary, max 300 characters]  
 **Deciders:** [List key decision-makers]  
 **Keywords:** [comma-separated keywords]  
 **Work Streams Impacted:** [affected work streams]  
@@ -113,6 +116,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 | Field | Description |
 |-------|-------------|
 | **Source** | Always "TASC" |
+| **Description** | One-sentence summary (max 300 characters) shown in the TASC index on the website |
 | **Raised by** | The person and work stream/role that originally raised the issue (recommendations only) |
 | **Authors** | Those who wrote the document |
 | **Deciders** | Those who made the decision (ADRs only) |

@@ -1,0 +1,80 @@
+name: TASC index
+
+# Pull requests: lint, test and prove the index still generates.
+# Pushes/merges to main: do the same, then commit the regenerated index so the
+# website can read index/adr-index.json and
+# index/recommendation-index.json from main. The ADR/recommendation READMEs and
+# the root README's "Recently Approved" section are generated from those JSON files.
+on:
+  pull_request:
+    paths:
+      - "adr/**"
+      - "recommendations/**"
+      - "governance/**"
+      - "drafts/**"
+      - "index/*.schema.json"
+      - "tools/**"
+      - ".github/workflows/tasc-index.yml"
+  push:
+    branches: [main]
+    paths:
+      - "adr/**"
+      - "recommendations/**"
+      - "governance/**"
+      - "drafts/**"
+      - "index/*.schema.json"
+      - "tools/**"
+      - ".github/workflows/tasc-index.yml"
+
+concurrency:
+  group: tasc-index-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # only used on push to main, to commit the regenerated index
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - run: uv sync --locked
+        working-directory: tools
+
+      - name: Lint
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+        working-directory: tools
+
+      - name: Test
+        run: uv run pytest
+        working-directory: tools
+
+      - name: Generate indexes
+        run: uv run python -m tasc_index
+        working-directory: tools
+
+      # Reads only index/*.json, so it must run after the indexes are generated.
+      - name: Generate READMEs
+        run: uv run python -m tasc_index.readmes
+        working-directory: tools
+
+      - name: Commit regenerated indexes and READMEs
+        if: github.event_name == 'push'
+        run: |
+          generated='index/*-index.json adr/README.md recommendations/README.md README.md'
+          if [ -z "$(git status --porcelain -- $generated)" ]; then
+            echo "Generated files already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- $generated
+          git commit -m "chore: regenerate TASC indexes and READMEs"
+          git push

@@ -4,6 +4,7 @@
 **Document ID**: TASC-GOV-01  
 **Source**: TASC  
 **Title**: TASC Governance and Leadership Charter  
+**Description**: The TASC charter: mission, membership, meeting format and the four-step decision-making process, including voting thresholds.  
 **Related GitHub issues**: [#65](https://github.com/ga4gh/TASC/issues/65)  
 **Authors**: TASC Leadership  
 **Date**: 2024-08-25  

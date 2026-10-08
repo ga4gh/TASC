@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-01  
 **Title**: API pagination guide  
+**Description**: Describes the page-based and token-based pagination strategies approved for GA4GH APIs and when to use each.  
 **Related GitHub issues**: [#29](https://github.com/ga4gh/TASC/issues/29)  
 **Raised by**: Jeremy Adams (Cloud)  
 **Authors**: Mamana Mbiyavanga, Andy Yates  

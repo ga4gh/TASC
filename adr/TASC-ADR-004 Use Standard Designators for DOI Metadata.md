@@ -2,10 +2,11 @@
 
 **Date:** 2026-03-23 | **Status:** Proposed
 
+**Description:** Every GA4GH DOI registration must carry a std_designator metadata value naming the originating group and document.  
 **Deciders:** TASC, Technical Team, Work Stream Leads
 **Keywords:** metadata, governance, taxonomy, classification, doi
 **Work Streams Impacted:** All
-**Products Affected:** All
+**Products Affected:** All categories
 
 ---
 

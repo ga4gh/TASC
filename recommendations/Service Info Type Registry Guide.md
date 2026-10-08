@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-02  
 **Title**: Service Info Type Registry Guide  
+**Description**: Defines how service type identifiers are registered, named and managed in the GA4GH Service Info Type Registry.  
 **Related GitHub issues**: [#1](https://github.com/ga4gh/TASC/issues/1), [#16](https://github.com/ga4gh/TASC/issues/16), [#67](https://github.com/ga4gh/TASC/issues/67)  
 **Raised by**: Melissa Konopko (Technical Team)  
 **Authors**: Jeremy Adams, John Marshall, Mamana Mbiyavanga  

@@ -2,16 +2,17 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Every GA4GH technical product must have a conformance suite of tests derived from its specification.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** conformance, testing, traceability, pdap, technical-product-requirements  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
 ## Context
 
-As part of TASC's review of the "GA4GH Technical Product Requirements", TASC needed to decide whether a conformance suite should be mandatory for every technical product, and to define what a conformance suite is. Without a repeatable, traceable basis for assessing conformance, adopters and other GA4GH products cannot reliably know whether a given implementation actually satisfies a product's specification, undermining the interoperability goals described in the TASC interoperability framework (see [TASC-ADR-011](TASC-ADR-011.md)).
+As part of TASC's review of the "GA4GH Technical Product Requirements", TASC needed to decide whether a conformance suite should be mandatory for every technical product, and to define what a conformance suite is. Without a repeatable, traceable basis for assessing conformance, adopters and other GA4GH products cannot reliably know whether a given implementation actually satisfies a product's specification, undermining the interoperability goals described in the TASC interoperability framework (see [TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md)).
 
 **The Problem:**
 
@@ -43,7 +44,7 @@ A conformance suite is a defined set of tests, derived from a product specificat
 - Every technical product MUST have a conformance suite.
 - The suite MUST be traceable to the product specification's requirements and behaviours.
 - The suite MUST state its scope, optional features, and limitations, so that a "pass" result has a clear, bounded meaning.
-- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006.md), [TASC-ADR-007](TASC-ADR-007.md), [TASC-ADR-008](TASC-ADR-008.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010.md)).
+- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
@@ -52,7 +53,7 @@ A conformance suite is a defined set of tests, derived from a product specificat
 ### Positive
 
 ✅ Conformance claims become independently verifiable and repeatable  
-✅ Directly supports GA4GH's interoperability mandate (see [TASC-ADR-011](TASC-ADR-011.md))  
+✅ Directly supports GA4GH's interoperability mandate (see [TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md))  
 
 ### Negative
 
@@ -62,14 +63,14 @@ A conformance suite is a defined set of tests, derived from a product specificat
 ### Risks & Mitigations
 
 **Risk:** Conformance suites of inconsistent rigour or scope across products could give a false sense of comparable conformance.  
-- **Mitigation:** TASC to define minimum expectations for conformance-suite traceability and scope documentation as part of the PDAP review checklist (see [TASC-ADR-010](TASC-ADR-010.md)).
+- **Mitigation:** TASC to define minimum expectations for conformance-suite traceability and scope documentation as part of the PDAP review checklist (see [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007.md) (Website), [TASC-ADR-008](TASC-ADR-008.md) (Starter Kit), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-011](TASC-ADR-011.md) (Interoperability Framework), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md) (Interoperability Framework), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** Existing GA4GH product conformance suites
 
 ---

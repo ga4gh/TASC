@@ -1,0 +1,137 @@
+{
+  "$schema": "adr-index.schema.json",
+  "documents": [
+    {
+      "id": "TASC-ADR-001",
+      "type": "adr",
+      "name": "Use Crossref as the DOI Registration Authority for GA4GH",
+      "date": "2026-03-23",
+      "status": "Proposed",
+      "description": "GA4GH registers all of its DOIs through Crossref, using the GA4GH DOI prefix.",
+      "path": "adr/TASC-ADR-001 Use Crossref for DOI.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/adr/TASC-ADR-001%20Use%20Crossref%20for%20DOI.md",
+      "short_name": "Use Crossref for DOI"
+    },
+    {
+      "id": "TASC-ADR-002",
+      "type": "adr",
+      "name": "Separate Citation Identifiers from Machine-Readable Standard Identifiers",
+      "date": "2026-03-23",
+      "status": "Proposed",
+      "description": "DOIs are used for citing documents only; machine-readable standard identifiers are governed separately.",
+      "path": "adr/TASC-ADR-002 Separate Citation and Standard Identifiers.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/adr/TASC-ADR-002%20Separate%20Citation%20and%20Standard%20Identifiers.md",
+      "short_name": "Separate Citation and Standard Identifiers"
+    },
+    {
+      "id": "TASC-ADR-003",
+      "type": "adr",
+      "name": "Use Opaque DOI Suffixes",
+      "date": "2026-03-23",
+      "status": "Proposed",
+      "description": "GA4GH DOI suffixes are opaque and must not encode work stream, product, specification or version information.",
+      "path": "adr/TASC-ADR-003 Use Opaque DOI Suffixes.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/adr/TASC-ADR-003%20Use%20Opaque%20DOI%20Suffixes.md",
+      "short_name": "Use Opaque DOI Suffixes"
+    },
+    {
+      "id": "TASC-ADR-004",
+      "type": "adr",
+      "name": "Use Standard Designators for DOI Metadata Classification",
+      "date": "2026-03-23",
+      "status": "Proposed",
+      "description": "Every GA4GH DOI registration must carry a std_designator metadata value naming the originating group and document.",
+      "path": "adr/TASC-ADR-004 Use Standard Designators for DOI Metadata.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/adr/TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md",
+      "short_name": "Use Standard Designators for DOI Metadata"
+    },
+    {
+      "id": "TASC-ADR-005",
+      "type": "adr",
+      "name": "Do Not Extend GA4GH DOIs to Other Research Resources",
+      "date": "2026-07-07",
+      "status": "Proposed",
+      "description": "GA4GH DOIs are limited to documentary outputs and are not extended to datasets, tools or other research resources.",
+      "path": "adr/TASC-ADR-005 No DOIs for Other Research Resources.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/adr/TASC-ADR-005%20No%20DOIs%20for%20Other%20Research%20Resources.md",
+      "short_name": "No DOIs for Other Research Resources"
+    },
+    {
+      "id": "TASC-ADR-006",
+      "type": "adr",
+      "name": "Every GA4GH Technical Product Must Have a Conformant GitHub Repository",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Every GA4GH technical product must have at least one GitHub repository that conforms to the TASC repository template.",
+      "path": "drafts/TASC-ADR-006 Require a Conformant GitHub Repository.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md",
+      "short_name": "Require a Conformant GitHub Repository"
+    },
+    {
+      "id": "TASC-ADR-007",
+      "type": "adr",
+      "name": "GA4GH Product and Topic Websites Must Be Served from a ga4gh.org Subdomain",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "GA4GH product and topic websites must be served from a ga4gh.org subdomain; standalone or third-party domains are not permitted.",
+      "path": "drafts/TASC-ADR-007 Serve Websites from ga4gh.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.md",
+      "short_name": "Serve Websites from ga4gh"
+    },
+    {
+      "id": "TASC-ADR-008",
+      "type": "adr",
+      "name": "Every GA4GH Technical Product Must Provide a Starter Kit",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Every GA4GH technical product must provide a Starter Kit giving users minimal scaffolding to build their own implementation.",
+      "path": "drafts/TASC-ADR-008 Require a Starter Kit.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-008%20Require%20a%20Starter%20Kit.md",
+      "short_name": "Require a Starter Kit"
+    },
+    {
+      "id": "TASC-ADR-009",
+      "type": "adr",
+      "name": "Every GA4GH Technical Product Must Have a Conformance Suite",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Every GA4GH technical product must have a conformance suite of tests derived from its specification.",
+      "path": "drafts/TASC-ADR-009 Require a Conformance Suite.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-009%20Require%20a%20Conformance%20Suite.md",
+      "short_name": "Require a Conformance Suite"
+    },
+    {
+      "id": "TASC-ADR-010",
+      "type": "adr",
+      "name": "Adoption of the GA4GH Technical Product Requirements (PDAP Approval Set)",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Adopts four mandatory PDAP approval requirements for technical products: GitHub repository, website, Starter Kit and conformance suite.",
+      "path": "drafts/TASC-ADR-010 Adopt Technical Product Requirements.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md",
+      "short_name": "Adopt Technical Product Requirements"
+    },
+    {
+      "id": "TASC-ADR-011",
+      "type": "adr",
+      "name": "Adoption of the TASC Interoperability Framework",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Adopts the GA4GH 2026 TASC Interoperability framework as the basis for assessing interoperability across technical products.",
+      "path": "drafts/TASC-ADR-011 Adopt the Interoperability Framework.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md",
+      "short_name": "Adopt the Interoperability Framework"
+    },
+    {
+      "id": "TASC-ADR-012",
+      "type": "adr",
+      "name": "The Role of TASC in PDAP Technical Alignment and Interoperability Governance",
+      "date": "2026-08-14",
+      "status": "Draft",
+      "description": "Defines TASC's role in PDAP: technical-alignment review, interoperability risk-tiering and resolving cross-product conflicts.",
+      "path": "drafts/TASC-ADR-012 TASC Role in PDAP Governance.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md",
+      "short_name": "TASC Role in PDAP Governance"
+    }
+  ]
+}

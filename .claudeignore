@@ -1,0 +1,19 @@
+# Dependencies and virtual environments
+node_modules/
+.venv/
+
+# Build artefacts
+dist/
+build/
+.next/
+
+# Package lock files
+uv.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/

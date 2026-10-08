@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-03  
 **Title**: GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development  
+**Description**: Defines the Product Owner role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight.  
 **Related GitHub issues**: [#49](https://github.com/ga4gh/TASC/issues/49), [#64](https://github.com/ga4gh/TASC/issues/64), [#74](https://github.com/ga4gh/TASC/issues/74)  
 **Raised by**: Jonathan Lawson (DURI)  
 **Authors**: Jonathan Lawson, Andy Yates  

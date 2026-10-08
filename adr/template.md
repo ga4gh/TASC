@@ -1,11 +1,12 @@
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Date:** YYYY-MM-DD | **Status:** [Draft | Proposed | Accepted | Deprecated | Superseded]  
 
+**Description:** [One sentence (max 300 characters) summarising the decision; shown in the TASC index]  
 **Deciders:** [List key decision-makers]  
 **Keywords:** [e.g., maturity-model, versioning, governance, api, security]  
 **Work Streams Impacted:** [e.g., Cloud, Discovery, DaMaSC]  
-**Products Affected:** [e.g., Beacon v2, TRS, Refget]  
+**Products Affected:** [Real products (e.g., Beacon v2, TRS, Refget) or broad categories: API, data model/ontology, file format, policy, policy toolkit, protocol, technical implementation guide]  
 
 ---
 

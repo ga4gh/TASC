@@ -2,16 +2,17 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Defines TASC's role in PDAP: technical-alignment review, interoperability risk-tiering and resolving cross-product conflicts.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** governance, role, pdap, technical-alignment, interoperability  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
 ## Context
 
-TASC-GOV-01 establishes TASC's role to aid the harmonisation of GA4GH's technical products so they can be used together and its decision-making structure. With the adoption of the PDAP technical product requirements ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-010](TASC-ADR-010.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011.md)), TASC needed to formally record its specific operational role within the PDAP v2 process itself, rather than leaving that role implicit across several separate documents.
+TASC-GOV-01 establishes TASC's role to aid the harmonisation of GA4GH's technical products so they can be used together and its decision-making structure. With the adoption of the PDAP technical product requirements ([TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md)), TASC needed to formally record its specific operational role within the PDAP v2 process itself, rather than leaving that role implicit across several separate documents.
 
 **The Problem:**
 
@@ -36,7 +37,7 @@ TASC-GOV-01 establishes TASC's role to aid the harmonisation of GA4GH's technica
 
 ## Decision
 
-TASC's role in PDAP is to perform technical-alignment review and interoperability risk-tiering during product approval, and to act as the venue for resolving cross-product technical alignment conflicts. This role builds on TASC's general mission (TASC-GOV-01) and is exercised through the PDAP requirements ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-010](TASC-ADR-010.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011.md)).
+TASC's role in PDAP is to perform technical-alignment review and interoperability risk-tiering during product approval, and to act as the venue for resolving cross-product technical alignment conflicts. This role builds on TASC's general mission (TASC-GOV-01) and is exercised through the PDAP requirements ([TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)) and the interoperability framework ([TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md)).
 
 **Key Points:**
 
@@ -46,7 +47,7 @@ TASC's role in PDAP is to perform technical-alignment review and interoperabilit
   - Aggregates Work Stream representatives' conflict identification and TASC's holistic response following discussion.
   - Provides structured touch-points and mitigation review for at-risk (Tier 2/3) products at PDAP checkpoints and gates, including formal sign-off for Tier 3 products.
   - Acts as the *de facto* venue for resolving cross-product technical alignment conflicts.
-  - Reviews and adopts PDAP artifact/state requirements (GitHub Repository, Website, Starter Kit, Conformance Suite) that products must satisfy ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-009](TASC-ADR-009.md)).
+  - Reviews and adopts PDAP artifact/state requirements (GitHub Repository, Website, Starter Kit, Conformance Suite) that products must satisfy ([TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md)).
 
 ---
 
@@ -65,14 +66,14 @@ TASC's role in PDAP is to perform technical-alignment review and interoperabilit
 ### Risks & Mitigations
 
 **Risk:** This ADR's description of TASC's PDAP role could drift out of sync with TASC-GOV-01 or the interoperability framework if either is revised independently.  
-- **Mitigation:** Any future revision to TASC's general mission (TASC-GOV-01) or the interoperability framework ([TASC-ADR-011](TASC-ADR-011.md)) that materially changes TASC's PDAP responsibilities should be accompanied by a superseding ADR to this one.
+- **Mitigation:** Any future revision to TASC's general mission (TASC-GOV-01) or the interoperability framework ([TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md)) that materially changes TASC's PDAP responsibilities should be accompanied by a superseding ADR to this one.
 
 ---
 
 ## References
 
 - **Full Policy:** `governance/TASC_Governance_and_Leadership_Approved_240825.md` (TASC-GOV-01); `2026 TASC Interoperability.md`
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-009](TASC-ADR-009.md) (PDAP requirements), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-011](TASC-ADR-011.md) (Interoperability Framework)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (PDAP requirements), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md) (Interoperability Framework)
 - **Examples:** n/a
 
 ---

@@ -2,10 +2,11 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Adopts four mandatory PDAP approval requirements for technical products: GitHub repository, website, Starter Kit and conformance suite.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** pdap, technical-product-requirements, governance, review  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
@@ -42,10 +43,10 @@ TASC formally reviewed the "GA4GH Technical Product Requirements | 2026-07-09" c
 
 - The reviewed source document is "GA4GH Technical Product Requirements | 2026-07-09."
 - Four requirements were adopted from that document's candidate list:
-  - GitHub Repository — see [TASC-ADR-006](TASC-ADR-006.md)
-  - Website — see [TASC-ADR-007](TASC-ADR-007.md)
-  - Starter Kit — see [TASC-ADR-008](TASC-ADR-008.md)
-  - Conformance Suite — see [TASC-ADR-009](TASC-ADR-009.md)
+  - GitHub Repository — see [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)
+  - Website — see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md)
+  - Starter Kit — see [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md)
+  - Conformance Suite — see [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md)
 - This ADR records the review and adoption decision itself; the substantive content of each requirement is recorded in its own ADR so each can be revised or superseded independently.
 
 ---
@@ -65,20 +66,20 @@ TASC formally reviewed the "GA4GH Technical Product Requirements | 2026-07-09" c
 ### Risks & Mitigations
 
 **Risk:** Future readers may only find one of the four requirement ADRs and miss the broader PDAP context.  
-- **Mitigation:** Each requirement ADR ([TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-009](TASC-ADR-009.md)) cross-references this review record in its References section.
+- **Mitigation:** Each requirement ADR ([TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md)) cross-references this review record in its References section.
 
 ---
 
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007.md) (Website), [TASC-ADR-008](TASC-ADR-008.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009.md) (Conformance Suite), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** n/a
 
 ---
 
 ## Notes
 
-The source review document referenced here (tracked in this repository as `CLAUDE-PDAP-REVIEW-TASC.md`) was not populated with the full requirements text as part of this ADR set, per an explicit decision at drafting time; this ADR and [TASC-ADR-006](TASC-ADR-006.md)–[TASC-ADR-009](TASC-ADR-009.md) instead draw directly on the requirements text supplied by Andy Yates during the TASC workshop discussion.
+The source review document referenced here (tracked in this repository as `CLAUDE-PDAP-REVIEW-TASC.md`) was not populated with the full requirements text as part of this ADR set, per an explicit decision at drafting time; this ADR and [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) instead draw directly on the requirements text supplied by Andy Yates during the TASC workshop discussion.
 
 Drafted with the assistance of Claude Sonnet 5 (Anthropic), via Claude Code, from source material provided the TASC workshop, July 2026.

@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-04  
 **Title**: TASC Technical Specification Development: Policy and processes for developing and communicating maturity of GA4GH Technical Specifications  
+**Description**: Sets out the policy and process for developing GA4GH technical specifications and communicating feature maturity levels.  
 **Related GitHub issues**: [#64](https://github.com/ga4gh/TASC/issues/64), [#49](https://github.com/ga4gh/TASC/issues/49), [#16](https://github.com/ga4gh/TASC/issues/16), [#46](https://github.com/ga4gh/TASC/issues/46)  
 **Raised by**: Alex Wagner (GKS)  
 **Authors**: Alex Wagner, Larry Babb, Robert Freimuth, GKS Work Stream  

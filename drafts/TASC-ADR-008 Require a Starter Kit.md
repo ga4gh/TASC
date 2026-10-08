@@ -2,10 +2,11 @@
 
 **Date:** 2026-08-14 | **Status:** Draft  
 
+**Description:** Every GA4GH technical product must provide a Starter Kit giving users minimal scaffolding to build their own implementation.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
 **Keywords:** starter-kit, reference-implementation, scaffolding, pdap, technical-product-requirements  
 **Work Streams Impacted:** All work streams  
-**Products Affected:** All GA4GH technical products  
+**Products Affected:** API, data model/ontology, file format, protocol, technical implementation guide
 
 ---
 
@@ -42,7 +43,7 @@ A Starter Kit is content needed to enable users to begin building their own cust
 
 - Every technical product MUST provide a Starter Kit satisfying the above definition.
 - A Product Development team's reference implementation MAY be used to satisfy this requirement where it meets the minimal-scaffolding, readily-extensible criteria.
-- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006.md), [TASC-ADR-007](TASC-ADR-007.md), [TASC-ADR-009](TASC-ADR-009.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010.md)).
+- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
@@ -61,14 +62,14 @@ A Starter Kit is content needed to enable users to begin building their own cust
 ### Risks & Mitigations
 
 **Risk:** A reference implementation submitted as a Starter Kit may be too complex, opinionated, or tightly coupled to one workflow to be "readily extended" for varied downstream use.  
-- **Mitigation:** TASC to define concrete acceptance criteria for what counts as adequate Starter Kit scaffolding as part of the PDAP review checklist (see [TASC-ADR-010](TASC-ADR-010.md)).
+- **Mitigation:** TASC to define concrete acceptance criteria for what counts as adequate Starter Kit scaffolding as part of the PDAP review checklist (see [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007.md) (Website), [TASC-ADR-009](TASC-ADR-009.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** Product reference implementations submitted as Starter Kits
 
 ---

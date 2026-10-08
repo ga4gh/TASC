@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-05  
 **Title**: Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products  
+**Description**: Provides a consistent way to cite GA4GH documentary outputs by minting DOIs through Crossref under the GA4GH prefix.  
 **Related GitHub issues**: [#39](https://github.com/ga4gh/TASC/issues/39), [#179](https://github.com/samtools/hts-specs/issues/179)  
 **Raised by**: Susan Fairley (Chief Standards Officer - GA4GH)  
 **Authors**: Chen Chen, James Eddy, Ian Fore, Francesca Frexia, Jimmy Payyappilly, Angela Page, Alex Wagner, Andy Yates, Michael Baudis, Sasha Siegel  
@@ -174,11 +175,11 @@ Work Streams SHOULD additionally consider providing a [Citation File Format (CFF
 
 - \[CROSSREF\] \- [Crossref: a DOI issuer](https://www.crossref.org/)
 - \[CROSSREF_RECORDS\] \- [Crossref Supported Record Types](https://www.crossref.org/documentation/schema-library/markup-guide-record-types/)
-- \[TASC-ADR-001\] - [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001.md)
-- \[TASC-ADR-002\] - [TASC-ADR-002: Separate Citation Identifiers from Machine-Readable Standard Identifiers](./TASC-ADR-002.md)
-- \[TASC-ADR-003\] - [TASC-ADR-003: Use Opaque DOI Suffixes](./TASC-ADR-003.md)
-- \[TASC-ADR-004\] - [TASC-ADR-004: Use Standard Designators for DOI Metadata Classification](./TASC-ADR-004.md)
-- \[TASC-ADR-005\] - [TASC-ADR-005: Do Not Extend GA4GH DOIs to Other Research Resources](./TASC-ADR-005.md)
+- \[TASC-ADR-001\] - [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001%20Use%20Crossref%20for%20DOI.md)
+- \[TASC-ADR-002\] - [TASC-ADR-002: Separate Citation Identifiers from Machine-Readable Standard Identifiers](./TASC-ADR-002%20Separate%20Citation%20and%20Standard%20Identifiers.md)
+- \[TASC-ADR-003\] - [TASC-ADR-003: Use Opaque DOI Suffixes](./TASC-ADR-003%20Use%20Opaque%20DOI%20Suffixes.md)
+- \[TASC-ADR-004\] - [TASC-ADR-004: Use Standard Designators for DOI Metadata Classification](./TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md)
+- \[TASC-ADR-005\] - [TASC-ADR-005: Do Not Extend GA4GH DOIs to Other Research Resources](./TASC-ADR-005%20No%20DOIs%20for%20Other%20Research%20Resources.md)
 
 ## Contributors
 
