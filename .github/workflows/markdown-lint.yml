@@ -1,0 +1,33 @@
+name: Markdown lint
+
+# Report only: this workflow never commits. Rules live in .markdownlint.yml; files are chosen in .markdownlint-cli2.jsonc.
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - ".markdownlint-cli2.jsonc"
+      - ".markdownlint.yml"
+      - ".github/workflows/markdown-lint.yml"
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"
+
+  # Link checking is off for the moment.
+  # lychee:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: lycheeverse/lychee-action@v2
+  #       with:
+  #         args: --offline --no-progress "**/*.md"

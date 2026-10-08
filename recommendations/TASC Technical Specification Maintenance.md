@@ -39,7 +39,7 @@ A maturity model is a useful mechanism for communicating varying stability acros
 
 The purpose of this document is to clearly define the maturity model and release process for developing and maintaining GA4GH standards, with the goal of enabling timely specification adoption by the community.
 
-![][image1]
+![Visual description of the innovation lifecycle][image1]
 
 ***Figure 1 \- The Innovation Adoption Lifecycle*** ([**source**](https://en.wikipedia.org/wiki/Technology_adoption_life_cycle))***.** The Innovation Adoption Lifecycle illustrates adoption rates (y-axis) for new technologies over time (x-axis). Innovators (leftmost on the time axis) are among the first to adopt a new technology, and laggards (rightmost) are among the last, reflecting the differing needs for innovation and stability by these community groups. Adopters in every category along the innovation adoption lifecycle benefit from communication about the maturity of technical specification components generated in GA4GH technical products. Communicating when a component is ready for implementation by groups along the innovation / stability spectrum is a primary goal of the maturity model, enabling adopters to engage at a time that is appropriate for their organizational needs.*  
 
@@ -64,7 +64,7 @@ It is not expected that every category of product feature developed for a GA4GH 
 
 ## *Maturity Advancement Process*
 
-Product feature maturity levels are to be reviewed and advanced by consensus among defined decision-makers following Work Stream and GA4GH processes, in consultation with the associated [**product group**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.ij15j31aj6jd) membership. Factors to be considered for product feature maturity advancement include the criteria specified in **Table 1**, the degree of adoption observed in the community, feedback provided by adopters, and availability of specification maintainers to provide the level of support required. 
+Product feature maturity levels are to be reviewed and advanced by consensus among defined decision-makers following Work Stream and GA4GH processes, in consultation with the associated [**product group**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.ij15j31aj6jd) membership. Factors to be considered for product feature maturity advancement include the criteria specified in **Table 1**, the degree of adoption observed in the community, feedback provided by adopters, and availability of specification maintainers to provide the level of support required.
 
 ### Developing a Draft Product Feature
 
@@ -155,7 +155,7 @@ The assigned [**feature developers**](https://docs.google.com/document/d/1xPFXRF
 
 ## *Versioning*
 
-[**Versions**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.sz593b8vre9l) are used to identify releases of technical specifications, *not* to individual product features. 
+[**Versions**](https://docs.google.com/document/d/1xPFXRF7_Ppe5SDBHTBa1E-MBHHNtoc1Q-jZ1olOrtc4/edit?tab=t.0#heading=h.sz593b8vre9l) are used to identify releases of technical specifications, *not* to individual product features.
 
 Technical specification development is intrinsically linked to policy surrounding major and minor version identification, which follow semantic versioning v2 (SemVer; [**semver.org**](https://semver.org/#semantic-versioning-200)) practices for API versioning. Version syntax follows SemVer syntax. Examples of how product features at different maturity levels are applied to the SemVer major/minor/patch syntax as follows:
 
@@ -183,7 +183,7 @@ Technical specification development is intrinsically linked to policy surroundin
 * Any changes made to *draft* product features  
 * Addition of implementation guidance, tests, or other supporting product features that do not directly affect data compatibility
 
-Versioning of approved GA4GH standards should additionally follow the procedures for [**GA4GH Product Updates**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7). Specifically, advancement of data classes to the *trial use* or *normative* levels must be accompanied by a minor release increment, and therefore may only be included in a release following an appropriate community and PRC consultation process ([**GA4GH Product Development 32**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7:~:text=32.%20Public%20comment,reduced%20or%20omitted.)). 
+Versioning of approved GA4GH standards should additionally follow the procedures for [**GA4GH Product Updates**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7). Specifically, advancement of data classes to the *trial use* or *normative* levels must be accompanied by a minor release increment, and therefore may only be included in a release following an appropriate community and PRC consultation process ([**GA4GH Product Development 32**](https://www.ga4gh.org/our-products/development-and-approval-process/#section_7:~:text=32.%20Public%20comment,reduced%20or%20omitted.)).
 
 ## *Releases*
 

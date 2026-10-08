@@ -64,6 +64,7 @@ See [all recommendations](recommendations/README.md) for the full list and statu
 - [TASC Members](#tasc-members)
 - [Group Meeting Format](#group-meeting-format)
 - [Decision-Making Process](#decision-making-process)
+- [Checking your changes](#checking-your-changes)
 - [Issue labels](#issue-labels)
 
 ## TASC Structure
@@ -214,6 +215,20 @@ For asynchronous discussion, members use:
 1. Decisions included in GA4GH communications and published to website
 2. TASC members maintain awareness within their work streams
 3. Content-specific indices and repositories created as needed
+
+## Checking your changes
+
+Before opening a pull request, lint the markdown (needs [Node.js](https://nodejs.org/)):
+
+```bash
+npx markdownlint-cli2
+```
+
+Rules are in [.markdownlint.yml](.markdownlint.yml). The same check runs on pull requests.
+
+The ADR and recommendation indexes (`index/`), the `adr/` and `recommendations/` READMEs and the
+"Recently Approved" section above are generated when changes reach `main`; do not edit them by hand.
+To preview them locally, see [tools/README.md](tools/README.md).
 
 ## Issue labels
 ### By Status (Open)
