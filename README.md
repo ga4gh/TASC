@@ -90,16 +90,19 @@ The CPO ensures that the team creates GA4GH-wide technical alignment and that th
 | Member | Work Stream |
 |--------|-------------|
 | **Nara Sobreira, David Bujold & Miro Cupak** | Discovery |
-| **Venkat Malladi & Brian O’Connor** | Cloud |
+| **Venkat Malladi & Brian O’Connor** | Federated Analysis |
 | **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
-| **Alex Wagner & Melissa Cline** | GKS |
+| **Alex Wagner, Melissa Cline & Larry Babb** | GKS |
 | **Benjamin Berk & Monica Munoz-Torres** | Clin/Pheno |
 | **Tom Conner & Jaime Delgado** | Data Security |
-| **Marc Fiume & Susheel Varma** | AIWS |
+| **Marc Fiume & Susheel Varma** | AI |
 
 Two volunteer representatives from each technical Work Stream and Data Security–preferably the Work Stream Co-leads–provide knowledge and insight for their respective GA4GH products and communicate as liaisons.
 
 ### Non-Voting Members (Advisory/Contributors)
+
+- Bob Freimuth, Mayo Clinic
+- Michael Baudis, University of Zurich
 
 #### GA4GH Staff
 TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
@@ -124,11 +127,9 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 
 | Member | Work Stream / Role |
 |--------|------------------------|
-| Marc Fiume | Discovery |
 | Ian Fore | Discovery, FASP |
 | David Bernick | Data Security |
 | Craig Voisin | DURI |
-| Jeremy Adams | TASC Lead, Technical Team|
 | Melissa Konopko | TASC Lead, Technical Team |
 | Rishi Nag | TASC Lead, Technical Team |
 | Susan Fairley | Chief Standards Officer |
@@ -138,7 +139,6 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 | Yasmeen Kurdi | Technical Team |
 | Alex Tsai | Technical Team |
 | John Marshall | Large Scale Genomics |
-| Michael Baudis | Discovery |
 
 ## Group Meeting Format
 
