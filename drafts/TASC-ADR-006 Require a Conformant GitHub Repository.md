@@ -47,7 +47,7 @@ All GA4GH technical products MUST have at least one GitHub repository. Each repo
 - At least one GitHub repository is required per technical product.
 - The repository MUST conform to the TASC repository template.
 - The repository MUST comply with all GitHub policies referenced within that template.
-- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
+- This requirement is one of the four PDAP artifact/state requirements TASC agreed at its July 2026 workshop (see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.md), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md), and the umbrella review record [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md)).
 
 ---
 
@@ -73,7 +73,7 @@ All GA4GH technical products MUST have at least one GitHub repository. Each repo
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** TASC repository template (to be published under `recommendations/`)
 
 ---

@@ -44,7 +44,7 @@ TASC formally reviewed the "GA4GH Technical Product Requirements | 2026-07-09" c
 - The reviewed source document is "GA4GH Technical Product Requirements | 2026-07-09."
 - Four requirements were adopted from that document's candidate list:
   - GitHub Repository — see [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)
-  - Website — see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md)
+  - Website — see [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.md)
   - Starter Kit — see [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md)
   - Conformance Suite — see [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md)
 - This ADR records the review and adoption decision itself; the substantive content of each requirement is recorded in its own ADR so each can be revised or superseded independently.
@@ -73,7 +73,7 @@ TASC formally reviewed the "GA4GH Technical Product Requirements | 2026-07-09" c
 ## References
 
 - **Full Policy:** GA4GH Technical Product Requirements, 2026-07-09
-- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.org.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
+- **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md) (GitHub Repository), [TASC-ADR-007](TASC-ADR-007%20Serve%20Websites%20from%20ga4gh.md) (Website), [TASC-ADR-008](TASC-ADR-008%20Require%20a%20Starter%20Kit.md) (Starter Kit), [TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (Conformance Suite), [TASC-ADR-012](TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (Role of TASC in PDAP Governance)
 - **Examples:** n/a
 
 ---

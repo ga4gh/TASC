@@ -89,7 +89,7 @@ REWS_GDPRPRIMER
 ### Risks & Mitigations
 
 **Risk:** Different originating groups adopt inconsistent naming patterns
-- **Mitigation:** Publish and maintain a controlled naming convention managed through the DOI registration process. Document the naming convention and index its subcomponents (`<ORIGINATING_GROUP_ACRONYM>`, `<DOCUMENT_NAME>`) in the Technical Team's central register — see [originating-group-acronyms.yaml](group-acronyms/originating-group-acronyms.yaml) for the authoritative list of `<ORIGINATING_GROUP_ACRONYM>` values — so clashes and inconsistencies can be checked before registration
+- **Mitigation:** Publish and maintain a controlled naming convention managed through the DOI registration process. Document the naming convention and index its subcomponents (`<ORIGINATING_GROUP_ACRONYM>`, `<DOCUMENT_NAME>`) in the Technical Team's central register — see [originating-group-acronyms.yaml](../registries/group-acronyms/originating-group-acronyms.yaml) for the authoritative list of `<ORIGINATING_GROUP_ACRONYM>` values — so clashes and inconsistencies can be checked before registration
 
 **Risk:** Designators become overly detailed or unstable
 - **Mitigation:** Require concise, durable naming aligned with long-term product and document identity

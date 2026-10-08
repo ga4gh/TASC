@@ -147,25 +147,29 @@ The `ga4gh/TASC` GitHub repository is the canonical source of truth for all TASC
 ga4gh/TASC/
 ├── README.md
 ├── adr/
-│   ├── README.md          (index table)
+│   ├── README.md          (generated index table)
 │   ├── template.md
-│   └── NNN-short-title.md (accepted ADRs)
+│   └── TASC-ADR-NNN Short Name.md (ADRs)
 ├── governance/
 │   └── TASC-GOV-XX_Title.md
 ├── recommendations/
 │   ├── template.md
 │   └── [Recommendation Title].md
 ├── drafts/                (work in progress)
-├── service-info/
-│   └── ga4gh-service-info.json
+├── registries/
+│   ├── service-info/
+│   │   └── ga4gh-service-info.json
+│   ├── namespace-resolver/
+│   ├── group-acronyms/
+│   └── persistent-url/
 └── data/                  (supporting materials, not committed)
 ```
 
-- **`adr/`** -- Immutable decision records. ADR files use the naming convention `NNN-short-kebab-title.md` with zero-padded 3-digit numbers.
+- **`adr/`** -- Immutable decision records. ADR files are named `TASC-ADR-NNN Short Name.md` (zero-padded 3-digit number, then a short name of up to 60 characters, e.g. `TASC-ADR-001 Use Crossref for DOI.md`), so they are easy to browse. `adr/README.md` is generated from the index.
 - **`governance/`** -- TASC operating charters and leadership rules.
 - **`recommendations/`** -- Approved policy documents and guidance.
 - **`drafts/`** -- Work-in-progress documents that graduate to their respective directories upon approval.
-- **`service-info/`** -- The GA4GH Service Info Type Registry.
+- **`registries/`** -- Registries maintained by TASC: the GA4GH Service Info Type Registry (`service-info/`), `namespace-resolver/`, `group-acronyms/` and `persistent-url/`.
 
 ## Document Lifecycle
 

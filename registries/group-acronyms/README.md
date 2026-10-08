@@ -4,7 +4,7 @@ This file details how to register new group acronyms
 
 ## Background
 
-The [Citing GA4GH Documentation](../recommendations/Citing%20GA4GH%20Documentation.md) requires the use of a known group acronym to create the `<std_designator>` metadata item. Contained in this directory is the registry of `<ORIGINATING_GROUP_ACRONYM>`. This is need is established in ADR [TASC-ADR-004](../adr/TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md).
+The [Citing GA4GH Documentation](../../recommendations/Citing%20GA4GH%20Documentation.md) requires the use of a known group acronym to create the `<std_designator>` metadata item. Contained in this directory is the registry of `<ORIGINATING_GROUP_ACRONYM>`. This is need is established in ADR [TASC-ADR-004](../../adr/TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md).
 
 Only the acronyms found here will be used/
 
