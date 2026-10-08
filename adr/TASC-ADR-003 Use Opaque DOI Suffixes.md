@@ -23,7 +23,7 @@ DOIs require both a unique identifier and sufficient metadata to support discove
 
 **Alternatives Considered:**
 
-1. **Use semantic DOI suffixes**
+Alternative 1. **Use semantic DOI suffixes**
 
 Example:
 
@@ -37,7 +37,7 @@ Example:
 - ❌ Creates governance challenges around naming
 - ❌ Introduces risk of identifier instability
 
-2. **Use opaque DOI suffixes without additional classification**
+Alternative 2. **Use opaque DOI suffixes without additional classification**
 
 Example:
 
@@ -84,7 +84,6 @@ GA4GH will generate DOI suffixes as opaque, non-semantic identifiers
 
 **Risk:** Opaque suffixes reduce administrative discoverability of registrations
 - **Mitigation:** The Technical Team maintains a central register indexing assigned suffixes against their `<std_designator>` values, restoring discoverability without encoding meaning in the DOI itself
-
 
 ---
 

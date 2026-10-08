@@ -46,7 +46,7 @@ GA4GH will not use, or extend, its DOI mechanism to serve as the persistent iden
 - GA4GH-minted DOIs MUST NOT be used as a general-purpose persistent identifier mechanism for datasets, tools, or other research resources
 - Datasets requiring persistent identifiers SHOULD use established dataset-identifier mechanisms appropriate to where they are hosted or governed
 - This decision bounds the scope of the Citing GA4GH Documentation Recommendation, which applies only to documentary outputs
-- Due to the nature of some documentary outputs they may contain data supporting testing. This is a consequence of minting said DOI 
+- Due to the nature of some documentary outputs they may contain data supporting testing. This is a consequence of minting said DOI
 
 ---
 
@@ -73,5 +73,3 @@ GA4GH will not use, or extend, its DOI mechanism to serve as the persistent iden
 ## References
 
 - **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
-
-

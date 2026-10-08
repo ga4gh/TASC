@@ -10,7 +10,7 @@
 **Date:** 2026-07-07  
 **Status:** Draft  
 **Keywords**: doi, citation  
-**Work Streams Impacted**: All workstreams  
+**Work Streams Impacted**: All
 **Products Affected**: None directly  
 
 ## Abstract
@@ -56,7 +56,6 @@ DOI suffixes MUST be generated as opaque identifiers and MUST NOT encode semanti
 
 Each DOI registration MUST include a `<std_designator>` metadata field identifying the originating group and document context. The `<std_designator>` value MUST follow the format:
 
-
 ```text
 <ORIGINATING_GROUP_ACRONYM>_<DOCUMENT_NAME>
 ```
@@ -72,7 +71,6 @@ TASC_TS
 ```
 
 Note that over time, originating groups can change names (e.g. Work Streams are sometimes renamed). Use the name of the originating group at the time of minting. Originating groups SHOULD use concise and stable designator values to promote consistency across DOI registrations. The `<std_designator>` value MUST uniquely identify the document category within the context of the originating group. The Technical Team's register of assigned designators (see *Recommendation*) MUST be checked prior to registration to avoid clashing or inconsistent values.
-
 
 ### DOI Request Process
 
