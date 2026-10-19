@@ -1,6 +1,5 @@
 data
 logs
-drafts/
 
 # Claude Code
 .claude/
