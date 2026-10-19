@@ -1,6 +1,6 @@
 # TASC-ADR-007: GA4GH Product and Topic Websites Must Be Served from a ga4gh.org Subdomain
 
-**Date:** 2026-08-14 | **Status:** Draft  
+**Date:** 2026-08-14 | **Status:** Approved  
 
 **Description:** GA4GH product and topic websites must be served from a ga4gh.org subdomain; standalone or third-party domains are not permitted.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  

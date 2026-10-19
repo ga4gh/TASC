@@ -1,6 +1,6 @@
 # TASC-ADR-010: Adoption of the GA4GH Technical Product Requirements (PDAP Approval Set)
 
-**Date:** 2026-08-14 | **Status:** Draft  
+**Date:** 2026-08-14 | **Status:** Approved  
 
 **Description:** Adopts four mandatory PDAP approval requirements for technical products: GitHub repository, website, Starter Kit and conformance suite.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  

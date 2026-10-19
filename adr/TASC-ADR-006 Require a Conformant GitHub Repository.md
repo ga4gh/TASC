@@ -1,6 +1,6 @@
 # TASC-ADR-006: Every GA4GH Technical Product Must Have a Conformant GitHub Repository
 
-**Date:** 2026-08-14 | **Status:** Draft  
+**Date:** 2026-08-14 | **Status:** Approved  
 
 **Description:** Every GA4GH technical product must have at least one GitHub repository that conforms to the TASC repository template.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  

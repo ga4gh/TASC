@@ -1,6 +1,6 @@
 # TASC-ADR-011: Adoption of the TASC Interoperability Framework
 
-**Date:** 2026-08-14 | **Status:** Draft  
+**Date:** 2026-08-14 | **Status:** Approved  
 
 **Description:** Adopts the GA4GH 2026 TASC Interoperability framework as the basis for assessing interoperability across technical products.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
