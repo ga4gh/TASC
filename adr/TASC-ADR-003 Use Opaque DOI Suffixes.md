@@ -1,6 +1,6 @@
 # TASC-ADR-003: Use Opaque DOI Suffixes
 
-**Date:** 2026-03-23 | **Status:** Proposed
+**Date:** 2026-03-23 | **Status:** Approved
 
 **Description:** GA4GH DOI suffixes are opaque and must not encode work stream, product, specification or version information.  
 **Deciders:** TASC, Technical Team, Work Stream Leads

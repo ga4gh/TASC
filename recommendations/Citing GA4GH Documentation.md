@@ -8,7 +8,7 @@
 **Raised by**: Susan Fairley (Chief Standards Officer - GA4GH)  
 **Authors**: Chen Chen, James Eddy, Ian Fore, Francesca Frexia, Jimmy Payyappilly, Angela Page, Alex Wagner, Andy Yates, Michael Baudis, Sasha Siegel  
 **Date:** 2026-07-07  
-**Status:** Draft  
+**Status:** Approved  
 **Keywords**: doi, citation  
 **Work Streams Impacted**: All
 **Products Affected**: None directly  

@@ -1,6 +1,6 @@
 # TASC-ADR-004: Use Standard Designators for DOI Metadata Classification
 
-**Date:** 2026-03-23 | **Status:** Proposed
+**Date:** 2026-03-23 | **Status:** Approved
 
 **Description:** Every GA4GH DOI registration must carry a std_designator metadata value naming the originating group and document.  
 **Deciders:** TASC, Technical Team, Work Stream Leads

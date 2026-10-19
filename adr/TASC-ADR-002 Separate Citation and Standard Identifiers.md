@@ -1,6 +1,6 @@
 # TASC-ADR-002: Separate Citation Identifiers from Machine-Readable Standard Identifiers
 
-**Date:** 2026-03-23 | **Status:** Proposed
+**Date:** 2026-03-23 | **Status:** Approved
 
 **Description:** DOIs are used for citing documents only; machine-readable standard identifiers are governed separately.  
 **Deciders:** TASC, Technical Team, Architecture Community  

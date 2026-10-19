@@ -1,6 +1,6 @@
 # TASC-ADR-005: Do Not Extend GA4GH DOIs to Other Research Resources
 
-**Date:** 2026-07-07 | **Status:** Proposed
+**Date:** 2026-07-07 | **Status:** Approved
 
 **Description:** GA4GH DOIs are limited to documentary outputs and are not extended to datasets, tools or other research resources.  
 **Deciders:** TASC, GA4GH Technical Team, Chief Product Officer  
