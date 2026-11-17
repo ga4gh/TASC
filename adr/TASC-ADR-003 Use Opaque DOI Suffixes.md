@@ -1,11 +1,12 @@
 # TASC-ADR-003: Use Opaque DOI Suffixes
 
-**Date:** 2026-03-23 | **Status:** Proposed
+**Date:** 2026-03-23 | **Status:** Approved
 
+**Description:** GA4GH DOI suffixes are opaque and must not encode work stream, product, specification or version information.  
 **Deciders:** TASC, Technical Team, Work Stream Leads
 **Keywords:** metadata, governance, taxonomy, doi, identifiers
 **Work Streams Impacted:** All
-**Products Affected:** All
+**Products Affected:** All categories
 
 ---
 
@@ -22,7 +23,7 @@ DOIs require both a unique identifier and sufficient metadata to support discove
 
 **Alternatives Considered:**
 
-1. **Use semantic DOI suffixes**
+Alternative 1. **Use semantic DOI suffixes**
 
 Example:
 
@@ -36,7 +37,7 @@ Example:
 - ❌ Creates governance challenges around naming
 - ❌ Introduces risk of identifier instability
 
-2. **Use opaque DOI suffixes without additional classification**
+Alternative 2. **Use opaque DOI suffixes without additional classification**
 
 Example:
 
@@ -84,13 +85,12 @@ GA4GH will generate DOI suffixes as opaque, non-semantic identifiers
 **Risk:** Opaque suffixes reduce administrative discoverability of registrations
 - **Mitigation:** The Technical Team maintains a central register indexing assigned suffixes against their `<std_designator>` values, restoring discoverability without encoding meaning in the DOI itself
 
-
 ---
 
 ## References
 
 - **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
-- **Related ADRs:** [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001.md)
+- **Related ADRs:** [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001%20Use%20Crossref%20for%20DOI.md)
 
 ---
 

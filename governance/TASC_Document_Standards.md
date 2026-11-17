@@ -4,6 +4,7 @@
 **Document ID**: TASC-GOV-02  
 **Source**: TASC  
 **Title**: TASC Document Standards: Format, Placement, and Communication Standards for TASC Outputs  
+**Description**: Sets the format, placement, numbering and communication standards for TASC recommendations, governance documents and ADRs.  
 **Related GitHub issues**: [#76](https://github.com/ga4gh/TASC/pull/76)  
 **Raised by**: Mamana Mbiyavanga (TASC)  
 **Authors**: Mamana Mbiyavanga, Andy Yates, Sasha Siegel, Jinny Park  
@@ -61,7 +62,7 @@ These documents define processes and standards that apply broadly and MAY evolve
 | **Scope** | Single architectural choice |
 | **Key Question** | "Why did we decide this way?" |
 
-ADRs follow the Michael Nygard template and capture the context, alternatives considered, decision made, and consequences. Once accepted, ADRs MUST NOT be edited. If a decision changes, a new ADR supersedes the original.
+ADRs follow the Michael Nygard template and capture the context, alternatives considered, decision made, and consequences. Once approved, ADRs MUST NOT be edited. If a decision changes, a new ADR supersedes the original.
 
 ### When to Use Which
 
@@ -80,6 +81,7 @@ All recommendations and governance documents MUST include the following metadata
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-XX (or **Document ID**: TASC-GOV-XX)  
 **Title**: [Full descriptive title]  
+**Description**: [One-sentence summary, max 300 characters]  
 **Related GitHub issues**: [#N](https://github.com/ga4gh/TASC/issues/N)  
 **Raised by**: [Name (Work Stream/Role)]  
 **Authors**: [Author names, comma-separated]  
@@ -97,7 +99,8 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 ```markdown
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Date:** YYYY-MM-DD | **Status:** [Proposed | Approved | Deprecated | Superseded]  
+**Description:** [One-sentence summary, max 300 characters]  
 **Deciders:** [List key decision-makers]  
 **Keywords:** [comma-separated keywords]  
 **Work Streams Impacted:** [affected work streams]  
@@ -113,13 +116,14 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 | Field | Description |
 |-------|-------------|
 | **Source** | Always "TASC" |
+| **Description** | One-sentence summary (max 300 characters) shown in the TASC index on the website |
 | **Raised by** | The person and work stream/role that originally raised the issue (recommendations only) |
 | **Authors** | Those who wrote the document |
 | **Deciders** | Those who made the decision (ADRs only) |
 | **Keywords** | Searchable tags for discoverability (e.g., api, pagination, governance, maturity-model) |
 | **Work Streams Impacted** | GA4GH work streams affected by the document |
 | **Products Affected** | Specific GA4GH products impacted |
-| **Status** | Current state: Draft, Approved/Accepted, Superseded/Deprecated |
+| **Status** | Current state: Draft, Approved, Superseded/Deprecated |
 
 Each metadata line MUST end with two trailing spaces for proper Markdown line breaks.
 
@@ -143,25 +147,29 @@ The `ga4gh/TASC` GitHub repository is the canonical source of truth for all TASC
 ga4gh/TASC/
 ├── README.md
 ├── adr/
-│   ├── README.md          (index table)
+│   ├── README.md          (generated index table)
 │   ├── template.md
-│   └── NNN-short-title.md (accepted ADRs)
+│   └── TASC-ADR-NNN Short Name.md (ADRs)
 ├── governance/
 │   └── TASC-GOV-XX_Title.md
 ├── recommendations/
 │   ├── template.md
 │   └── [Recommendation Title].md
 ├── drafts/                (work in progress)
-├── service-info/
-│   └── ga4gh-service-info.json
+├── registries/
+│   ├── service-info/
+│   │   └── ga4gh-service-info.json
+│   ├── namespace-resolver/
+│   ├── group-acronyms/
+│   └── persistent-url/
 └── data/                  (supporting materials, not committed)
 ```
 
-- **`adr/`** -- Immutable decision records. ADR files use the naming convention `NNN-short-kebab-title.md` with zero-padded 3-digit numbers.
+- **`adr/`** -- Immutable decision records. ADR files are named `TASC-ADR-NNN Short Name.md` (zero-padded 3-digit number, then a short name of up to 60 characters, e.g. `TASC-ADR-001 Use Crossref for DOI.md`), so they are easy to browse. `adr/README.md` is generated from the index.
 - **`governance/`** -- TASC operating charters and leadership rules.
 - **`recommendations/`** -- Approved policy documents and guidance.
 - **`drafts/`** -- Work-in-progress documents that graduate to their respective directories upon approval.
-- **`service-info/`** -- The GA4GH Service Info Type Registry.
+- **`registries/`** -- Registries maintained by TASC: the GA4GH Service Info Type Registry (`service-info/`), `namespace-resolver/`, `group-acronyms/` and `persistent-url/`.
 
 ## Document Lifecycle
 

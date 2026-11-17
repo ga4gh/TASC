@@ -3,6 +3,7 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-02  
 **Title**: Service Info Type Registry Guide  
+**Description**: Defines how service type identifiers are registered, named and managed in the GA4GH Service Info Type Registry.  
 **Related GitHub issues**: [#1](https://github.com/ga4gh/TASC/issues/1), [#16](https://github.com/ga4gh/TASC/issues/16), [#67](https://github.com/ga4gh/TASC/issues/67)  
 **Raised by**: Melissa Konopko (Technical Team)  
 **Authors**: Jeremy Adams, John Marshall, Mamana Mbiyavanga  
@@ -53,7 +54,7 @@ The artifact identifier specifies the particular API or service type within the 
 
 Artifact identifiers MUST conform to the following regular expression pattern:
 
-```
+```text
 ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
 ```
 
@@ -73,7 +74,7 @@ Invalid examples: `ToolRegistry`, `beacon_v2`, `DRS`, `-service`
 Product developers MUST submit new service type registrations through GitHub pull requests to the TASC repository. The submission process is:
 
 1. Fork the GA4GH TASC repository
-2. Modify the `service-info/ga4gh-service-info.json` file to add the new entry
+2. Modify the `registries/service-info/ga4gh-service-info.json` file to add the new entry
 3. Maintain alphabetical ordering of entries by artifact identifier
 4. Submit a pull request with a clear description of the service type
 5. Notify the GA4GH Secretariat or TASC Force via appropriate communication channels
@@ -142,6 +143,7 @@ Entries MAY include additional metadata:
 ### Example entries
 
 Active service type:
+
 ```json
 {
   "type": {
@@ -152,6 +154,7 @@ Active service type:
 ```
 
 Deprecated service type:
+
 ```json
 {
   "type": {
@@ -271,7 +274,7 @@ Organizations implementing GA4GH APIs alongside proprietary or non-standard serv
 ## References
 
 [SERVICE-INFO-SPEC] - GA4GH Service Info Specification: https://github.com/ga4gh-discovery/ga4gh-service-info
-[TASC-REGISTRY] - GA4GH Service Info Type Registry: https://github.com/ga4gh/TASC/tree/main/service-info
+[TASC-REGISTRY] - GA4GH Service Info Type Registry: https://github.com/ga4gh/TASC/tree/main/registries/service-info
 [PRODUCT-APPROVAL] - GA4GH Product Approval Process: https://www.ga4gh.org/how-we-work/approval-process/
 [RFC-3986] - URI Generic Syntax: https://www.rfc-editor.org/rfc/rfc3986
 [KEBAB-CASE] - Naming Convention Best Practices: https://en.wikipedia.org/wiki/Letter_case#Kebab_case

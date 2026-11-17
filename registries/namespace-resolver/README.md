@@ -13,6 +13,7 @@ GA4GH standards such as refget and VRS provide methods for the construction of c
 ### YAML format
 
 The YAML file shall feature entries in the following format:
+
 ```yaml
 prefixes:
   - SQ:
@@ -28,7 +29,7 @@ prefixes:
 
 A GA4GH identifier is constructed according to this syntax:
 
-```
+```text
 "ga4gh" ":" type_prefix "." digest
 ```
 

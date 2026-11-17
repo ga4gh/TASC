@@ -1,3 +1,3 @@
-persistent-url @ahwagner @larrybabb @andy-yates-hdr
-namespace-resolvers @ahwagner @larrybabb @andy-yates-hdr
-group-acronyms @mamanambiya @svsiegel @andy-yates-hdr
+registries/persistent-url @ahwagner @larrybabb @andy-yates-hdr
+registries/namespace-resolver @ahwagner @larrybabb @andy-yates-hdr
+registries/group-acronyms @mamanambiya @svsiegel @andy-yates-hdr

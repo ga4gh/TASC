@@ -1,0 +1,10 @@
+{
+  // Rules live in .markdownlint.yml; this file only chooses which files are linted.
+  "globs": ["**/*.md"],
+  "ignores": [
+    ".venv/**",
+    "node_modules/**",
+    "adr/README.md",
+    "recommendations/README.md"
+  ]
+}

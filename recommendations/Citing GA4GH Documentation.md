@@ -3,13 +3,14 @@
 **Source**: TASC  
 **Recommendation**: GA4GH-REC-05  
 **Title**: Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products  
+**Description**: Provides a consistent way to cite GA4GH documentary outputs by minting DOIs through Crossref under the GA4GH prefix.  
 **Related GitHub issues**: [#39](https://github.com/ga4gh/TASC/issues/39), [#179](https://github.com/samtools/hts-specs/issues/179)  
 **Raised by**: Susan Fairley (Chief Standards Officer - GA4GH)  
 **Authors**: Chen Chen, James Eddy, Ian Fore, Francesca Frexia, Jimmy Payyappilly, Angela Page, Alex Wagner, Andy Yates, Michael Baudis, Sasha Siegel  
 **Date:** 2026-07-07  
-**Status:** Draft  
+**Status:** Approved  
 **Keywords**: doi, citation  
-**Work Streams Impacted**: All workstreams  
+**Work Streams Impacted**: All
 **Products Affected**: None directly  
 
 ## Abstract
@@ -35,7 +36,7 @@ Registration requests MUST be submitted by raising a GitHub issue in the TASC re
 
 The `<std_designator>` metadata field SHOULD follow the format `<ORIGINATING_GROUP_ACRONYM>_<DOCUMENT_NAME>`.
 
-The Technical Team maintains a register of assigned suffixes, together with their associated `<ORIGINATING_GROUP_ACRONYM>` and `<DOCUMENT_NAME>` values, to avoid clashing DOIs, prevent duplicate or inconsistent designators, and enable reverse lookup. The list of authoritative `<ORIGINATING_GROUP_ACRONYM>` values is maintained in [originating-group-acronyms.yaml](../group-acronyms/originating-group-acronyms.yaml); requesters MUST use an acronym from this list or request that a new one be added. DOIs MAY be created for any GA4GH digital output and for any version of a digital output. Newly approved products SHOULD request and assign a DOI to selected digital materials, including any specific versions. DOIs MUST NOT be minted for transitional or ephemeral materials e.g. a draft specification.
+The Technical Team maintains a register of assigned suffixes, together with their associated `<ORIGINATING_GROUP_ACRONYM>` and `<DOCUMENT_NAME>` values, to avoid clashing DOIs, prevent duplicate or inconsistent designators, and enable reverse lookup. The list of authoritative `<ORIGINATING_GROUP_ACRONYM>` values is maintained in [originating-group-acronyms.yaml](../registries/group-acronyms/originating-group-acronyms.yaml); requesters MUST use an acronym from this list or request that a new one be added. DOIs MAY be created for any GA4GH digital output and for any version of a digital output. Newly approved products SHOULD request and assign a DOI to selected digital materials, including any specific versions. DOIs MUST NOT be minted for transitional or ephemeral materials e.g. a draft specification.
 
 GA4GH DOIs work alongside those created by other authorities and organisations (e.g. publishers, open repositories) and do not replace or supplant them. GA4GH DOIs MUST NOT redirect to another DOI URI. This recommendation MUST apply to GA4GH documentary outputs and MUST NOT apply to datasets, tools or other research resources.
 
@@ -55,7 +56,6 @@ DOI suffixes MUST be generated as opaque identifiers and MUST NOT encode semanti
 
 Each DOI registration MUST include a `<std_designator>` metadata field identifying the originating group and document context. The `<std_designator>` value MUST follow the format:
 
-
 ```text
 <ORIGINATING_GROUP_ACRONYM>_<DOCUMENT_NAME>
 ```
@@ -71,7 +71,6 @@ TASC_TS
 ```
 
 Note that over time, originating groups can change names (e.g. Work Streams are sometimes renamed). Use the name of the originating group at the time of minting. Originating groups SHOULD use concise and stable designator values to promote consistency across DOI registrations. The `<std_designator>` value MUST uniquely identify the document category within the context of the originating group. The Technical Team's register of assigned designators (see *Recommendation*) MUST be checked prior to registration to avoid clashing or inconsistent values.
-
 
 ### DOI Request Process
 
@@ -174,11 +173,11 @@ Work Streams SHOULD additionally consider providing a [Citation File Format (CFF
 
 - \[CROSSREF\] \- [Crossref: a DOI issuer](https://www.crossref.org/)
 - \[CROSSREF_RECORDS\] \- [Crossref Supported Record Types](https://www.crossref.org/documentation/schema-library/markup-guide-record-types/)
-- \[TASC-ADR-001\] - [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001.md)
-- \[TASC-ADR-002\] - [TASC-ADR-002: Separate Citation Identifiers from Machine-Readable Standard Identifiers](./TASC-ADR-002.md)
-- \[TASC-ADR-003\] - [TASC-ADR-003: Use Opaque DOI Suffixes](./TASC-ADR-003.md)
-- \[TASC-ADR-004\] - [TASC-ADR-004: Use Standard Designators for DOI Metadata Classification](./TASC-ADR-004.md)
-- \[TASC-ADR-005\] - [TASC-ADR-005: Do Not Extend GA4GH DOIs to Other Research Resources](./TASC-ADR-005.md)
+- \[TASC-ADR-001\] - [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](../adr/TASC-ADR-001%20Use%20Crossref%20for%20DOI.md)
+- \[TASC-ADR-002\] - [TASC-ADR-002: Separate Citation Identifiers from Machine-Readable Standard Identifiers](../adr/TASC-ADR-002%20Separate%20Citation%20and%20Standard%20Identifiers.md)
+- \[TASC-ADR-003\] - [TASC-ADR-003: Use Opaque DOI Suffixes](../adr/TASC-ADR-003%20Use%20Opaque%20DOI%20Suffixes.md)
+- \[TASC-ADR-004\] - [TASC-ADR-004: Use Standard Designators for DOI Metadata Classification](../adr/TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md)
+- \[TASC-ADR-005\] - [TASC-ADR-005: Do Not Extend GA4GH DOIs to Other Research Resources](../adr/TASC-ADR-005%20No%20DOIs%20for%20Other%20Research%20Resources.md)
 
 ## Contributors
 

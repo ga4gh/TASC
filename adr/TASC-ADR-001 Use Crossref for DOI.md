@@ -1,11 +1,12 @@
 # TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH
 
-**Date:** 2026-03-23 | **Status:** Proposed
+**Date:** 2026-03-23 | **Status:** Approved
 
+**Description:** GA4GH registers all of its DOIs through Crossref, using the GA4GH DOI prefix.  
 **Deciders:** TASC, GA4GH Technical Team, Chief Product Officer
 **Keywords:** doi, crossref, governance, publishing, metadata
 **Work Streams Impacted:** All
-**Products Affected:** All GA4GH documentary outputs
+**Products Affected:** All categories
 
 ---
 
