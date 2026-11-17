@@ -14,7 +14,7 @@ def adr_text(
     number: str = "001",
     title: str = "Use Widgets",
     date: str = "2026-01-02",
-    status: str = "Accepted",
+    status: str = "Approved",
 ) -> str:
     return f"""# TASC-ADR-{number}: {title}
 

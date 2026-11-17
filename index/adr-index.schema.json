@@ -25,7 +25,7 @@
       "enum": [
         "Draft",
         "Proposed",
-        "Accepted",
+        "Approved",
         "Deprecated",
         "Superseded"
       ]

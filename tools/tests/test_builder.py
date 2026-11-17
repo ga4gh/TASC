@@ -28,7 +28,7 @@ def test_indexes_each_type_with_expected_fields(repo):
         DocType.ADR,
         "Use Widgets",
         "2026-01-02",
-        "Accepted",
+        "Approved",
     )
     assert adr.path == "adr/TASC-ADR-001 Widgets.md"
 
@@ -73,7 +73,7 @@ def test_unclassifiable_draft_is_an_error(repo):
 
 
 def test_draft_is_validated_like_its_type(repo):
-    write(repo, "drafts/New rec.md", rec_text("GA4GH-REC-09", status="Accepted"))
+    write(repo, "drafts/New rec.md", rec_text("GA4GH-REC-09", status="Deprecated"))
     with pytest.raises(IndexBuildError, match="status"):
         build(repo)
 
@@ -90,21 +90,21 @@ def test_build_url_honours_repo_and_branch():
     )
 
 
-@pytest.mark.parametrize("status", ["Approved", "accepted", ""])
+@pytest.mark.parametrize("status", ["Accepted", "approved", ""])
 def test_adr_rejects_statuses_outside_its_enum(repo, status):
     write(repo, "adr/TASC-ADR-001 Widgets.md", adr_text(status=status))
     with pytest.raises(IndexBuildError, match="status"):
         build(repo)
 
 
-@pytest.mark.parametrize("status", ["Accepted", "Proposed", "Deprecated"])
+@pytest.mark.parametrize("status", ["Proposed", "Deprecated"])
 def test_recommendation_rejects_adr_only_statuses(repo, status):
     write(repo, "recommendations/Widget guide.md", rec_text(status=status))
     with pytest.raises(IndexBuildError, match="status"):
         build(repo)
 
 
-@pytest.mark.parametrize("status", ["Draft", "Proposed", "Accepted", "Deprecated", "Superseded"])
+@pytest.mark.parametrize("status", ["Draft", "Proposed", "Approved", "Deprecated", "Superseded"])
 def test_adr_accepts_every_adr_status(repo, status):
     write(repo, "adr/TASC-ADR-001 Widgets.md", adr_text(status=status))
     assert any(d.status == status for d in build(repo).documents)

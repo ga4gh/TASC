@@ -62,7 +62,7 @@ These documents define processes and standards that apply broadly and MAY evolve
 | **Scope** | Single architectural choice |
 | **Key Question** | "Why did we decide this way?" |
 
-ADRs follow the Michael Nygard template and capture the context, alternatives considered, decision made, and consequences. Once accepted, ADRs MUST NOT be edited. If a decision changes, a new ADR supersedes the original.
+ADRs follow the Michael Nygard template and capture the context, alternatives considered, decision made, and consequences. Once approved, ADRs MUST NOT be edited. If a decision changes, a new ADR supersedes the original.
 
 ### When to Use Which
 
@@ -99,7 +99,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 ```markdown
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Proposed | Accepted | Deprecated | Superseded]  
+**Date:** YYYY-MM-DD | **Status:** [Proposed | Approved | Deprecated | Superseded]  
 **Description:** [One-sentence summary, max 300 characters]  
 **Deciders:** [List key decision-makers]  
 **Keywords:** [comma-separated keywords]  
@@ -123,7 +123,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 | **Keywords** | Searchable tags for discoverability (e.g., api, pagination, governance, maturity-model) |
 | **Work Streams Impacted** | GA4GH work streams affected by the document |
 | **Products Affected** | Specific GA4GH products impacted |
-| **Status** | Current state: Draft, Approved/Accepted, Superseded/Deprecated |
+| **Status** | Current state: Draft, Approved, Superseded/Deprecated |
 
 Each metadata line MUST end with two trailing spaces for proper Markdown line breaks.
 

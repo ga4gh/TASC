@@ -62,22 +62,22 @@ ENTRY = {
 @pytest.mark.parametrize(
     ("schema", "bad"),
     [
-        (ADR_SCHEMA, {"type": "adr", "id": "TASC-ADR-001", "status": "Approved"}),
-        (ADR_SCHEMA, {"type": "adr", "id": "GA4GH-REC-01", "status": "Accepted"}),
+        (ADR_SCHEMA, {"type": "adr", "id": "TASC-ADR-001", "status": "Accepted"}),
+        (ADR_SCHEMA, {"type": "adr", "id": "GA4GH-REC-01", "status": "Approved"}),
         (ADR_SCHEMA, {"type": "recommendation", "id": "GA4GH-REC-01", "status": "Approved"}),
         (
             ADR_SCHEMA,
             {
                 "type": "adr",
                 "id": "TASC-ADR-001",
-                "status": "Accepted",
+                "status": "Approved",
                 "short_name": "x",
                 "extra": "x",
             },
         ),
-        (REC_SCHEMA, {"type": "recommendation", "id": "GA4GH-REC-01", "status": "Accepted"}),
+        (REC_SCHEMA, {"type": "recommendation", "id": "GA4GH-REC-01", "status": "Deprecated"}),
         (REC_SCHEMA, {"type": "governance", "id": "TASC-GOV-01", "status": "Proposed"}),
-        (REC_SCHEMA, {"type": "adr", "id": "TASC-ADR-001", "status": "Accepted"}),
+        (REC_SCHEMA, {"type": "adr", "id": "TASC-ADR-001", "status": "Approved"}),
     ],
 )
 def test_schemas_reject_inconsistent_entries(schema, bad):

@@ -111,7 +111,7 @@ def render_recent_section(adrs: list[dict[str, str]], recs: list[dict[str, str]]
         return "\n".join(f"- {link(d, '', label_of(d))} ({d['date']})" for d in docs)
 
     recent_adrs = latest(
-        [d for d in adrs if d["type"] == "adr" and d["status"] == AdrStatus.ACCEPTED.value]
+        [d for d in adrs if d["type"] == "adr" and d["status"] == AdrStatus.APPROVED.value]
     )
     recent_recs = latest(
         [
