@@ -43,15 +43,17 @@ This repository is organized into the following directories:
 
 ### Architectural Decision Records
 
-_None yet._
+- [TASC-ADR-012 TASC Role in PDAP Governance](adr/TASC-ADR-012%20TASC%20Role%20in%20PDAP%20Governance.md) (2026-08-14)
+- [TASC-ADR-011 Adopt the Interoperability Framework](adr/TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md) (2026-08-14)
+- [TASC-ADR-010 Adopt Technical Product Requirements](adr/TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (2026-08-14)
 
 See [all ADRs](adr/README.md) for the full list and statuses.
 
 ### Recommendations
 
+- [Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products](recommendations/Citing%20GA4GH%20Documentation.md) (2026-07-07)
 - [TASC Technical Specification Development: Policy and processes for developing and communicating maturity of GA4GH Technical Specifications](recommendations/TASC%20Technical%20Specification%20Maintenance.md) (2025-07-18)
 - [GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development](recommendations/GA4GH%20product%20owner%20description.md) (2025-07-18)
-- [Service Info Type Registry Guide](recommendations/Service%20Info%20Type%20Registry%20Guide.md) (2025-01-28)
 
 See [all recommendations](recommendations/README.md) for the full list and statuses.
 <!-- tasc-recent:end -->

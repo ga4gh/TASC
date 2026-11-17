@@ -46,7 +46,7 @@
       "type": "recommendation",
       "name": "Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products",
       "date": "2026-07-07",
-      "status": "Draft",
+      "status": "Approved",
       "description": "Provides a consistent way to cite GA4GH documentary outputs by minting DOIs through Crossref under the GA4GH prefix.",
       "path": "recommendations/Citing GA4GH Documentation.md",
       "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/Citing%20GA4GH%20Documentation.md"
