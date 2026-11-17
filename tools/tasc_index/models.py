@@ -21,7 +21,7 @@ class DocType(str, Enum):
 class AdrStatus(str, Enum):
     DRAFT = "Draft"
     PROPOSED = "Proposed"
-    ACCEPTED = "Accepted"
+    APPROVED = "Approved"
     DEPRECATED = "Deprecated"
     SUPERSEDED = "Superseded"
 
