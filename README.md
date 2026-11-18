@@ -55,7 +55,7 @@ See [all ADRs](adr/README.md) for the full list and statuses.
 
 - [Citing GA4GH documentation: A mechanism for creating digital object identifiers in support of GA4GH products](recommendations/Citing%20GA4GH%20Documentation.md) (2026-07-07)
 - [TASC Technical Specification Development: Policy and processes for developing and communicating maturity of GA4GH Technical Specifications](recommendations/TASC%20Technical%20Specification%20Maintenance.md) (2025-07-18)
-- [GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development](recommendations/GA4GH%20product%20owner%20description.md) (2025-07-18)
+- [GA4GH Product Leads: Integrating Software Product Management Principles into GA4GH Standards & Policies Development](recommendations/GA4GH%20product%20lead%20description.md) (2025-07-18)
 
 See [all recommendations](recommendations/README.md) for the full list and statuses.
 <!-- tasc-recent:end -->
