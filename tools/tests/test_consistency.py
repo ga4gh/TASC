@@ -115,3 +115,20 @@ def test_every_real_document_has_a_description_field():
 @pytest.mark.parametrize("template", ["adr/template.md", "recommendations/template.md"])
 def test_templates_include_a_description_field(template):
     assert "**Description" in (REPO_ROOT / template).read_text()
+
+
+def test_rec_03_uses_pdap_product_lead_terminology():
+    """GA4GH-REC-03 must use the PDAP v3.0 term 'Product Lead', not 'Product Owner'.
+
+    The one permitted mention of the old term is the 'previously' note that records the rename.
+    """
+    index = json.loads((INDEX_DIR / "recommendation-index.json").read_text())
+    entry = next(e for e in index["documents"] if e["id"] == "GA4GH-REC-03")
+    doc = (REPO_ROOT / entry["path"]).read_text()
+    assert "Product Lead" in entry["name"] + entry["description"]
+    assert "owner" not in (entry["name"] + entry["description"]).lower()
+    leftovers = [
+        line for line in doc.splitlines()
+        if re.search(r"product owner|\bPO\b", line, re.I) and "previously" not in line.lower()
+    ]
+    assert not leftovers, leftovers
