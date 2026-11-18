@@ -1,16 +1,18 @@
 # TASC index generator
 
-Generates two machine-readable indexes of this repository's documents. The TASC
+Generates three machine-readable indexes of this repository's documents and registries. The TASC
 pages on the GA4GH website read them from `main`:
 
 | File                                 | Lists                                  | Schema                                    |
 |--------------------------------------|----------------------------------------|-------------------------------------------|
 | `index/adr-index.json`               | ADRs                                   | `index/adr-index.schema.json`             |
 | `index/recommendation-index.json`    | Recommendations and governance documents | `index/recommendation-index.schema.json` |
+| `index/registry-index.json`          | Registries under `registries/`         | `index/registry-index.schema.json`        |
 
 ```text
 https://raw.githubusercontent.com/ga4gh/TASC/main/index/adr-index.json
 https://raw.githubusercontent.com/ga4gh/TASC/main/index/recommendation-index.json
+https://raw.githubusercontent.com/ga4gh/TASC/main/index/registry-index.json
 ```
 
 ## What is indexed
@@ -29,6 +31,16 @@ Each entry has `id`, `type`, `name`, `date`, `status`, `description`, `path` and
 `url` (a permanent GitHub link back to the source file). The shape is defined by
 the two schemas above. Each has its own status enum: ADRs use one, recommendations
 and governance documents share another.
+
+## Registries
+
+Registries are operational data, not documents, so they have no ID, date or status and
+are not numbered. Each registry README carries its own header (`Description`, `Defined by`,
+and a `Data file` and/or `External location`), and every directory under `registries/` is
+indexed. `Defined by` must be present but may be blank when no ADR, recommendation or
+governance document defines the registry. The generator fails on a missing README,
+Description or `Defined by` line, a missing data file, or an unknown document ID. See
+[docs/ARCHITECTURE/registry-index.md](../docs/ARCHITECTURE/registry-index.md).
 
 ## Usage
 
@@ -56,6 +68,8 @@ disagrees with its ID) fails generation. Every problem is listed in one run.
 `index/*.json`, never the markdown, and writes:
 
 - `adr/README.md` and `recommendations/README.md`: a table of every indexed document;
+- `registries/README.md`: a table of every registry and its defining document;
+- the "Registries" block of the root `README.md` (between the `tasc-registries` markers);
 - the "Recently Approved" block of the root `README.md` (between the `tasc-recent`
   markers): the latest 3 `Approved` ADRs and the latest 3 `Approved` recommendations, newest `Date` first.
 
@@ -97,6 +111,7 @@ bot must be allowed to push to it.
 | File                      | Responsibility                                    |
 |---------------------------|---------------------------------------------------|
 | `tasc_index/models.py`    | Document types, status enums, ID formats, entry model |
+| `tasc_index/registries.py`| Registry manifest validation and index entries    |
 | `tasc_index/parsing.py`   | Markdown metadata header and heading parsing      |
 | `tasc_index/descriptions.py` | Fallback description when a document has none  |
 | `tasc_index/builder.py`   | Discovery, validation, ordering, index split, JSON rendering |

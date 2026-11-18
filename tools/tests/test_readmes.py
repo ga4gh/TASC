@@ -67,6 +67,7 @@ def test_generate_reads_only_the_index_files(repo, tmp_path):
     docs = [adr(1)]
     (repo / "index" / "adr-index.json").write_text(json.dumps({"documents": docs}))
     (repo / "index" / "recommendation-index.json").write_text(json.dumps({"documents": []}))
+    (repo / "index" / "registry-index.json").write_text(json.dumps({"registries": []}))
     generate(repo, repo / "index")
     assert "Short 1" in (repo / "adr" / "README.md").read_text()
     assert "TASC-ADR-001 Short 1" in (repo / "README.md").read_text()

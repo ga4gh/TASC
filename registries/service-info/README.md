@@ -1,5 +1,9 @@
 # GA4GH Service Info Types
 
+**Description**: Service type identifiers (group and artifact) that GA4GH API servers declare in their service-info response.  
+**Defined by**: GA4GH-REC-02  
+**Data file**: ga4gh-service-info.json  
+
 This file details how to add values to the list of Service Info type values for the GA4GH API.
 
 ## Background

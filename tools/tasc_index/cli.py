@@ -18,7 +18,10 @@ from tasc_index.builder import (
     documents_for,
     render_index,
 )
+from tasc_index.registries import build_registry_index, render_registry_index
 
+REGISTRY_INDEX = "registry-index.json"
+REGISTRY_SCHEMA = "registry-index.schema.json"
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -35,7 +38,8 @@ def validate_against_schema(rendered: str, schema_path: Path) -> list[str]:
 
 def parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        prog="tasc_index", description="Generate the TASC ADR and recommendation index JSON files."
+        prog="tasc_index",
+        description="Generate the TASC ADR, recommendation and registry index JSON files.",
     )
     parser.add_argument("--root", type=Path, default=REPO_ROOT, help="repository root")
     parser.add_argument(
@@ -64,6 +68,12 @@ def main(argv: list[str] | None = None) -> int:
             repo_url=args.repo_url,
             branch=args.branch,
         )
+        registries = build_registry_index(
+            args.root,
+            known_ids={d.id for d in result.documents},
+            repo_url=args.repo_url,
+            branch=args.branch,
+        )
     except IndexBuildError as exc:
         print("Index generation failed:", file=sys.stderr)
         for error in exc.errors:
@@ -88,10 +98,17 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{spec.filename} does not satisfy its schema: {violation}", file=sys.stderr)
         failed = failed or bool(violations)
         outputs.append((args.index_dir / spec.filename, rendered, len(documents)))
+
+    registry_rendered = render_registry_index(registries, REGISTRY_SCHEMA)
+    for violation in validate_against_schema(registry_rendered, args.index_dir / REGISTRY_SCHEMA):
+        print(f"{REGISTRY_INDEX} does not satisfy its schema: {violation}", file=sys.stderr)
+        failed = True
     if failed:
         return 1
 
     for path, rendered, count in outputs:
         path.write_text(rendered, encoding="utf-8")
         print(f"Wrote {count} documents to {path}")
+    (args.index_dir / REGISTRY_INDEX).write_text(registry_rendered, encoding="utf-8")
+    print(f"Wrote {len(registries)} registries to {args.index_dir / REGISTRY_INDEX}")
     return 0

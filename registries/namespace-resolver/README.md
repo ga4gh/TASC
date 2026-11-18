@@ -1,5 +1,9 @@
 # GA4GH Namespaced Identifier Registration
 
+**Description**: Type prefixes and resolution patterns for identifiers in the ga4gh namespace, such as ga4gh:SQ.  
+**Defined by**:  
+**Data file**: identifier-prefixes.yaml  
+
 This file details how to register prefixes and resolution patterns for the `GA4GH` namespace.
 
 ## Background

@@ -2,8 +2,8 @@ name: TASC index
 
 # Pull requests: lint, test and prove the index still generates.
 # Pushes/merges to main: do the same, then commit the regenerated index so the
-# website can read index/adr-index.json and
-# index/recommendation-index.json from main. The ADR/recommendation READMEs and
+# website can read index/adr-index.json,
+# index/recommendation-index.json and index/registry-index.json from main. The ADR/recommendation READMEs and
 # the root README's "Recently Approved" section are generated from those JSON files.
 on:
   pull_request:
@@ -11,6 +11,7 @@ on:
       - "adr/**"
       - "recommendations/**"
       - "governance/**"
+      - "registries/**"
       - "drafts/**"
       - "index/*.schema.json"
       - "tools/**"
@@ -21,6 +22,7 @@ on:
       - "adr/**"
       - "recommendations/**"
       - "governance/**"
+      - "registries/**"
       - "drafts/**"
       - "index/*.schema.json"
       - "tools/**"
@@ -68,7 +70,7 @@ jobs:
       - name: Commit regenerated indexes and READMEs
         if: github.event_name == 'push'
         run: |
-          generated='index/*-index.json adr/README.md recommendations/README.md README.md'
+          generated='index/*-index.json adr/README.md recommendations/README.md registries/README.md README.md'
           if [ -z "$(git status --porcelain -- $generated)" ]; then
             echo "Generated files already up to date"
             exit 0

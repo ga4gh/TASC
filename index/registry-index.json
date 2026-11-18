@@ -1,0 +1,53 @@
+{
+  "$schema": "registry-index.schema.json",
+  "registries": [
+    {
+      "slug": "group-acronyms",
+      "name": "GA4GH Group Acronyms",
+      "description": "Acronyms for GA4GH groups, used in the std_designator metadata of DOI registrations.",
+      "path": "registries/group-acronyms/README.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/registries/group-acronyms/README.md",
+      "hosting": "repository",
+      "defined_by": [
+        "GA4GH-REC-05",
+        "TASC-ADR-004"
+      ],
+      "data_path": "registries/group-acronyms/originating-group-acronyms.yaml",
+      "data_url": "https://github.com/ga4gh/TASC/blob/main/registries/group-acronyms/originating-group-acronyms.yaml"
+    },
+    {
+      "slug": "namespace-resolver",
+      "name": "GA4GH Namespaced Identifier Registration",
+      "description": "Type prefixes and resolution patterns for identifiers in the ga4gh namespace, such as ga4gh:SQ.",
+      "path": "registries/namespace-resolver/README.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/registries/namespace-resolver/README.md",
+      "hosting": "repository",
+      "defined_by": [],
+      "data_path": "registries/namespace-resolver/identifier-prefixes.yaml",
+      "data_url": "https://github.com/ga4gh/TASC/blob/main/registries/namespace-resolver/identifier-prefixes.yaml"
+    },
+    {
+      "slug": "persistent-url",
+      "name": "GA4GH Persistent URL Redirects",
+      "description": "Rules for GA4GH persistent URLs on w3id.org. TASC reviews the pattern; the redirect rules live in the ga4gh/w3id.org repository.",
+      "path": "registries/persistent-url/README.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/registries/persistent-url/README.md",
+      "hosting": "external",
+      "defined_by": [],
+      "external_url": "https://github.com/ga4gh/w3id.org"
+    },
+    {
+      "slug": "service-info",
+      "name": "GA4GH Service Info Types",
+      "description": "Service type identifiers (group and artifact) that GA4GH API servers declare in their service-info response.",
+      "path": "registries/service-info/README.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/registries/service-info/README.md",
+      "hosting": "repository",
+      "defined_by": [
+        "GA4GH-REC-02"
+      ],
+      "data_path": "registries/service-info/ga4gh-service-info.json",
+      "data_url": "https://github.com/ga4gh/TASC/blob/main/registries/service-info/ga4gh-service-info.json"
+    }
+  ]
+}

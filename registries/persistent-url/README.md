@@ -1,5 +1,9 @@
 # GA4GH Persistent URL Redirects
 
+**Description**: Rules for GA4GH persistent URLs on w3id.org. TASC reviews the pattern; the redirect rules live in the ga4gh/w3id.org repository.  
+**Defined by**:  
+**External location**: https://github.com/ga4gh/w3id.org  
+
 This file details how to register prefixes and resolution patterns for the `GA4GH` namespace.
 
 ## Background

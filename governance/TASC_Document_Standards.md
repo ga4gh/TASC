@@ -170,6 +170,7 @@ ga4gh/TASC/
 - **`recommendations/`** -- Approved policy documents and guidance.
 - **`drafts/`** -- Work-in-progress documents that graduate to their respective directories upon approval.
 - **`registries/`** -- Registries maintained by TASC: the GA4GH Service Info Type Registry (`service-info/`), `namespace-resolver/`, `group-acronyms/` and `persistent-url/`.
+  Registries are operational artefacts, indexed in `registries/README.md`, and are not numbered. Each registry README carries a metadata header (`Description`, `Defined by`, and a `Data file` and/or `External location`); `Defined by` names the recommendation, ADR or governance document that defines the registry, or is left blank if there is none.
 
 ## Document Lifecycle
 

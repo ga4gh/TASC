@@ -74,6 +74,47 @@ Use widgets.
 """
 
 
+def registry_entry(slug: str = "widgets", **overrides) -> dict:
+    """A registry README: H1 name plus header fields. A None value omits the line."""
+    entry = {
+        "slug": slug,
+        "name": "Widget Registry",
+        "description": "Lists the widget identifiers used by GA4GH products.",
+        "defined_by": "GA4GH-REC-01",
+        "data_file": "widgets.yaml",
+        "external_location": None,
+    }
+    return {**entry, **overrides}
+
+
+HEADER_FIELDS = {
+    "description": "Description",
+    "defined_by": "Defined by",
+    "data_file": "Data file",
+    "external_location": "External location",
+}
+
+
+def registry_readme(entry: dict) -> str:
+    lines = [f"# {entry['name']}", ""]
+    lines += [
+        f"**{label}**: {entry[key]}  "
+        for key, label in HEADER_FIELDS.items()
+        if entry[key] is not None
+    ]
+    return "\n".join(lines) + "\n\n## Background\n\nText.\n"
+
+
+def write_registry(root: Path, entries: list[dict]) -> None:
+    """Replace the registries with one directory per entry (README, plus data file if named)."""
+    for old in (root / "registries").glob("*/"):
+        shutil.rmtree(old)
+    for entry in entries:
+        write(root, f"registries/{entry['slug']}/README.md", registry_readme(entry))
+        if entry["data_file"] and "/" not in entry["data_file"]:
+            write(root, f"registries/{entry['slug']}/{entry['data_file']}", "items: []\n")
+
+
 def write(root: Path, rel: str, content: str) -> Path:
     path = root / rel
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -92,6 +133,7 @@ def repo(tmp_path: Path) -> Path:
         "governance/Charter.md",
         rec_text("TASC-GOV-01", "Charter", id_field="Document ID"),
     )
+    write_registry(tmp_path, [registry_entry()])
     for schema in (REPO_ROOT / "index").glob("*.schema.json"):
         shutil.copy(schema, tmp_path / "index" / schema.name)
     return tmp_path

@@ -5,6 +5,7 @@
     ".venv/**",
     "node_modules/**",
     "adr/README.md",
-    "recommendations/README.md"
+    "recommendations/README.md",
+    "registries/README.md"
   ]
 }
