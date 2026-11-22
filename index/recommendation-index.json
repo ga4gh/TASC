@@ -24,12 +24,12 @@
     {
       "id": "GA4GH-REC-03",
       "type": "recommendation",
-      "name": "GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development",
+      "name": "GA4GH Product Leads: Integrating Software Product Management Principles into GA4GH Standards & Policies Development",
       "date": "2025-07-18",
       "status": "Approved",
-      "description": "Defines the Product Owner role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight.",
-      "path": "recommendations/GA4GH product owner description.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH%20product%20owner%20description.md"
+      "description": "Defines the Product Lead role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight.",
+      "path": "recommendations/GA4GH product lead description.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH%20product%20lead%20description.md"
     },
     {
       "id": "GA4GH-REC-04",
