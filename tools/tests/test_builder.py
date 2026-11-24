@@ -28,7 +28,7 @@ def test_indexes_each_type_with_expected_fields(repo):
         DocType.ADR,
         "Use Widgets",
         "2026-01-02",
-        "Approved",
+        "Accepted",
     )
     assert adr.path == "adr/TASC-ADR-001 Widgets.md"
 
@@ -90,7 +90,7 @@ def test_build_url_honours_repo_and_branch():
     )
 
 
-@pytest.mark.parametrize("status", ["Accepted", "approved", ""])
+@pytest.mark.parametrize("status", ["Approved", "accepted", ""])
 def test_adr_rejects_statuses_outside_its_enum(repo, status):
     write(repo, "adr/TASC-ADR-001 Widgets.md", adr_text(status=status))
     with pytest.raises(IndexBuildError, match="status"):
@@ -104,7 +104,7 @@ def test_recommendation_rejects_adr_only_statuses(repo, status):
         build(repo)
 
 
-@pytest.mark.parametrize("status", ["Draft", "Proposed", "Approved", "Deprecated", "Superseded"])
+@pytest.mark.parametrize("status", ["Draft", "Proposed", "Accepted", "Deprecated", "Superseded"])
 def test_adr_accepts_every_adr_status(repo, status):
     write(repo, "adr/TASC-ADR-001 Widgets.md", adr_text(status=status))
     assert any(d.status == status for d in build(repo).documents)

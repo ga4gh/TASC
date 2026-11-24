@@ -1,6 +1,6 @@
 # TASC-ADR-009: Every GA4GH Technical Product Must Have a Conformance Suite
 
-**Date:** 2026-08-14 | **Status:** Approved  
+**Date:** 2026-08-14 | **Status:** Accepted  
 
 **Description:** Every GA4GH technical product must have a conformance suite of tests derived from its specification.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  

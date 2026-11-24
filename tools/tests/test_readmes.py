@@ -13,7 +13,7 @@ from tasc_index.readmes import (
 )
 
 
-def adr(n, status="Approved", date="2026-01-01", path=None):
+def adr(n, status="Accepted", date="2026-01-01", path=None):
     return {
         "id": f"TASC-ADR-{n:03}",
         "type": "adr",
@@ -32,8 +32,8 @@ def test_latest_is_newest_first_and_limited():
     assert [d["id"] for d in latest(docs)] == ["TASC-ADR-005", "TASC-ADR-002", "TASC-ADR-004"]
 
 
-def test_recent_adrs_are_only_the_approved_ones():
-    docs = [adr(1, status="Approved"), adr(2, status="Proposed"), adr(3, status="Draft")]
+def test_recent_adrs_are_only_the_accepted_ones():
+    docs = [adr(1, status="Accepted"), adr(2, status="Proposed"), adr(3, status="Draft")]
     section = render_recent_section(docs, [])
     assert "TASC-ADR-001" in section
     assert "TASC-ADR-002" not in section

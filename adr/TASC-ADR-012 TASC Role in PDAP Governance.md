@@ -1,6 +1,6 @@
 # TASC-ADR-012: The Role of TASC in PDAP Technical Alignment and Interoperability Governance
 
-**Date:** 2026-08-14 | **Status:** Approved  
+**Date:** 2026-08-14 | **Status:** Accepted  
 
 **Description:** Defines TASC's role in PDAP: technical-alignment review, interoperability risk-tiering and resolving cross-product conflicts.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  

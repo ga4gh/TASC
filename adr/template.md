@@ -1,6 +1,6 @@
 # TASC-ADR-XXX: [Short Decision Title]
 
-**Date:** YYYY-MM-DD | **Status:** [Draft | Proposed | Approved | Deprecated | Superseded]  
+**Date:** YYYY-MM-DD | **Status:** [Draft | Proposed | Accepted | Deprecated | Superseded]  
 
 **Description:** [One sentence (max 300 characters) summarising the decision; shown in the TASC index]  
 **Deciders:** [List key decision-makers]  

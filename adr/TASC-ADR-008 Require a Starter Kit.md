@@ -1,6 +1,6 @@
 # TASC-ADR-008: Every GA4GH Technical Product Must Provide a Starter Kit
 
-**Date:** 2026-08-14 | **Status:** Approved  
+**Date:** 2026-08-14 | **Status:** Accepted  
 
 **Description:** Every GA4GH technical product must provide a Starter Kit giving users minimal scaffolding to build their own implementation.  
 **Deciders:** TASC (agreed at TASC workshop, July 2026)  
