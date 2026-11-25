@@ -43,7 +43,7 @@ TASC outputs fall into two categories with distinct characteristics:
 ### Recommendations and Governance Documents (Living)
 
 | Attribute | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Purpose** | Ongoing rules, procedures, standards, and guidance |
 | **Nature** | Living, prescriptive, comprehensive |
 | **Length** | Typically 10-50+ pages |
@@ -55,7 +55,7 @@ These documents define processes and standards that apply broadly and MAY evolve
 ### Architectural Decision Records (Immutable)
 
 | Attribute | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Purpose** | Single decision + rationale |
 | **Nature** | Immutable, explanatory, focused |
 | **Length** | 1-2 pages |
@@ -114,7 +114,7 @@ All ADRs MUST include the following metadata header and follow the Nygard templa
 ### Metadata Field Definitions
 
 | Field | Description |
-|-------|-------------|
+| ------- | ------------- |
 | **Source** | Always "TASC" |
 | **Description** | One-sentence summary (max 300 characters) shown in the TASC index on the website |
 | **Raised by** | The person and work stream/role that originally raised the issue (recommendations only) |
@@ -130,7 +130,7 @@ Each metadata line MUST end with two trailing spaces for proper Markdown line br
 ## Numbering Convention
 
 | Document Type | ID Format | Example |
-|---------------|-----------|---------|
+| --------------- | ----------- | --------- |
 | Recommendations | `GA4GH-REC-XX` | GA4GH-REC-01 |
 | Governance documents | `TASC-GOV-XX` | TASC-GOV-01 |
 | Architectural Decision Records | `TASC-ADR-XXX` | TASC-ADR-001 |
@@ -190,7 +190,7 @@ Documents follow the TASC charter's four-step decision-making process:
 When a new output is approved, the following communication steps SHOULD be followed:
 
 | Step | Action | Channel |
-|------|--------|---------|
+| ------ | -------- | --------- |
 | 1 | Merge PR | GitHub repository (source of truth) |
 | 2 | Update Airtable | Metadata registry |
 | 3 | Post announcement | TASC mailing list + Slack #tasc |
@@ -204,7 +204,7 @@ This ensures no approved output "goes dark" -- every output reaches the people w
 All approved outputs SHOULD appear as cards on the GA4GH website, linking back to the GitHub source document. The Airtable metadata registry SHOULD contain the following fields for each output:
 
 | Field | Description |
-|-------|-------------|
+| ------- | ------------- |
 | Title | Document name |
 | Description | Brief summary |
 | Alignment Scope | GA4GH alignment area |
@@ -224,7 +224,7 @@ All approved outputs SHOULD appear as cards on the GA4GH website, linking back t
 ## Contributors
 
 | Name | Organisation |
-|------|-------------|
+| ------ | ------------- |
 | Mamana Mbiyavanga | University of Cape Town / TASC Co-lead |
 | Andy Yates | EMBL-EBI / TASC Co-lead |
 | Sasha Siegel | GA4GH / CPO |

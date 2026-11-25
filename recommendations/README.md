@@ -5,7 +5,7 @@
 Recommendations are TASC outputs that guide GA4GH work streams and products. Governance documents are listed with them. Registries are not recommendations; they are indexed in [registries](../registries/README.md). To propose a new document, start from [template.md](template.md).
 
 | Title | ID | Type | Date | Status | Description |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | [API pagination guide](API%20pagination%20guide.md) | GA4GH-REC-01 | Recommendation | 2024-11-25 | Approved | Describes the page-based and token-based pagination strategies approved for GA4GH APIs and when to use each. |
 | [Service Info Type Registry Guide](Service%20Info%20Type%20Registry%20Guide.md) | GA4GH-REC-02 | Recommendation | 2025-01-28 | Approved | Defines how service type identifiers are registered, named and managed in the GA4GH Service Info Type Registry. |
 | [GA4GH Product Owners: Integrating Software Product Management Principles into GA4GH Standards & Policies Development](GA4GH%20product%20owner%20description.md) | GA4GH-REC-03 | Recommendation | 2025-07-18 | Approved | Defines the Product Owner role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight. |

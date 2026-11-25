@@ -15,6 +15,7 @@ import sys
 from pathlib import Path, PurePosixPath
 from urllib.parse import quote
 
+from tasc_index.markdown import cell, table
 from tasc_index.models import AdrStatus, RecommendationStatus
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -46,18 +47,8 @@ def link(doc: dict[str, str], from_dir: str, label: str) -> str:
     return f"[{cell(label)}]({quote(rel.as_posix())})"
 
 
-def cell(text: str) -> str:
-    return text.replace("|", "\\|").replace("\n", " ")
-
-
 def adr_label(doc: dict[str, str]) -> str:
     return f"{doc['id']} {doc.get('short_name') or doc['name']}"
-
-
-def table(header: list[str], rows: list[list[str]]) -> str:
-    lines = ["| " + " | ".join(header) + " |", "|" + "|".join("---" for _ in header) + "|"]
-    lines += ["| " + " | ".join(row) + " |" for row in rows]
-    return "\n".join(lines)
 
 
 def latest(documents: list[dict[str, str]]) -> list[dict[str, str]]:

@@ -70,5 +70,5 @@
 [People who contributed to the development of this recommendation, including reviewers and discussion participants.]
 
 | Name | Organisation |
-|------|-------------|
+| ------ | ------------- |
 | [Name] | [Organisation] |

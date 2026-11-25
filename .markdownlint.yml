@@ -29,8 +29,9 @@ MD024: false
 # Allow multiple top-level headings (some docs use bold text parsed as h1)
 MD025: false
 
-# Disable table column style — compact vs padded varies across docs
-MD060: false
+# Tables use the compact style: one space inside every pipe, including the delimiter row
+MD060:
+  style: compact
 
 # Allow bare URLs in reference sections
 MD034: false

@@ -5,7 +5,7 @@
 Architectural Decision Records (ADRs) capture what TASC decided, why, and the consequences. ADRs still in `Draft` live in [drafts](../drafts/). To propose an ADR, start from [template.md](template.md).
 
 | ADR | Date | Status | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [TASC-ADR-001 Use Crossref for DOI](TASC-ADR-001%20Use%20Crossref%20for%20DOI.md) | 2026-03-23 | Accepted | GA4GH registers all of its DOIs through Crossref, using the GA4GH DOI prefix. |
 | [TASC-ADR-002 Separate Citation and Standard Identifiers](TASC-ADR-002%20Separate%20Citation%20and%20Standard%20Identifiers.md) | 2026-03-23 | Accepted | DOIs are used for citing documents only; machine-readable standard identifiers are governed separately. |
 | [TASC-ADR-003 Use Opaque DOI Suffixes](TASC-ADR-003%20Use%20Opaque%20DOI%20Suffixes.md) | 2026-03-23 | Accepted | GA4GH DOI suffixes are opaque and must not encode work stream, product, specification or version information. |

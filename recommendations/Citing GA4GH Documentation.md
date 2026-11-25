@@ -109,7 +109,7 @@ The complete list of required metadata follows. Fields marked *"to be specified"
 For example, a request for the WES specification from the Federated Analysis Work Stream might supply:
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | Contributor → Organization | GA4GH Federated Analysis Work Stream |
 | Title | Workflow Execution Service (WES) API |
 | Approval Date | 2026-03-15 |
@@ -184,7 +184,7 @@ Work Streams SHOULD additionally consider providing a [Citation File Format (CFF
 This section lists reviewers and discussion participants who contributed to the development of this recommendation, in addition to the authors listed above.
 
 | Name | Organisation |
-|------|-------------|
+| ------ | ------------- |
 | Chen Chen | Ontario Institute for Cancer Research, GA4GH |
 | James Eddy | Sage Bionetworks |
 | Ian Fore | Independent |

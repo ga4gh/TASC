@@ -5,7 +5,7 @@
 Registries are lists that TASC maintains so GA4GH products do not clash on shared names and identifiers. They are operational data rather than recommendations, so they are indexed here instead of being numbered. Each README explains how to request a new entry.
 
 | Registry | Purpose | Entries | Defined by |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [GA4GH Group Acronyms](group-acronyms/README.md) | Acronyms for GA4GH groups, used in the std_designator metadata of DOI registrations. | [originating-group-acronyms.yaml](group-acronyms/originating-group-acronyms.yaml) | [GA4GH-REC-05](../recommendations/Citing%20GA4GH%20Documentation.md), [TASC-ADR-004](../adr/TASC-ADR-004%20Use%20Standard%20Designators%20for%20DOI%20Metadata.md) |
 | [GA4GH Namespaced Identifier Registration](namespace-resolver/README.md) | Type prefixes and resolution patterns for identifiers in the ga4gh namespace, such as ga4gh:SQ. | [identifier-prefixes.yaml](namespace-resolver/identifier-prefixes.yaml) | - |
 | [GA4GH Persistent URL Redirects](persistent-url/README.md) | Rules for GA4GH persistent URLs on w3id.org. TASC reviews the pattern; the redirect rules live in the ga4gh/w3id.org repository. | [github.com/ga4gh/w3id.org](https://github.com/ga4gh/w3id.org) (maintained outside this repository) | - |

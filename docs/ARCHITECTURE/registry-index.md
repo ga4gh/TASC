@@ -29,7 +29,7 @@ Each registry describes itself in the header of its own README, using the same
 ```
 
 | Field | Required | Meaning |
-|-------|----------|---------|
+| ------- | ---------- | --------- |
 | Heading | Yes | The registry's name |
 | Description | Yes | One-line summary shown in the index |
 | Defined by | Yes, but may be blank or `None` | IDs of the ADRs, recommendations or governance documents that define the registry, comma-separated. Blank means no TASC document defines it. The line must still be present so it is never skipped by accident |

@@ -3,11 +3,11 @@
 Generates three machine-readable indexes of this repository's documents and registries. The TASC
 pages on the GA4GH website read them from `main`:
 
-| File                                 | Lists                                  | Schema                                    |
-|--------------------------------------|----------------------------------------|-------------------------------------------|
-| `index/adr-index.json`               | ADRs                                   | `index/adr-index.schema.json`             |
-| `index/recommendation-index.json`    | Recommendations and governance documents | `index/recommendation-index.schema.json` |
-| `index/registry-index.json`          | Registries under `registries/`         | `index/registry-index.schema.json`        |
+| File | Lists | Schema |
+| -------------------------------------- | ---------------------------------------- | ------------------------------------------- |
+| `index/adr-index.json` | ADRs | `index/adr-index.schema.json` |
+| `index/recommendation-index.json` | Recommendations and governance documents | `index/recommendation-index.schema.json` |
+| `index/registry-index.json` | Registries under `registries/` | `index/registry-index.schema.json` |
 
 ```text
 https://raw.githubusercontent.com/ga4gh/TASC/main/index/adr-index.json
@@ -17,11 +17,11 @@ https://raw.githubusercontent.com/ga4gh/TASC/main/index/registry-index.json
 
 ## What is indexed
 
-| Directory          | Type             | Identifier source                      | Statuses                                  |
-|--------------------|------------------|----------------------------------------|-------------------------------------------|
-| `adr/`             | `adr`            | H1: `# TASC-ADR-NNN: Title`            | Draft, Proposed, Approved, Deprecated, Superseded |
-| `recommendations/` | `recommendation` | `**Recommendation**: GA4GH-REC-NN`     | Draft, Approved, Superseded               |
-| `governance/`      | `governance`     | `**Document ID**: TASC-GOV-NN`         | Draft, Approved, Superseded               |
+| Directory | Type | Identifier source | Statuses |
+| -------------------- | ------------------ | ---------------------------------------- | ------------------------------------------- |
+| `adr/` | `adr` | H1: `# TASC-ADR-NNN: Title` | Draft, Proposed, Approved, Deprecated, Superseded |
+| `recommendations/` | `recommendation` | `**Recommendation**: GA4GH-REC-NN` | Draft, Approved, Superseded |
+| `governance/` | `governance` | `**Document ID**: TASC-GOV-NN` | Draft, Approved, Superseded |
 
 `drafts/` is also indexed; a draft's type is inferred from its content (a
 `TASC-ADR-NNN:` title, a `Recommendation` field or a `Document ID` field), and its
@@ -108,12 +108,12 @@ bot must be allowed to push to it.
 
 ## Layout
 
-| File                      | Responsibility                                    |
-|---------------------------|---------------------------------------------------|
-| `tasc_index/models.py`    | Document types, status enums, ID formats, entry model |
-| `tasc_index/registries.py`| Registry manifest validation and index entries    |
-| `tasc_index/parsing.py`   | Markdown metadata header and heading parsing      |
-| `tasc_index/descriptions.py` | Fallback description when a document has none  |
-| `tasc_index/builder.py`   | Discovery, validation, ordering, index split, JSON rendering |
-| `tasc_index/cli.py`       | Command line and schema validation of the output  |
-| `tasc_index/readmes.py`   | README generation from the index JSON             |
+| File | Responsibility |
+| --------------------------- | --------------------------------------------------- |
+| `tasc_index/models.py` | Document types, status enums, ID formats, entry model |
+| `tasc_index/registries.py` | Registry manifest validation and index entries |
+| `tasc_index/parsing.py` | Markdown metadata header and heading parsing |
+| `tasc_index/descriptions.py` | Fallback description when a document has none |
+| `tasc_index/builder.py` | Discovery, validation, ordering, index split, JSON rendering |
+| `tasc_index/cli.py` | Command line and schema validation of the output |
+| `tasc_index/readmes.py` | README generation from the index JSON |

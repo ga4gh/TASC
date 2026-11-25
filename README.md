@@ -105,7 +105,7 @@ The CPO ensures that the team creates GA4GH-wide technical alignment and that th
 #### Work Stream Representatives
 
 | Member | Work Stream |
-|--------|-------------|
+| -------- | ------------- |
 | **Nara Sobreira, David Bujold & Miro Cupak** | Discovery |
 | **Venkat Malladi & Brian Oâ€™Connor** | Federated Analysis |
 | **Jaime Guidry Auvil & Jonathan Lawson** | DURI |
@@ -125,7 +125,7 @@ Two volunteer representatives from each technical Work Stream and Data Securityâ
 TASC also enlists support from the GA4GH Staff Technical Team to encourage technical alignment across the Work Streams.
 
 | Member | Role |
-|--------|------|
+| -------- | ------ |
 | **Jinny Park** (jinny.park@ga4gh.org) | Technical Team Support |
 | **Reggan Thomas** | Technical Team |
 | **Jimmy Payyappilly** | Technical Team |
@@ -143,7 +143,7 @@ TASC also enlists support from the GA4GH Staff Technical Team to encourage techn
 ### Past contributors
 
 | Member | Work Stream / Role |
-|--------|------------------------|
+| -------- | ------------------------ |
 | Ian Fore | Discovery, FASP |
 | David Bernick | Data Security |
 | Craig Voisin | DURI |
