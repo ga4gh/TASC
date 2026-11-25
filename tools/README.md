@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/ga4gh/TASC/main/index/registry-index.json
 
 | Directory | Type | Identifier source | Statuses |
 | -------------------- | ------------------ | ---------------------------------------- | ------------------------------------------- |
-| `adr/` | `adr` | H1: `# TASC-ADR-NNN: Title` | Draft, Proposed, Approved, Deprecated, Superseded |
+| `adr/` | `adr` | H1: `# TASC-ADR-NNN: Title` | Draft, Proposed, Accepted, Deprecated, Superseded |
 | `recommendations/` | `recommendation` | `**Recommendation**: GA4GH-REC-NN` | Draft, Approved, Superseded |
 | `governance/` | `governance` | `**Document ID**: TASC-GOV-NN` | Draft, Approved, Superseded |
 
@@ -71,7 +71,7 @@ disagrees with its ID) fails generation. Every problem is listed in one run.
 - `registries/README.md`: a table of every registry and its defining document;
 - the "Registries" block of the root `README.md` (between the `tasc-registries` markers);
 - the "Recently Approved" block of the root `README.md` (between the `tasc-recent`
-  markers): the latest 3 `Approved` ADRs and the latest 3 `Approved` recommendations, newest `Date` first.
+  markers): the latest 3 `Accepted` ADRs and the latest 3 `Approved` recommendations, newest `Date` first.
 
 Do not edit these by hand; the workflow regenerates and commits them.
 
