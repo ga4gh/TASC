@@ -154,7 +154,11 @@ def index_json(repo):
 
 
 DOCS = [
-    {"id": "GA4GH-REC-01", "name": "Widget guide", "path": "recommendations/Widget guide.md"},
+    {
+        "id": "GA4GH-REC-01",
+        "name": "Widget guide",
+        "path": "recommendations/GA4GH-REC-01 Widget guide.md",
+    },
     {"id": "TASC-ADR-001", "name": "Widgets", "path": "adr/TASC-ADR-001 Widgets.md"},
 ]
 
@@ -163,7 +167,7 @@ def test_registries_readme_links_are_relative_to_the_registries_directory(repo):
     text = render_registries_readme(index_json(repo), DOCS)
     assert "[Widget Registry](widgets/README.md)" in text
     assert "[widgets.yaml](widgets/widgets.yaml)" in text
-    assert "[GA4GH-REC-01](../recommendations/Widget%20guide.md)" in text
+    assert "[GA4GH-REC-01](../recommendations/GA4GH-REC-01%20Widget%20guide.md)" in text
 
 
 def test_registries_readme_flags_externally_hosted_registries(repo):

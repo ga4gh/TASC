@@ -72,4 +72,4 @@ GA4GH will not use, or extend, its DOI mechanism to serve as the persistent iden
 
 ## References
 
-- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
+- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/GA4GH-REC-05%20Citing%20GA4GH%20Documentation.md)

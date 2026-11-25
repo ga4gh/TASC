@@ -108,6 +108,12 @@
         },
         "status": {
           "$ref": "#/$defs/recommendationStatus"
+        },
+        "short_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "description": "Short title used in listings, e.g. 'API pagination guide'. Taken from the file name, e.g. 'GA4GH-REC-01 API pagination guide.md'."
         }
       },
       "unevaluatedProperties": false

@@ -8,8 +8,9 @@
       "date": "2024-11-25",
       "status": "Approved",
       "description": "Describes the page-based and token-based pagination strategies approved for GA4GH APIs and when to use each.",
-      "path": "recommendations/API pagination guide.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/API%20pagination%20guide.md"
+      "path": "recommendations/GA4GH-REC-01 API Pagination Guide.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-01%20API%20Pagination%20Guide.md",
+      "short_name": "API Pagination Guide"
     },
     {
       "id": "GA4GH-REC-02",
@@ -18,8 +19,9 @@
       "date": "2025-01-28",
       "status": "Approved",
       "description": "Defines how service type identifiers are registered, named and managed in the GA4GH Service Info Type Registry.",
-      "path": "recommendations/Service Info Type Registry Guide.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/Service%20Info%20Type%20Registry%20Guide.md"
+      "path": "recommendations/GA4GH-REC-02 Service Info Type Registry Guide.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-02%20Service%20Info%20Type%20Registry%20Guide.md",
+      "short_name": "Service Info Type Registry Guide"
     },
     {
       "id": "GA4GH-REC-03",
@@ -28,8 +30,9 @@
       "date": "2025-07-18",
       "status": "Approved",
       "description": "Defines the Product Owner role for GA4GH standards, including responsibilities, reporting lines, term limits and oversight.",
-      "path": "recommendations/GA4GH product owner description.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH%20product%20owner%20description.md"
+      "path": "recommendations/GA4GH-REC-03 Product Owners.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-03%20Product%20Owners.md",
+      "short_name": "Product Owners"
     },
     {
       "id": "GA4GH-REC-04",
@@ -38,8 +41,9 @@
       "date": "2025-07-18",
       "status": "Approved",
       "description": "Sets out the policy and process for developing GA4GH technical specifications and communicating feature maturity levels.",
-      "path": "recommendations/TASC Technical Specification Maintenance.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/TASC%20Technical%20Specification%20Maintenance.md"
+      "path": "recommendations/GA4GH-REC-04 Technical Specification Development.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-04%20Technical%20Specification%20Development.md",
+      "short_name": "Technical Specification Development"
     },
     {
       "id": "GA4GH-REC-05",
@@ -48,8 +52,20 @@
       "date": "2026-07-07",
       "status": "Approved",
       "description": "Provides a consistent way to cite GA4GH documentary outputs by minting DOIs through Crossref under the GA4GH prefix.",
-      "path": "recommendations/Citing GA4GH Documentation.md",
-      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/Citing%20GA4GH%20Documentation.md"
+      "path": "recommendations/GA4GH-REC-05 Citing GA4GH Documentation.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-05%20Citing%20GA4GH%20Documentation.md",
+      "short_name": "Citing GA4GH Documentation"
+    },
+    {
+      "id": "GA4GH-REC-06",
+      "type": "recommendation",
+      "name": "Role of TASC in the PDAP",
+      "date": "2026-07-28",
+      "status": "Draft",
+      "description": "Defines what TASC does as a product moves through PDAP v3: it reviews technical alignment, assigns a risk tier, judges the product's responses, signs off at each gate and arbitrates cross-product conflicts.",
+      "path": "drafts/recommendations/GA4GH-REC-06 Role of TASC in PDAP.md",
+      "url": "https://github.com/ga4gh/TASC/blob/main/drafts/recommendations/GA4GH-REC-06%20Role%20of%20TASC%20in%20PDAP.md",
+      "short_name": "Role of TASC in PDAP"
     },
     {
       "id": "TASC-GOV-01",

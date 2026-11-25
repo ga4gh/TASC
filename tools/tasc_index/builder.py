@@ -15,6 +15,8 @@ from tasc_index.parsing import ParseError, parse_adr_title, parse_h1, parse_meta
 DEFAULT_REPO_URL = "https://github.com/ga4gh/TASC"
 DEFAULT_BRANCH = "main"
 MAX_SHORT_NAME = 60
+# Types whose file name is "<ID> Short Name.md"; governance documents keep their own names.
+NAMED_TYPES = {DocType.ADR, DocType.RECOMMENDATION}
 
 # Directory -> document type. `drafts/` holds work in progress of any type, so
 # its files are classified from their content instead (see `infer_type`).
@@ -94,7 +96,9 @@ def discover(root: Path) -> list[tuple[Path, DocType | None]]:
     """
     found = []
     for directory, doc_type in SOURCES.items():
-        for path in sorted((root / directory).glob("*.md")):
+        # drafts/ mirrors the destination directories (drafts/adr, drafts/recommendations).
+        pattern = "**/*.md" if directory == "drafts" else "*.md"
+        for path in sorted((root / directory).glob(pattern)):
             if path.name.lower() not in EXCLUDED_FILENAMES:
                 found.append((path, doc_type))
     return found
@@ -122,10 +126,6 @@ def parse_document(
     if doc_type is DocType.ADR:
         title = parse_adr_title(text)
         doc_id, name = title.id, title.name
-        if path.stem != doc_id and not path.stem.startswith(f"{doc_id} "):
-            raise ParseError(
-                f"file name '{path.name}' must be '{doc_id} Short Name.md' (or '{doc_id}.md')"
-            )
     else:
         doc_id = meta.get(_ID_FIELDS[doc_type], "")
         name = meta.get("title", "")
@@ -136,6 +136,11 @@ def parse_document(
 
     if not ID_PATTERNS[doc_type].match(doc_id):
         raise ParseError(f"identifier '{doc_id}' does not match {ID_PATTERNS[doc_type].pattern}")
+
+    if doc_type in NAMED_TYPES and path.stem != doc_id and not path.stem.startswith(f"{doc_id} "):
+        raise ParseError(
+            f"file name '{path.name}' must be '{doc_id} Short Name.md' (or '{doc_id}.md')"
+        )
 
     date = meta.get("date", "")
     try:
@@ -158,7 +163,7 @@ def parse_document(
         raise ParseError(f"description is longer than {MAX_LENGTH} characters")
 
     short_name = None
-    if doc_type is DocType.ADR:
+    if doc_type in NAMED_TYPES:
         short_name = path.stem[len(doc_id) :].strip()
         if not short_name:
             short_name = name
@@ -191,7 +196,8 @@ def build_index(
     """Build the index for every document under ``root``.
 
     All problems are collected before raising so a contributor can fix them in
-    one pass. With ``strict``, a missing ``Description`` field or ADR short name is an error.
+    one pass. With ``strict``, a missing ``Description`` field or a missing ADR or
+    recommendation short name is an error.
     """
     result = BuildResult()
     errors: list[str] = []

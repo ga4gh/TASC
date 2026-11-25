@@ -60,7 +60,7 @@ class Document:
     description: str
     path: str  # repo-relative, POSIX separators
     url: str  # permanent link to the file on GitHub
-    short_name: str | None = None  # ADRs only; see short_names.json
+    short_name: str | None = None  # ADRs and recommendations only; from the file name
 
     def to_dict(self) -> dict[str, str]:
         data = asdict(self)

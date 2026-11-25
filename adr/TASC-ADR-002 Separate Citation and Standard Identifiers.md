@@ -76,7 +76,7 @@ GA4GH will use DOIs for documentary citation only. Future machine-readable ident
 
 ## References
 
-- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
+- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/GA4GH-REC-05%20Citing%20GA4GH%20Documentation.md)
 
 ---
 

@@ -9,6 +9,7 @@ from tasc_index.readmes import (
     latest,
     render_adr_readme,
     render_recent_section,
+    render_recommendation_readme,
     splice_recent,
 )
 
@@ -24,6 +25,32 @@ def adr(n, status="Accepted", date="2026-01-01", path=None):
         "description": "A | B",
         "path": path or f"adr/TASC-ADR-{n:03}.md",
     }
+
+
+def rec(n, short_name="Short rec", doc_type="recommendation"):
+    prefix = "GA4GH-REC" if doc_type == "recommendation" else "TASC-GOV"
+    doc = {
+        "id": f"{prefix}-{n:02}",
+        "type": doc_type,
+        "name": f"Long recommendation title {n}",
+        "date": "2026-01-01",
+        "status": "Approved",
+        "description": "d",
+        "path": f"recommendations/{prefix}-{n:02} {short_name}.md",
+    }
+    if doc_type == "recommendation":
+        doc["short_name"] = short_name
+    return doc
+
+
+def test_recommendation_readme_links_the_id_and_short_name_but_governance_keeps_its_title():
+    text = render_recommendation_readme([rec(1), rec(1, doc_type="governance")])
+    assert "[GA4GH-REC-01 Short rec](GA4GH-REC-01%20Short%20rec.md)" in text
+    assert "[Long recommendation title 1](" in text  # the governance row
+
+
+def test_recent_recommendations_are_labelled_with_id_and_short_name():
+    assert "[GA4GH-REC-01 Short rec]" in render_recent_section([], [rec(1)])
 
 
 def test_latest_is_newest_first_and_limited():

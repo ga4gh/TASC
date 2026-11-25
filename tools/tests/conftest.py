@@ -127,7 +127,7 @@ def repo(tmp_path: Path) -> Path:
     """A minimal valid repository with one document of each type."""
     (tmp_path / "index").mkdir()
     write(tmp_path, "adr/TASC-ADR-001 Widgets.md", adr_text())
-    write(tmp_path, "recommendations/Widget guide.md", rec_text())
+    write(tmp_path, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text())
     write(
         tmp_path,
         "governance/Charter.md",

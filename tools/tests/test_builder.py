@@ -38,7 +38,7 @@ def test_indexes_each_type_with_expected_fields(repo):
 
 def test_order_is_by_type_then_identifier(repo):
     write(repo, "adr/TASC-ADR-002.md", adr_text("002"))
-    write(repo, "recommendations/Another.md", rec_text("GA4GH-REC-02"))
+    write(repo, "recommendations/GA4GH-REC-02 Another.md", rec_text("GA4GH-REC-02"))
     ids = [d.id for d in build(repo).documents]
     assert ids == ["TASC-ADR-001", "TASC-ADR-002", "GA4GH-REC-01", "GA4GH-REC-02", "TASC-GOV-01"]
 
@@ -59,11 +59,24 @@ def test_templates_and_readmes_are_not_indexed(repo):
 
 def test_drafts_are_indexed_and_classified_by_content(repo):
     write(repo, "drafts/TASC-ADR-006.md", adr_text("006", status="Draft"))
-    write(repo, "drafts/New rec.md", rec_text("GA4GH-REC-09", status="Draft"))
+    write(repo, "drafts/GA4GH-REC-09 New rec.md", rec_text("GA4GH-REC-09", status="Draft"))
     docs = {d.id: d for d in build(repo).documents}
     assert docs["TASC-ADR-006"].type is DocType.ADR
     assert docs["TASC-ADR-006"].path == "drafts/TASC-ADR-006.md"
     assert docs["GA4GH-REC-09"].type is DocType.RECOMMENDATION
+
+
+def test_drafts_in_subdirectories_are_indexed_and_validated(repo):
+    write(repo, "drafts/recommendations/GA4GH-REC-09 New rec.md", rec_text("GA4GH-REC-09"))
+    write(repo, "drafts/adr/TASC-ADR-006.md", adr_text("006", status="Draft"))
+    ids = {d.id for d in build(repo).documents}
+    assert {"GA4GH-REC-09", "TASC-ADR-006"} <= ids
+
+
+def test_a_draft_in_a_subdirectory_is_held_to_the_same_rules(repo):
+    write(repo, "drafts/recommendations/Wrong name.md", rec_text("GA4GH-REC-09"))
+    with pytest.raises(IndexBuildError, match="file name .* must be"):
+        build(repo)
 
 
 def test_unclassifiable_draft_is_an_error(repo):
@@ -73,14 +86,17 @@ def test_unclassifiable_draft_is_an_error(repo):
 
 
 def test_draft_is_validated_like_its_type(repo):
-    write(repo, "drafts/New rec.md", rec_text("GA4GH-REC-09", status="Deprecated"))
+    write(repo, "drafts/GA4GH-REC-09 New rec.md", rec_text("GA4GH-REC-09", status="Deprecated"))
     with pytest.raises(IndexBuildError, match="status"):
         build(repo)
 
 
 def test_url_links_back_to_file_and_encodes_spaces(repo):
     rec = next(d for d in build(repo).documents if d.id == "GA4GH-REC-01")
-    assert rec.url == "https://github.com/ga4gh/TASC/blob/main/recommendations/Widget%20guide.md"
+    assert (
+        rec.url
+        == "https://github.com/ga4gh/TASC/blob/main/recommendations/GA4GH-REC-01%20Widget%20guide.md"
+    )
 
 
 def test_build_url_honours_repo_and_branch():
@@ -99,7 +115,7 @@ def test_adr_rejects_statuses_outside_its_enum(repo, status):
 
 @pytest.mark.parametrize("status", ["Proposed", "Deprecated"])
 def test_recommendation_rejects_adr_only_statuses(repo, status):
-    write(repo, "recommendations/Widget guide.md", rec_text(status=status))
+    write(repo, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text(status=status))
     with pytest.raises(IndexBuildError, match="status"):
         build(repo)
 
@@ -125,26 +141,26 @@ def test_rejects_adr_file_name_that_disagrees_with_identifier(repo):
 
 @pytest.mark.parametrize("doc_id", ["GA4GH-REC-XX", "REC-01", "TASC-ADR-001"])
 def test_rejects_malformed_recommendation_identifier(repo, doc_id):
-    write(repo, "recommendations/Widget guide.md", rec_text(doc_id))
+    write(repo, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text(doc_id))
     with pytest.raises(IndexBuildError, match="identifier"):
         build(repo)
 
 
 def test_rejects_missing_identifier_field(repo):
-    write(repo, "recommendations/Widget guide.md", rec_text(id_field="Something else"))
+    write(repo, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text(id_field="Something else"))
     with pytest.raises(IndexBuildError, match="missing 'recommendation'"):
         build(repo)
 
 
 def test_rejects_duplicate_identifiers(repo):
-    write(repo, "recommendations/Copy.md", rec_text("GA4GH-REC-01"))
+    write(repo, "recommendations/GA4GH-REC-01 Copy.md", rec_text("GA4GH-REC-01"))
     with pytest.raises(IndexBuildError, match="duplicate identifier 'GA4GH-REC-01'"):
         build(repo)
 
 
 def test_reports_every_problem_in_one_pass(repo):
     write(repo, "adr/TASC-ADR-001 Widgets.md", adr_text(status="Nope"))
-    write(repo, "recommendations/Widget guide.md", rec_text(date="never"))
+    write(repo, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text(date="never"))
     with pytest.raises(IndexBuildError) as excinfo:
         build(repo)
     assert len(excinfo.value.errors) == 2
@@ -222,10 +238,40 @@ def test_render_is_deterministic_and_has_no_timestamp(repo):
     ]
 
 
-def test_adr_short_name_comes_from_the_file_name_and_only_adrs_have_one(repo):
+def test_adr_and_recommendation_short_names_come_from_the_file_name_but_governance_has_none(repo):
     docs = {d.id: d for d in build(repo).documents}
     assert docs["TASC-ADR-001"].short_name == "Widgets"
-    assert docs["GA4GH-REC-01"].short_name is None
+    assert docs["GA4GH-REC-01"].short_name == "Widget guide"
+    assert docs["TASC-GOV-01"].short_name is None
+
+
+def test_rejects_recommendation_file_name_that_disagrees_with_identifier(repo):
+    write(repo, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text("GA4GH-REC-02"))
+    with pytest.raises(IndexBuildError, match="file name .* must be 'GA4GH-REC-02 Short Name.md'"):
+        build(repo)
+
+
+def test_rejects_recommendation_file_name_without_the_identifier(repo):
+    (repo / "recommendations" / "GA4GH-REC-01 Widget guide.md").rename(
+        repo / "recommendations" / "Widget guide.md"
+    )
+    with pytest.raises(IndexBuildError, match="file name .* must be"):
+        build(repo)
+
+
+def test_overlong_recommendation_short_name_is_rejected(repo):
+    path = repo / "recommendations" / "GA4GH-REC-01 Widget guide.md"
+    path.rename(repo / "recommendations" / f"GA4GH-REC-01 {'x' * 61}.md")
+    with pytest.raises(IndexBuildError, match="short name is longer"):
+        build(repo)
+
+
+def test_strict_mode_requires_a_recommendation_short_name(repo):
+    (repo / "recommendations" / "GA4GH-REC-01 Widget guide.md").rename(
+        repo / "recommendations" / "GA4GH-REC-01.md"
+    )
+    with pytest.raises(IndexBuildError, match="no short name"):
+        build(repo, strict=True)
 
 
 def test_adr_file_name_without_short_name_falls_back_to_title_and_fails_strict(repo):

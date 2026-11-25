@@ -1,7 +1,7 @@
 # Role of TASC in the PDAP
 
 **Document Type**: Directive  
-**Document ID**: GA4GH-REC-06
+**Recommendation**: GA4GH-REC-06  
 **Source**: TASC  
 **Title**: Role of TASC in the PDAP  
 **Description**: Defines what TASC does as a product moves through PDAP v3: it reviews technical alignment, assigns a risk tier, judges the product's responses, signs off at each gate and arbitrates cross-product conflicts.  

@@ -48,7 +48,13 @@ def link(doc: dict[str, str], from_dir: str, label: str) -> str:
 
 
 def adr_label(doc: dict[str, str]) -> str:
+    """ID plus short name, for ADRs and recommendations (governance has no short name)."""
     return f"{doc['id']} {doc.get('short_name') or doc['name']}"
+
+
+def document_label(doc: dict[str, str]) -> str:
+    """ID plus short name where the document has one, otherwise its title."""
+    return adr_label(doc) if doc.get("short_name") else doc["name"]
 
 
 def latest(documents: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -80,7 +86,7 @@ def render_adr_readme(adrs: list[dict[str, str]]) -> str:
 def render_recommendation_readme(documents: list[dict[str, str]]) -> str:
     rows = [
         [
-            link(d, "recommendations", d["name"]),
+            link(d, "recommendations", document_label(d)),
             d["id"],
             d["type"].capitalize(),
             d["date"],
@@ -191,7 +197,7 @@ def render_recent_section(adrs: list[dict[str, str]], recs: list[dict[str, str]]
         "### Architectural Decision Records\n\n"
         f"{bullets(recent_adrs, adr_label)}\n\n"
         "See [all ADRs](adr/README.md) for the full list and statuses.\n\n"
-        f"### Recommendations\n\n{bullets(recent_recs, lambda d: d['name'])}\n\n"
+        f"### Recommendations\n\n{bullets(recent_recs, document_label)}\n\n"
         "See [all recommendations](recommendations/README.md) for the full list and statuses.\n"
         f"{RECENT_END}\n"
     )

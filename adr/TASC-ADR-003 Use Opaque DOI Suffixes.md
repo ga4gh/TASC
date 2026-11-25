@@ -89,7 +89,7 @@ GA4GH will generate DOI suffixes as opaque, non-semantic identifiers
 
 ## References
 
-- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/Citing%20GA4GH%20Documentation.md)
+- **Full Recommendation:** [Citing GA4GH Documentation Recommendation](../recommendations/GA4GH-REC-05%20Citing%20GA4GH%20Documentation.md)
 - **Related ADRs:** [TASC-ADR-001: Use Crossref as the DOI Registration Authority for GA4GH](./TASC-ADR-001%20Use%20Crossref%20for%20DOI.md)
 
 ---
