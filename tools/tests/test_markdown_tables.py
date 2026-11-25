@@ -13,6 +13,7 @@ GENERATED = [
     "adr/README.md",
     "recommendations/README.md",
     "registries/README.md",
+    "requirements/README.md",
 ]
 DELIMITER = re.compile(r"^\|( :?-{3,}:? \|)+$")
 

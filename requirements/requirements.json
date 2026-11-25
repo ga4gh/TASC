@@ -1,0 +1,158 @@
+{
+  "requirements": [
+    {
+      "name": "GitHub repository",
+      "category": "repository-website",
+      "details": "At least one GitHub repository per product, conforming to the TASC repository template and the GitHub policies it references.",
+      "applies": "From the start of development, and for the life of the product",
+      "documents": [
+        "TASC-ADR-006"
+      ]
+    },
+    {
+      "name": "Website",
+      "category": "repository-website",
+      "details": "Any website representing a GA4GH product or topic is served from a ga4gh.org subdomain. Standalone and third-party domains are not permitted.",
+      "applies": "Whenever a product website exists",
+      "documents": [
+        "TASC-ADR-007"
+      ]
+    },
+    {
+      "name": "Retired status shown",
+      "category": "repository-website",
+      "details": "On retirement, the repository and website show the product's retired status.",
+      "applies": "On retirement",
+      "references": [
+        "PDAP v3.0 §7.3"
+      ],
+      "status": "Approved"
+    },
+    {
+      "name": "Starter kit",
+      "category": "starter-kit-conformance",
+      "details": "Content that lets a user begin building their own implementation: minimal scaffolding that can be extended for downstream workflows or applications. A reference implementation built by the product development team may serve as the starter kit.",
+      "applies": "At product approval, and maintained thereafter",
+      "documents": [
+        "TASC-ADR-008"
+      ]
+    },
+    {
+      "name": "Conformance suite",
+      "category": "starter-kit-conformance",
+      "details": "A defined set of tests derived from the specification and traceable to its requirements and behaviours, stating the version it covers and its scope, optional features and limitations, so that a pass has a bounded meaning.",
+      "applies": "At product approval",
+      "documents": [
+        "TASC-ADR-009"
+      ]
+    },
+    {
+      "name": "Maturity model and versioning",
+      "category": "specification-design",
+      "details": "Semantic versioning, with product features annotated Draft, Trial Use, Normative or Deprecated, and advancement following the stated criteria.",
+      "applies": "From first release, ongoing",
+      "documents": [
+        "GA4GH-REC-04"
+      ]
+    },
+    {
+      "name": "API pagination",
+      "category": "specification-design",
+      "details": "New products offering pagination use page-based or token-based pagination, with the specified parameter names, unless agreed otherwise with TASC.",
+      "applies": "For any new API offering pagination",
+      "documents": [
+        "GA4GH-REC-01"
+      ]
+    },
+    {
+      "name": "Interoperability",
+      "category": "specification-design",
+      "details": "Interoperability is exchange of data and subsequent use of it without custom integrations, across three layers: syntactic, semantic, and behavioural. Products are assessed and risk-tiered against this definition.",
+      "applies": "Throughout development, ongoing",
+      "documents": [
+        "TASC-ADR-011"
+      ],
+      "references": [
+        "2026 TASC Interoperability"
+      ]
+    },
+    {
+      "name": "Service Info type",
+      "category": "registration",
+      "details": "GA4GH API services register a service type identifier (group plus a kebab-case artifact matching the stated pattern) and expose it through the Service Info endpoint. Registration is by PR to the TASC repository.",
+      "applies": "Submitted early in the approval cycle; retrospective registration possible for approved products",
+      "documents": [
+        "GA4GH-REC-02"
+      ],
+      "registries": [
+        "service-info"
+      ]
+    },
+    {
+      "name": "GA4GH namespace prefix",
+      "category": "registration",
+      "details": "Products minting `ga4gh:` identifiers register their type prefix with a name, documentation URI and, where applicable, a schema URI. Prefixes are uppercase, ideally 2 to 4 characters, name concrete types rather than parent classes, and map one-to-one to a schema type. Requests need the product owners' approval. Prefixes should not change between versions of a product.",
+      "applies": "Prepared alongside the approval documentation, and before identifiers are published",
+      "registries": [
+        "namespace-resolver"
+      ],
+      "status": "Approved"
+    },
+    {
+      "name": "Persistent URL",
+      "category": "registration",
+      "details": "Products publishing JSON Schema register w3id.org redirect rules following the TASC pURL pattern, so that `$id` values resolve. Rules are added by PR to the ga4gh/w3id.org repository, with TASC reviewing and syncing upstream.",
+      "applies": "Before schemas are published",
+      "registries": [
+        "persistent-url"
+      ],
+      "status": "Approved"
+    },
+    {
+      "name": "Originating group acronym",
+      "category": "registration",
+      "details": "The group behind the product holds a registered acronym, which forms the `std_designator` in DOI metadata. Only acronyms in the registry may be used; a new group registers one before requesting a DOI.",
+      "applies": "Before a DOI is requested",
+      "documents": [
+        "TASC-ADR-004",
+        "GA4GH-REC-05"
+      ],
+      "registries": [
+        "group-acronyms"
+      ]
+    },
+    {
+      "name": "DOIs",
+      "category": "citation",
+      "details": "Approved products are assigned DOIs under the GA4GH prefix, covering at least the latest specification, the product landing page, and the documentation. DOIs are not minted for drafts, so this follows approval rather than gating it.",
+      "applies": "After product approval",
+      "documents": [
+        "GA4GH-REC-05",
+        "TASC-ADR-001",
+        "TASC-ADR-002",
+        "TASC-ADR-003",
+        "TASC-ADR-004",
+        "TASC-ADR-005"
+      ]
+    },
+    {
+      "name": "Citation file",
+      "category": "citation",
+      "details": "A CITATION.cff file in the repository, carrying the registered DOI, so downstream users cite the product rather than an incidental paper.",
+      "applies": "After the DOI is issued",
+      "documents": [
+        "GA4GH-REC-05"
+      ],
+      "status": "Recommended"
+    },
+    {
+      "name": "Named product owner",
+      "category": "ownership",
+      "details": "At least one named product owner per product, set on approval, on a term-limited basis.",
+      "applies": "On product approval, ongoing",
+      "documents": [
+        "GA4GH-REC-03"
+      ]
+    }
+  ]
+}

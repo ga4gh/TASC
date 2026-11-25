@@ -12,6 +12,7 @@ on:
       - "recommendations/**"
       - "governance/**"
       - "registries/**"
+      - "requirements/**"
       - "drafts/**"
       - "index/*.schema.json"
       - "tools/**"
@@ -23,6 +24,7 @@ on:
       - "recommendations/**"
       - "governance/**"
       - "registries/**"
+      - "requirements/**"
       - "drafts/**"
       - "index/*.schema.json"
       - "tools/**"
@@ -70,7 +72,7 @@ jobs:
       - name: Commit regenerated indexes and READMEs
         if: github.event_name == 'push'
         run: |
-          generated='index/*-index.json adr/README.md recommendations/README.md registries/README.md README.md'
+          generated='index/*-index.json adr/README.md recommendations/README.md registries/README.md requirements/README.md README.md'
           if [ -z "$(git status --porcelain -- $generated)" ]; then
             echo "Generated files already up to date"
             exit 0

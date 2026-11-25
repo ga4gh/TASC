@@ -17,6 +17,11 @@ from urllib.parse import quote
 
 from tasc_index.markdown import cell, table
 from tasc_index.models import AdrStatus, RecommendationStatus
+from tasc_index.requirements import (
+    load_requirements,
+    render_requirements_readme,
+    validate_requirements,
+)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 RECENT_COUNT = 3
@@ -241,6 +246,17 @@ def generate(root: Path, index_dir: Path) -> list[Path]:
         root / "registries" / "README.md": render_registries_readme(registries, adrs + recs),
         root_readme: splice_registries(root_text, render_registries_section(registries)),
     }
+    requirements_file = root / "requirements" / "requirements.json"
+    if requirements_file.exists():
+        requirements = load_requirements(requirements_file)
+        errors = validate_requirements(
+            requirements, {d["id"]: d for d in adrs + recs}, {r["slug"]: r for r in registries}
+        )
+        if errors:
+            raise ValueError("invalid requirements.json: " + "; ".join(errors))
+        outputs[root / "requirements" / "README.md"] = render_requirements_readme(
+            requirements, adrs + recs, registries
+        )
     for path, content in outputs.items():
         path.write_text(content, encoding="utf-8")
     return list(outputs)
