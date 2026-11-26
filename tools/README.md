@@ -47,7 +47,7 @@ Description or `Defined by` line, a missing data file, or an unknown document ID
 ```bash
 cd tools
 uv sync                                  # once; installs the locked dependencies
-uv run python -m tasc_index              # writes both files in ../index
+uv run python -m tasc_index              # writes the index files in ../index
 uv run python -m tasc_index.readmes      # then the READMEs, from those files
 uv run pytest
 uv run ruff check . && uv run ruff format --check .
@@ -60,28 +60,29 @@ Options: `--strict` (fail when a document has no `Description` field),
 `--branch`, `--repo-url`, `--root`, `--index-dir`.
 
 A malformed document (bad ID, date or status, duplicate ID, ADR file name that
-disagrees with its ID) fails generation. Every problem is listed in one run.
+or recommendation or governance file name that disagrees with its ID) fails generation. Every problem is listed in one run.
 
 ## READMEs
 
 `python -m tasc_index.readmes` (run from `tools/`, after the indexes are generated) reads
 `index/*.json`, never the markdown, and writes:
 
-- `adr/README.md` and `recommendations/README.md`: a table of every indexed document;
+- `adr/README.md` and `recommendations/README.md` (which also lists governance documents): a table of every indexed document;
 - `registries/README.md`: a table of every registry and its defining document;
 - the "Registries" block of the root `README.md` (between the `tasc-registries` markers);
 - the "Recently Approved" block of the root `README.md` (between the `tasc-recent`
-  markers): the latest 3 `Accepted` ADRs and the latest 3 `Approved` recommendations, newest `Date` first.
+  markers): the latest 3 `Accepted` ADRs, the latest 3 `Approved` recommendations and the latest 3 `Approved` governance documents, newest `Date` first.
 
 Do not edit these by hand; the workflow regenerates and commits them.
 
-## ADR short names
+## Short names
 
-ADR headings in listings read `TASC-ADR-001 Use Crossref for DOI`. The short part lives in
-the ADR's file name, so the files are easy to browse: `adr/TASC-ADR-001 Use Crossref for DOI.md`
-(up to 60 characters after the ID). It is emitted as `short_name` in `adr-index.json`. A file named
-only `TASC-ADR-NNN.md` falls back to the full title with a warning, and `--strict` (and the test
-suite) fails.
+Headings in listings read `TASC-ADR-001 Use Crossref for DOI`, `GA4GH-REC-01 API Pagination Guide`
+or `TASC-GOV-01 TASC_Governance_and_Leadership_Approved_240825`. The short part lives in the file name, so the
+files are easy to browse: `adr/TASC-ADR-001 Use Crossref for DOI.md` (any length after
+the ID). It is emitted as `short_name` in the index. A file named only `<ID>.md` falls back to
+the full title with a warning, and `--strict` (and the test suite) fails. The identifier in the
+file name must match the one in the document.
 
 ## Descriptions
 

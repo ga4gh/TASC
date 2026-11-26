@@ -104,7 +104,6 @@
         "short_name": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 60,
           "description": "Short title used in listings, e.g. 'Use Crossref for DOI'. Taken from the file name, e.g. 'TASC-ADR-001 Use Crossref for DOI.md'."
         }
       },

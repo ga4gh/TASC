@@ -29,7 +29,7 @@ def adr(n, status="Accepted", date="2026-01-01", path=None):
 
 def rec(n, short_name="Short rec", doc_type="recommendation"):
     prefix = "GA4GH-REC" if doc_type == "recommendation" else "TASC-GOV"
-    doc = {
+    return {
         "id": f"{prefix}-{n:02}",
         "type": doc_type,
         "name": f"Long recommendation title {n}",
@@ -37,20 +37,30 @@ def rec(n, short_name="Short rec", doc_type="recommendation"):
         "status": "Approved",
         "description": "d",
         "path": f"recommendations/{prefix}-{n:02} {short_name}.md",
+        "short_name": short_name,
     }
-    if doc_type == "recommendation":
-        doc["short_name"] = short_name
-    return doc
 
 
-def test_recommendation_readme_links_the_id_and_short_name_but_governance_keeps_its_title():
-    text = render_recommendation_readme([rec(1), rec(1, doc_type="governance")])
+def test_recommendation_readme_links_the_id_and_short_name_for_governance_too():
+    text = render_recommendation_readme([rec(1), rec(1, "Charter", doc_type="governance")])
     assert "[GA4GH-REC-01 Short rec](GA4GH-REC-01%20Short%20rec.md)" in text
-    assert "[Long recommendation title 1](" in text  # the governance row
+    assert "[TASC-GOV-01 Charter](TASC-GOV-01%20Charter.md)" in text
 
 
 def test_recent_recommendations_are_labelled_with_id_and_short_name():
     assert "[GA4GH-REC-01 Short rec]" in render_recent_section([], [rec(1)])
+
+
+def test_recent_governance_documents_are_approved_ones_with_id_and_short_name():
+    docs = [rec(1, "Charter", doc_type="governance"), rec(2, "Draft one", doc_type="governance")]
+    docs[1]["status"] = "Draft"
+    section = render_recent_section([], docs)
+    assert "### Governance" in section
+    assert "[TASC-GOV-01 Charter]" in section
+    assert "TASC-GOV-02" not in section
+    # Governance documents are not listed under Recommendations.
+    assert section.index("### Governance") > section.index("### Recommendations")
+    assert "TASC-GOV-01" not in section.split("### Governance")[0]
 
 
 def test_latest_is_newest_first_and_limited():

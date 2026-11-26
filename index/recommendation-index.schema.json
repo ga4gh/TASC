@@ -112,7 +112,6 @@
         "short_name": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 60,
           "description": "Short title used in listings, e.g. 'API pagination guide'. Taken from the file name, e.g. 'GA4GH-REC-01 API pagination guide.md'."
         }
       },
@@ -133,6 +132,11 @@
         },
         "status": {
           "$ref": "#/$defs/recommendationStatus"
+        },
+        "short_name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Short title used in listings, e.g. 'TASC_Governance_and_Leadership_Approved_240825'. Taken from the file name, e.g. 'TASC-GOV-01 TASC_Governance_and_Leadership_Approved_240825.md'."
         }
       },
       "unevaluatedProperties": false

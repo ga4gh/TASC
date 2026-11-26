@@ -19,6 +19,7 @@ def test_writes_separate_schema_valid_indexes(repo, capsys):
     rec = load(repo, "recommendation-index.json")
     assert [d["id"] for d in adr["documents"]] == ["TASC-ADR-001"]
     assert [d["id"] for d in rec["documents"]] == ["GA4GH-REC-01", "TASC-GOV-01"]
+    assert rec["documents"][1]["short_name"] == "Charter"
     assert adr["$schema"] == "adr-index.schema.json"
     assert rec["$schema"] == "recommendation-index.schema.json"
     assert "Wrote 1 documents" in capsys.readouterr().out

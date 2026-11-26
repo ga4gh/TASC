@@ -144,8 +144,8 @@ This document applies in the first instance to new products entering PDAP v3, wh
 - [PDAP] [GA4GH Product Development and Approval Process v2.0 draft, 2026-05-19](https://docs.google.com/document/d/1M4rsFHn0u-Qmtf5mdvPj_0J9j4R4tGBxsBTKpB43mag/edit)
 - [TASC-INTEROP] [GA4GH 2026 TASC Interoperability](https://docs.google.com/document/d/1_NVRgxqaq_6m0k2Wzjd_7oBwFxlQtsnsxY0t3N_ebIU/edit)
 - [DOSSIER] [Technical Product Dossier](https://docs.google.com/document/d/1McYw7Py4SVASDpzj0b5HpoJg_-yT-FE7xf0QXEBekls/edit)
-- [TASC-GOV-01] [TASC Governance and Leadership Charter](https://github.com/ga4gh/TASC/blob/main/governance/TASC_Governance_and_Leadership_Approved_240825.md)
-- [TASC-GOV-02] [TASC Document Standards](https://github.com/ga4gh/TASC/blob/main/governance/TASC_Document_Standards.md)
+- [TASC-GOV-01] [TASC Governance and Leadership Charter](https://github.com/ga4gh/TASC/blob/main/governance/TASC-GOV-01%20TASC_Governance_and_Leadership_Approved_240825.md)
+- [TASC-GOV-02] [TASC Document Standards](https://github.com/ga4gh/TASC/blob/main/governance/TASC-GOV-02%20TASC_Document_Standards.md)
 - [PROC] [PDAP Review Operating Procedure](pdap-review-operating-procedure.md)
 - [ISSUE-93] <https://github.com/ga4gh/TASC/issues/93>
 

@@ -62,5 +62,5 @@ The `tasc-index` workflow runs on changes under `registries/` and commits the re
 
 ## Related
 
-- `governance/TASC_Document_Standards.md` (repository structure)
+- `governance/TASC-GOV-02 TASC_Document_Standards.md` (repository structure)
 - [tools/README.md](../../tools/README.md)

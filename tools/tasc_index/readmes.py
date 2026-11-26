@@ -48,13 +48,8 @@ def link(doc: dict[str, str], from_dir: str, label: str) -> str:
 
 
 def adr_label(doc: dict[str, str]) -> str:
-    """ID plus short name, for ADRs and recommendations (governance has no short name)."""
+    """ID plus short name (the file name's short name, falling back to the title)."""
     return f"{doc['id']} {doc.get('short_name') or doc['name']}"
-
-
-def document_label(doc: dict[str, str]) -> str:
-    """ID plus short name where the document has one, otherwise its title."""
-    return adr_label(doc) if doc.get("short_name") else doc["name"]
 
 
 def latest(documents: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -86,7 +81,7 @@ def render_adr_readme(adrs: list[dict[str, str]]) -> str:
 def render_recommendation_readme(documents: list[dict[str, str]]) -> str:
     rows = [
         [
-            link(d, "recommendations", document_label(d)),
+            link(d, "recommendations", adr_label(d)),
             d["id"],
             d["type"].capitalize(),
             d["date"],
@@ -191,14 +186,24 @@ def render_recent_section(adrs: list[dict[str, str]], recs: list[dict[str, str]]
             if d["type"] == "recommendation" and d["status"] == RecommendationStatus.APPROVED.value
         ]
     )
+    recent_governance = latest(
+        [
+            d
+            for d in recs
+            if d["type"] == "governance" and d["status"] == RecommendationStatus.APPROVED.value
+        ]
+    )
     return (
         f"{RECENT_START}\n"
         "## Recently Approved\n\n"
         "### Architectural Decision Records\n\n"
         f"{bullets(recent_adrs, adr_label)}\n\n"
         "See [all ADRs](adr/README.md) for the full list and statuses.\n\n"
-        f"### Recommendations\n\n{bullets(recent_recs, document_label)}\n\n"
-        "See [all recommendations](recommendations/README.md) for the full list and statuses.\n"
+        f"### Recommendations\n\n{bullets(recent_recs, adr_label)}\n\n"
+        "See [all recommendations](recommendations/README.md) for the full list and statuses.\n\n"
+        f"### Governance\n\n{bullets(recent_governance, adr_label)}\n\n"
+        "Governance documents are listed with the recommendations in "
+        "[recommendations/README.md](recommendations/README.md).\n"
         f"{RECENT_END}\n"
     )
 

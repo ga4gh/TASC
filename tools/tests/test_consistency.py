@@ -86,14 +86,15 @@ def test_schemas_reject_inconsistent_entries(schema, bad):
     assert not Draft202012Validator(schema).is_valid({"documents": [{**ENTRY, **bad}]})
 
 
-def test_recommendation_schema_allows_a_short_name_on_recommendations_only():
+def test_recommendation_schema_allows_a_short_name_on_recommendations_and_governance():
     from jsonschema import Draft202012Validator
 
     validator = Draft202012Validator(REC_SCHEMA)
     rec = {**ENTRY, "type": "recommendation", "id": "GA4GH-REC-01", "status": "Approved"}
     gov = {**ENTRY, "type": "governance", "id": "TASC-GOV-01", "status": "Approved"}
     assert validator.is_valid({"documents": [{**rec, "short_name": "x"}]})
-    assert not validator.is_valid({"documents": [{**gov, "short_name": "x"}]})
+    assert validator.is_valid({"documents": [{**gov, "short_name": "x"}]})
+    assert validator.is_valid({"documents": [{**gov, "short_name": "x" * 200}]})
 
 
 @pytest.mark.parametrize(

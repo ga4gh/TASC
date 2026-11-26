@@ -238,11 +238,11 @@ def test_render_is_deterministic_and_has_no_timestamp(repo):
     ]
 
 
-def test_adr_and_recommendation_short_names_come_from_the_file_name_but_governance_has_none(repo):
+def test_short_names_come_from_the_file_name(repo):
     docs = {d.id: d for d in build(repo).documents}
     assert docs["TASC-ADR-001"].short_name == "Widgets"
     assert docs["GA4GH-REC-01"].short_name == "Widget guide"
-    assert docs["TASC-GOV-01"].short_name is None
+    assert docs["TASC-GOV-01"].short_name == "Charter"
 
 
 def test_rejects_recommendation_file_name_that_disagrees_with_identifier(repo):
@@ -259,11 +259,39 @@ def test_rejects_recommendation_file_name_without_the_identifier(repo):
         build(repo)
 
 
-def test_overlong_recommendation_short_name_is_rejected(repo):
-    path = repo / "recommendations" / "GA4GH-REC-01 Widget guide.md"
-    path.rename(repo / "recommendations" / f"GA4GH-REC-01 {'x' * 61}.md")
-    with pytest.raises(IndexBuildError, match="short name is longer"):
+def test_rejects_governance_file_name_without_the_identifier(repo):
+    (repo / "governance" / "TASC-GOV-01 Charter.md").rename(repo / "governance" / "Charter.md")
+    with pytest.raises(IndexBuildError, match="file name .* must be 'TASC-GOV-01 Short Name.md'"):
         build(repo)
+
+
+def test_rejects_governance_file_name_that_disagrees_with_identifier(repo):
+    write(
+        repo, "governance/TASC-GOV-01 Charter.md", rec_text("TASC-GOV-02", id_field="Document ID")
+    )
+    with pytest.raises(IndexBuildError, match="file name .* must be 'TASC-GOV-02 Short Name.md'"):
+        build(repo)
+
+
+def test_strict_mode_requires_a_governance_short_name(repo):
+    (repo / "governance" / "TASC-GOV-01 Charter.md").rename(repo / "governance" / "TASC-GOV-01.md")
+    with pytest.raises(IndexBuildError, match="no short name"):
+        build(repo, strict=True)
+
+
+def test_short_names_have_no_length_limit(repo):
+    long_name = "x" * 200
+    (repo / "recommendations" / "GA4GH-REC-01 Widget guide.md").rename(
+        repo / "recommendations" / f"GA4GH-REC-01 {long_name}.md"
+    )
+    (repo / "governance" / "TASC-GOV-01 Charter.md").rename(
+        repo / "governance" / f"TASC-GOV-01 {long_name}.md"
+    )
+    (repo / "adr" / "TASC-ADR-001 Widgets.md").rename(repo / "adr" / f"TASC-ADR-001 {long_name}.md")
+    docs = {d.id: d for d in build(repo).documents}
+    assert {docs[i].short_name for i in ("GA4GH-REC-01", "TASC-GOV-01", "TASC-ADR-001")} == {
+        long_name
+    }
 
 
 def test_strict_mode_requires_a_recommendation_short_name(repo):
@@ -281,9 +309,3 @@ def test_adr_file_name_without_short_name_falls_back_to_title_and_fails_strict(r
     assert any("no short name" in w for w in result.warnings)
     with pytest.raises(IndexBuildError, match="no short name"):
         build(repo, strict=True)
-
-
-def test_overlong_short_name_is_rejected(repo):
-    (repo / "adr" / "TASC-ADR-001 Widgets.md").rename(repo / "adr" / f"TASC-ADR-001 {'x' * 61}.md")
-    with pytest.raises(IndexBuildError, match="short name is longer"):
-        build(repo)

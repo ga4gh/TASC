@@ -14,9 +14,8 @@ from tasc_index.parsing import ParseError, parse_adr_title, parse_h1, parse_meta
 
 DEFAULT_REPO_URL = "https://github.com/ga4gh/TASC"
 DEFAULT_BRANCH = "main"
-MAX_SHORT_NAME = 60
-# Types whose file name is "<ID> Short Name.md"; governance documents keep their own names.
-NAMED_TYPES = {DocType.ADR, DocType.RECOMMENDATION}
+# Types whose file name is "<ID> Short Name.md".
+NAMED_TYPES = {DocType.ADR, DocType.RECOMMENDATION, DocType.GOVERNANCE}
 
 # Directory -> document type. `drafts/` holds work in progress of any type, so
 # its files are classified from their content instead (see `infer_type`).
@@ -48,7 +47,7 @@ class IndexSpec:
 
 
 # ADRs are immutable decision records; recommendations and governance documents
-# are living policy (see TASC_Document_Standards.md), so they share an index.
+# are living policy (see TASC-GOV-02 TASC_Document_Standards.md), so they share an index.
 INDEXES = (
     IndexSpec("adr", frozenset({DocType.ADR})),
     IndexSpec("recommendation", frozenset({DocType.RECOMMENDATION, DocType.GOVERNANCE})),
@@ -168,8 +167,6 @@ def parse_document(
         if not short_name:
             short_name = name
             warnings.append(f"{doc_id}: no short name in the file name, using the full title")
-        elif len(short_name) > MAX_SHORT_NAME:
-            raise ParseError(f"short name is longer than {MAX_SHORT_NAME} characters")
 
     rel_path = path.relative_to(root).as_posix()
     document = Document(
@@ -196,8 +193,8 @@ def build_index(
     """Build the index for every document under ``root``.
 
     All problems are collected before raising so a contributor can fix them in
-    one pass. With ``strict``, a missing ``Description`` field or a missing ADR or
-    recommendation short name is an error.
+    one pass. With ``strict``, a missing ``Description`` field or a missing ADR,
+    recommendation or governance short name is an error.
     """
     result = BuildResult()
     errors: list[str] = []

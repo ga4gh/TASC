@@ -72,7 +72,7 @@ TASC's role in PDAP is to perform technical-alignment review and interoperabilit
 
 ## References
 
-- **Full Policy:** `governance/TASC_Governance_and_Leadership_Approved_240825.md` (TASC-GOV-01); `2026 TASC Interoperability.md`
+- **Full Policy:** `governance/TASC-GOV-01 TASC_Governance_and_Leadership_Approved_240825.md` (TASC-GOV-01); `2026 TASC Interoperability.md`
 - **Related ADRs:** [TASC-ADR-006](TASC-ADR-006%20Require%20a%20Conformant%20GitHub%20Repository.md)–[TASC-ADR-009](TASC-ADR-009%20Require%20a%20Conformance%20Suite.md) (PDAP requirements), [TASC-ADR-010](TASC-ADR-010%20Adopt%20Technical%20Product%20Requirements.md) (PDAP Technical Product Requirements Review), [TASC-ADR-011](TASC-ADR-011%20Adopt%20the%20Interoperability%20Framework.md) (Interoperability Framework)
 - **Examples:** n/a
 
@@ -80,4 +80,4 @@ TASC's role in PDAP is to perform technical-alignment review and interoperabilit
 
 ## Notes
 
-Drafted with the assistance of Claude Sonnet 5 (Anthropic), via Claude Code, from `governance/TASC_Governance_and_Leadership_Approved_240825.md`, `2026 TASC Interoperability.md`, and source material provided the TASC workshop, July 2026.
+Drafted with the assistance of Claude Sonnet 5 (Anthropic), via Claude Code, from `governance/TASC-GOV-01 TASC_Governance_and_Leadership_Approved_240825.md`, `2026 TASC Interoperability.md`, and source material provided the TASC workshop, July 2026.

@@ -151,10 +151,11 @@ ga4gh/TASC/
 │   ├── template.md
 │   └── TASC-ADR-NNN Short Name.md (ADRs)
 ├── governance/
-│   └── TASC-GOV-XX_Title.md
+│   └── TASC-GOV-NN Short Name.md (governance documents)
 ├── recommendations/
+│   ├── README.md          (generated index table)
 │   ├── template.md
-│   └── [Recommendation Title].md
+│   └── GA4GH-REC-NN Short Name.md (recommendations)
 ├── drafts/                (work in progress)
 ├── registries/
 │   ├── service-info/
@@ -165,9 +166,9 @@ ga4gh/TASC/
 └── data/                  (supporting materials, not committed)
 ```
 
-- **`adr/`** -- Immutable decision records. ADR files are named `TASC-ADR-NNN Short Name.md` (zero-padded 3-digit number, then a short name of up to 60 characters, e.g. `TASC-ADR-001 Use Crossref for DOI.md`), so they are easy to browse. `adr/README.md` is generated from the index.
-- **`governance/`** -- TASC operating charters and leadership rules.
-- **`recommendations/`** -- Approved policy documents and guidance. Recommendation files are named `GA4GH-REC-NN Short Name.md` (the identifier, then a short name of up to 60 characters, e.g. `GA4GH-REC-01 API Pagination Guide.md`), the same pattern as ADRs. The short name is shown in the generated listings; the full title stays in the document's `Title` field. `recommendations/README.md` is generated from the index.
+- **`adr/`** -- Immutable decision records. ADR files are named `TASC-ADR-NNN Short Name.md` (zero-padded 3-digit number, then a short name, e.g. `TASC-ADR-001 Use Crossref for DOI.md`), so they are easy to browse. `adr/README.md` is generated from the index.
+- **`governance/`** -- TASC operating charters and leadership rules. Governance files are named `TASC-GOV-NN Short Name.md` (the identifier, then a short name, e.g. `TASC-GOV-01 TASC_Governance_and_Leadership_Approved_240825.md`), the same pattern as ADRs and recommendations. The short name is shown in the generated listings; the full title stays in the document's `Title` field. Governance documents are listed in `recommendations/README.md`, which is generated from the index.
+- **`recommendations/`** -- Approved policy documents and guidance. Recommendation files are named `GA4GH-REC-NN Short Name.md` (the identifier, then a short name, e.g. `GA4GH-REC-01 API Pagination Guide.md`), the same pattern as ADRs. The short name is shown in the generated listings; the full title stays in the document's `Title` field. `recommendations/README.md` is generated from the index.
 - **`drafts/`** -- Work-in-progress documents that graduate to their respective directories upon approval.
 - **`registries/`** -- Registries maintained by TASC: the GA4GH Service Info Type Registry (`service-info/`), `namespace-resolver/`, `group-acronyms/` and `persistent-url/`.
   Registries are operational artefacts, indexed in `registries/README.md`, and are not numbered. Each registry README carries a metadata header (`Description`, `Defined by`, and a `Data file` and/or `External location`); `Defined by` names the recommendation, ADR or governance document that defines the registry, or is left blank if there is none.
@@ -216,7 +217,7 @@ All approved outputs SHOULD appear as cards on the GA4GH website, linking back t
 
 ## References
 
-- [TASC Governance and Leadership Charter (TASC-GOV-01)](TASC_Governance_and_Leadership_Approved_240825.md)
+- [TASC Governance and Leadership Charter (TASC-GOV-01)](TASC-GOV-01%20TASC_Governance_and_Leadership_Approved_240825.md)
 - [Michael Nygard's ADR template](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
 - [TASC Placement Proposal Presentation](https://docs.google.com/presentation/d/1zc4VeoZVaU2fIr6dP9VSFhHxIceWzglt/edit) (February 2026)
 - [GA4GH TASC GitHub Project Board](https://github.com/orgs/ga4gh/projects/9/views/1)

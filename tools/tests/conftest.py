@@ -130,7 +130,7 @@ def repo(tmp_path: Path) -> Path:
     write(tmp_path, "recommendations/GA4GH-REC-01 Widget guide.md", rec_text())
     write(
         tmp_path,
-        "governance/Charter.md",
+        "governance/TASC-GOV-01 Charter.md",
         rec_text("TASC-GOV-01", "Charter", id_field="Document ID"),
     )
     write_registry(tmp_path, [registry_entry()])

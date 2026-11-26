@@ -33,7 +33,7 @@ class RecommendationStatus(str, Enum):
 
 
 # Governance documents share the recommendation metadata header
-# (see governance/TASC_Document_Standards.md), so they share its statuses.
+# (see governance/TASC-GOV-02 TASC_Document_Standards.md), so they share its statuses.
 STATUS_ENUMS: dict[DocType, type[Enum]] = {
     DocType.ADR: AdrStatus,
     DocType.RECOMMENDATION: RecommendationStatus,
@@ -60,7 +60,7 @@ class Document:
     description: str
     path: str  # repo-relative, POSIX separators
     url: str  # permanent link to the file on GitHub
-    short_name: str | None = None  # ADRs and recommendations only; from the file name
+    short_name: str | None = None  # from the file name, '<ID> Short Name.md'
 
     def to_dict(self) -> dict[str, str]:
         data = asdict(self)

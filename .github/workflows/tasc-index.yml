@@ -2,9 +2,10 @@ name: TASC index
 
 # Pull requests: lint, test and prove the index still generates.
 # Pushes/merges to main: do the same, then commit the regenerated index so the
-# website can read index/adr-index.json,
-# index/recommendation-index.json and index/registry-index.json from main. The ADR/recommendation READMEs and
-# the root README's "Recently Approved" section are generated from those JSON files.
+# website can read index/adr-index.json, index/recommendation-index.json (recommendations and
+# governance documents) and index/registry-index.json from main. The ADR, recommendation and
+# registry READMEs and the root README's "Recently Approved" section are generated from those
+# JSON files.
 on:
   pull_request:
     paths:
